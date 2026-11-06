@@ -53,6 +53,7 @@ jobs:
         run: |
           if [ -f schema/schema.json ]; then
             CODEGEN_SERVER_URL_GQL=./schema/schema.json pnpm gql:codegen
+            pnpm exec oxfmt --write src/lib/graphql/generated
             git diff --exit-code -- src/lib/graphql/generated
           else
             echo "No schema/schema.json committed; skipping codegen drift check."
