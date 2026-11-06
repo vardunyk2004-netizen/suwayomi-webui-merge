@@ -61,7 +61,7 @@ jobs:
           fi
 
       - name: Upload regenerated GraphQL files when drift is found
-        if: steps.codegen-drift.outcome == 'failure'
+        if: ${{ failure() && steps.codegen-drift.outcome == 'failure' }}
         uses: actions/upload-artifact@v4
         with:
           name: webui-codegen-output
