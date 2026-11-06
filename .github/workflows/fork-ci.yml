@@ -1,0 +1,75 @@
+# Fork CI for the WEBUI repo. Copy to webui/.github/workflows/fork-ci.yml on branch fork-work.
+# Based on upstream's own build_pull_request.yml. NOT YET RUN: Phase 0 must get it green.
+name: Fork CI
+
+on:
+  push:
+    branches: [fork-work]
+    paths-ignore: ['**.md']
+  pull_request:
+    paths-ignore: ['**.md']
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    name: Lint, format, typecheck, build
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4.2.0
+        with:
+          version: 11.1.2
+
+      - name: Install modules
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Format check
+        run: pnpm format:check
+
+      - name: Typecheck
+        run: pnpm tsc
+
+      - name: Codegen drift check (only when a schema file is committed at schema/schema.json)
+        run: |
+          if [ -f schema/schema.json ]; then
+            CODEGEN_SERVER_URL_GQL=./schema/schema.json pnpm gql:codegen
+            git diff --exit-code -- src/lib/graphql/generated
+          else
+            echo "No schema/schema.json committed; skipping codegen drift check."
+          fi
+
+      - name: Build
+        run: pnpm build
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: webui-build
+          path: build
+          if-no-files-found: error
+          retention-days: 3
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Fork CI (webui)" >> "$GITHUB_STEP_SUMMARY"
+          echo "Commit: $GITHUB_SHA" >> "$GITHUB_STEP_SUMMARY"
+          echo "Job status: ${{ job.status }}" >> "$GITHUB_STEP_SUMMARY"
