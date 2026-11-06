@@ -50,6 +50,7 @@ jobs:
         run: pnpm tsc
 
       - name: Codegen drift check (only when a schema file is committed at schema/schema.json)
+        id: codegen-drift
         run: |
           if [ -f schema/schema.json ]; then
             CODEGEN_SERVER_URL_GQL=./schema/schema.json pnpm gql:codegen
@@ -58,6 +59,15 @@ jobs:
           else
             echo "No schema/schema.json committed; skipping codegen drift check."
           fi
+
+      - name: Upload regenerated GraphQL files when drift is found
+        if: steps.codegen-drift.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: webui-codegen-output
+          path: src/lib/graphql/generated
+          if-no-files-found: error
+          retention-days: 3
 
       - name: Build
         run: pnpm build
