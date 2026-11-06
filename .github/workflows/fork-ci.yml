@@ -1,5 +1,5 @@
 # Fork CI for the WEBUI repo. Copy to webui/.github/workflows/fork-ci.yml on branch fork-work.
-# Based on upstream's own build_pull_request.yml. NOT YET RUN: Phase 0 must get it green.
+# Based on upstream's own build_pull_request.yml.
 name: Fork CI
 
 on:
@@ -24,6 +24,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -58,6 +60,9 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Add WebUI revision label
+        run: echo "r$(git rev-list HEAD --count)" > build/revision
 
       - name: Upload build
         uses: actions/upload-artifact@v4
