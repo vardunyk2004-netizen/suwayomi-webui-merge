@@ -23,6 +23,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Slider from '@mui/material/Slider';
 import DialogContentText from '@mui/material/DialogContentText';
 import WarningIcon from '@mui/icons-material/Warning';
+import type { MessageDescriptor } from '@lingui/core';
 import type { SxProps, Theme } from '@mui/material/styles';
 import { useLingui } from '@lingui/react/macro';
 
@@ -42,7 +43,7 @@ type BaseProps = {
     handleUpdate: (value: number) => void;
     showSlider?: never;
     disabled?: boolean;
-    disabledDescription?: string;
+    disabledDescription?: MessageDescriptor;
     listItemTextSx?: SxProps<Theme>;
     handleLiveUpdate?: (value: number) => void;
 };

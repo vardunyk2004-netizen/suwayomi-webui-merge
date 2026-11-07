@@ -47,7 +47,7 @@ export const SelectSetting = <SettingValue extends string | number>({
     values: SelectSettingValue<SettingValue>[];
     handleChange: (value: SettingValue) => void;
     disabled?: boolean;
-    disabledDescription?: string;
+    disabledDescription?: MessageDescriptor;
 }) => {
     const { t } = useLingui();
 
