@@ -30,7 +30,10 @@ import { makeToast } from '@/base/utils/Toast.ts';
 import type { MetadataUpdateSettings } from '@/features/app-updates/AppUpdateChecker.types.ts';
 import { getErrorMessage } from '@/lib/HelperFunctions.ts';
 import { useAppTitle } from '@/features/navigation-bar/hooks/useAppTitle.ts';
-import type { PartialSettingsTypeInput } from '@/lib/graphql/generated/graphql-base.types.ts';
+import type {
+    PartialSettingsTypeInput,
+    SettingsType,
+} from '@/lib/graphql/generated/graphql-base.types.ts';
 import {
     AuthMode,
     CbzMediaType,
@@ -63,7 +66,7 @@ import { convertToAutoBackupFlags, getAutoBackupFlagsInfo } from '@/features/bac
 import type { BackupFlagInclusionState } from '@/features/backup/Backup.types.ts';
 import { getDateString } from '@/base/utils/DateHelper.ts';
 import { ListSubheader } from '@/base/components/lists/ListSubheader.tsx';
-import { ForkToolsSettings } from '@/features/settings/components/ForkToolsSettings.tsx';
+import { ForkToolsSettings, type ForkToolSettings } from '@/features/settings/components/ForkToolsSettings.tsx';
 
 const convertSyncDataToBackupFlags = (settings: ServerSettingsType): BackupFlagInclusionState => ({
     includeManga: settings.syncDataManga,
@@ -246,7 +249,10 @@ export const ServerSettings = () => {
     return (
         <List sx={{ pt: 0 }}>
             {localSettings}
-            <ForkToolsSettings settings={serverSettings} updateSetting={updateSetting} />
+            <ForkToolsSettings
+                settings={serverSettings as ServerSettingsType & ForkToolSettings}
+                updateSettings={updateSettings}
+            />
             <List
                 subheader={
                     <ListSubheader component="div" id="server-settings-server-address">

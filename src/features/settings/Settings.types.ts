@@ -18,7 +18,6 @@ import type {
     Maybe,
     SettingsDownloadConversion,
     SettingsDownloadConversionHeader,
-    SettingsType,
 } from '@/lib/graphql/generated/graphql-base.types.ts';
 import type { MetadataHistorySettings } from '@/features/history/History.types.ts';
 import type { GetServerSettingsQuery } from '@/lib/graphql/generated/graphql.ts';
@@ -42,17 +41,7 @@ export interface ISearchSettings {
     fuzzySearch: boolean;
 }
 
-export type ServerSettings = Omit<GetServerSettingsQuery['settings'], '__typename'> &
-    Partial<
-        Pick<
-            SettingsType,
-            | 'forkStockMode'
-            | 'mergeEnabled'
-            | 'duplicatesEnabled'
-            | 'reindexEnabled'
-            | 'doctorEnabled'
-        >
-    >;
+export type ServerSettings = Omit<GetServerSettingsQuery['settings'], '__typename'>;
 
 export type WebUISettingsType = Pick<
     ServerSettings,

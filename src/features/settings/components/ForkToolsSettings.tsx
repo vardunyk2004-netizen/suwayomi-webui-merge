@@ -12,17 +12,23 @@ import ListItemText from '@mui/material/ListItemText';
 import Switch from '@mui/material/Switch';
 import { useLingui } from '@lingui/react/macro';
 import { ListSubheader } from '@/base/components/lists/ListSubheader.tsx';
-import type { ServerSettings } from '@/features/settings/Settings.types.ts';
+import type { PartialSettingsTypeInput, SettingsType } from '@/lib/graphql/generated/graphql-base.types.ts';
+
+export type ForkToolSettings = Pick<
+    SettingsType,
+    | 'forkStockMode'
+    | 'mergeEnabled'
+    | 'duplicatesEnabled'
+    | 'reindexEnabled'
+    | 'doctorEnabled'
+>;
 
 type ForkToolsSettingsProps = {
-    settings: ServerSettings;
-    updateSetting: <Setting extends keyof ServerSettings>(
-        setting: Setting,
-        value: ServerSettings[Setting],
-    ) => Promise<void>;
+    settings: ForkToolSettings;
+    updateSettings: (settings: PartialSettingsTypeInput) => Promise<void>;
 };
 
-export const ForkToolsSettings = ({ settings, updateSetting }: ForkToolsSettingsProps) => {
+export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSettingsProps) => {
     const { t } = useLingui();
     const dependentSwitchDisabled = settings.forkStockMode;
 
@@ -42,7 +48,7 @@ export const ForkToolsSettings = ({ settings, updateSetting }: ForkToolsSettings
                 <Switch
                     edge="end"
                     checked={settings.forkStockMode}
-                    onChange={(event) => updateSetting('forkStockMode', event.target.checked)}
+                    onChange={(event) => updateSettings({ forkStockMode: event.target.checked })}
                 />
             </ListItem>
             <ListItem>
@@ -54,7 +60,7 @@ export const ForkToolsSettings = ({ settings, updateSetting }: ForkToolsSettings
                     edge="end"
                     checked={settings.mergeEnabled}
                     disabled={dependentSwitchDisabled}
-                    onChange={(event) => updateSetting('mergeEnabled', event.target.checked)}
+                    onChange={(event) => updateSettings({ mergeEnabled: event.target.checked })}
                 />
             </ListItem>
             <ListItem>
@@ -63,7 +69,7 @@ export const ForkToolsSettings = ({ settings, updateSetting }: ForkToolsSettings
                     edge="end"
                     checked={settings.duplicatesEnabled}
                     disabled={dependentSwitchDisabled}
-                    onChange={(event) => updateSetting('duplicatesEnabled', event.target.checked)}
+                    onChange={(event) => updateSettings({ duplicatesEnabled: event.target.checked })}
                 />
             </ListItem>
             <ListItem>
@@ -72,7 +78,7 @@ export const ForkToolsSettings = ({ settings, updateSetting }: ForkToolsSettings
                     edge="end"
                     checked={settings.reindexEnabled}
                     disabled={dependentSwitchDisabled}
-                    onChange={(event) => updateSetting('reindexEnabled', event.target.checked)}
+                    onChange={(event) => updateSettings({ reindexEnabled: event.target.checked })}
                 />
             </ListItem>
             <ListItem>
@@ -84,7 +90,7 @@ export const ForkToolsSettings = ({ settings, updateSetting }: ForkToolsSettings
                     edge="end"
                     checked={settings.doctorEnabled}
                     disabled={dependentSwitchDisabled}
-                    onChange={(event) => updateSetting('doctorEnabled', event.target.checked)}
+                    onChange={(event) => updateSettings({ doctorEnabled: event.target.checked })}
                 />
             </ListItem>
         </List>
