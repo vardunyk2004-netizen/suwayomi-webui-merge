@@ -246,10 +246,7 @@ export const ServerSettings = () => {
     return (
         <List sx={{ pt: 0 }}>
             {localSettings}
-            <ForkToolsSettings
-                settings={serverSettings}
-                updateSettings={updateSettings}
-            />
+            <ForkToolsSettings settings={serverSettings} updateSettings={updateSettings} />
             <List
                 subheader={
                     <ListSubheader component="div" id="server-settings-server-address">
