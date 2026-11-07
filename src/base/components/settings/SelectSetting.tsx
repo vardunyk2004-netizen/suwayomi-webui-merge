@@ -56,6 +56,13 @@ export const SelectSetting = <SettingValue extends string | number>({
 
     const valueDisplayText = useMemo(() => values.find(([key]) => key === value)?.[1]?.text, [value]);
     const dialogValueDisplayInfo = useMemo(() => values.find(([key]) => key === dialogValue)![1], [dialogValue]);
+    let secondaryText = t`Loading…`;
+
+    if (disabled && disabledDescription) {
+        secondaryText = t(disabledDescription);
+    } else if (valueDisplayText) {
+        secondaryText = t(valueDisplayText as MessageDescriptor);
+    }
 
     useEffect(() => {
         if (!value) {
@@ -83,13 +90,7 @@ export const SelectSetting = <SettingValue extends string | number>({
             <ListItemButton disabled={disabled} onClick={() => setIsDialogOpen(true)}>
                 <ListItemText
                     primary={settingName}
-                    secondary={
-                        disabled && disabledDescription
-                            ? t(disabledDescription)
-                            : valueDisplayText
-                              ? t(valueDisplayText as MessageDescriptor)
-                              : t`Loading…`
-                    }
+                    secondary={secondaryText}
                     slotProps={{
                         secondary: { sx: { display: 'flex', flexDirection: 'column' } },
                     }}
