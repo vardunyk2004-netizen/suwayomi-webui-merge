@@ -152,6 +152,7 @@ export const SERVER_SETTINGS = gql`
         forkStockMode
         mergeEnabled
         mergeDefaultMode
+        mergeDedupeStrategy
         mergeUnnumberedChapterMatching
         mergeMinimumSources
         mergeChapterDisplay
