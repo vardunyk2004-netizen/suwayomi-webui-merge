@@ -16,11 +16,11 @@ import type { MetadataUpdateSettings } from '@/features/app-updates/AppUpdateChe
 import type { MetadataThemeSettings } from '@/features/theme/AppTheme.types.ts';
 import type {
     Maybe,
+    SettingsType,
     SettingsDownloadConversion,
     SettingsDownloadConversionHeader,
 } from '@/lib/graphql/generated/graphql-base.types.ts';
 import type { MetadataHistorySettings } from '@/features/history/History.types.ts';
-import type { SettingsType } from '@/lib/graphql/generated/graphql-base.types.ts';
 import type { GetServerSettingsQuery } from '@/lib/graphql/generated/graphql.ts';
 
 export type MetadataServerSettingKeys = keyof MetadataServerSettings;
