@@ -247,7 +247,7 @@ export const ServerSettings = () => {
         <List sx={{ pt: 0 }}>
             {localSettings}
             <ForkToolsSettings
-                settings={serverSettings as ServerSettingsType & ForkToolSettings}
+                settings={serverSettings as unknown as ServerSettingsType & ForkToolSettings}
                 updateSettings={updateSettings}
             />
             <List
