@@ -1414,6 +1414,13 @@ export enum MergeChapterDisplay {
     Original = 'ORIGINAL',
 }
 
+export enum MergeDedupeStrategy {
+    ManualPerChapter = 'MANUAL_PER_CHAPTER',
+    MostPages = 'MOST_PAGES',
+    NewestUpload = 'NEWEST_UPLOAD',
+    PreferredSource = 'PREFERRED_SOURCE',
+}
+
 export enum MergeDefaultMode {
     Mirror = 'MIRROR',
     Sequence = 'SEQUENCE',
@@ -2036,6 +2043,7 @@ export type PartialSettingsType = Settings & {
     maxSourcesInParallel?: Maybe<Scalars['Int']['output']>;
     mergeChapterDisplay?: Maybe<MergeChapterDisplay>;
     mergeChapterLevelEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeDedupeStrategy?: Maybe<MergeDedupeStrategy>;
     mergeDefaultMode?: Maybe<MergeDefaultMode>;
     mergeDownloadOnceForMirrors?: Maybe<Scalars['Boolean']['output']>;
     mergeEnabled?: Maybe<Scalars['Boolean']['output']>;
@@ -2138,6 +2146,7 @@ export type PartialSettingsTypeInput = {
     maxSourcesInParallel?: InputMaybe<Scalars['Int']['input']>;
     mergeChapterDisplay?: InputMaybe<MergeChapterDisplay>;
     mergeChapterLevelEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeDedupeStrategy?: InputMaybe<MergeDedupeStrategy>;
     mergeDefaultMode?: InputMaybe<MergeDefaultMode>;
     mergeDownloadOnceForMirrors?: InputMaybe<Scalars['Boolean']['input']>;
     mergeEnabled?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2714,6 +2723,7 @@ export type Settings = {
     maxSourcesInParallel?: Maybe<Scalars['Int']['output']>;
     mergeChapterDisplay?: Maybe<MergeChapterDisplay>;
     mergeChapterLevelEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeDedupeStrategy?: Maybe<MergeDedupeStrategy>;
     mergeDefaultMode?: Maybe<MergeDefaultMode>;
     mergeDownloadOnceForMirrors?: Maybe<Scalars['Boolean']['output']>;
     mergeEnabled?: Maybe<Scalars['Boolean']['output']>;
@@ -2883,6 +2893,7 @@ export type SettingsType = Settings & {
     maxSourcesInParallel: Scalars['Int']['output'];
     mergeChapterDisplay: MergeChapterDisplay;
     mergeChapterLevelEnabled: Scalars['Boolean']['output'];
+    mergeDedupeStrategy: MergeDedupeStrategy;
     mergeDefaultMode: MergeDefaultMode;
     mergeDownloadOnceForMirrors: Scalars['Boolean']['output'];
     mergeEnabled: Scalars['Boolean']['output'];

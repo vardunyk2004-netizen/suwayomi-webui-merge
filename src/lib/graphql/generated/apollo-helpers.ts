@@ -1232,6 +1232,7 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'maxSourcesInParallel'
     | 'mergeChapterDisplay'
     | 'mergeChapterLevelEnabled'
+    | 'mergeDedupeStrategy'
     | 'mergeDefaultMode'
     | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
@@ -1345,6 +1346,7 @@ export type PartialSettingsTypeFieldPolicy = {
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDedupeStrategy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1689,6 +1691,7 @@ export type SettingsKeySpecifier = (
     | 'maxSourcesInParallel'
     | 'mergeChapterDisplay'
     | 'mergeChapterLevelEnabled'
+    | 'mergeDedupeStrategy'
     | 'mergeDefaultMode'
     | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
@@ -1802,6 +1805,7 @@ export type SettingsFieldPolicy = {
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDedupeStrategy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1966,6 +1970,7 @@ export type SettingsTypeKeySpecifier = (
     | 'maxSourcesInParallel'
     | 'mergeChapterDisplay'
     | 'mergeChapterLevelEnabled'
+    | 'mergeDedupeStrategy'
     | 'mergeDefaultMode'
     | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
@@ -2079,6 +2084,7 @@ export type SettingsTypeFieldPolicy = {
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDedupeStrategy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
