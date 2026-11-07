@@ -16,11 +16,7 @@ import type { PartialSettingsTypeInput, SettingsType } from '@/lib/graphql/gener
 
 export type ForkToolSettings = Pick<
     SettingsType,
-    | 'forkStockMode'
-    | 'mergeEnabled'
-    | 'duplicatesEnabled'
-    | 'reindexEnabled'
-    | 'doctorEnabled'
+    'forkStockMode' | 'mergeEnabled' | 'duplicatesEnabled' | 'reindexEnabled' | 'doctorEnabled'
 >;
 
 type ForkToolsSettingsProps = {
