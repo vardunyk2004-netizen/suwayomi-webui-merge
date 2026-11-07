@@ -151,6 +151,15 @@ export const SERVER_SETTINGS = gql`
         # Fork tools
         forkStockMode
         mergeEnabled
+        mergeDefaultMode
+        mergeUnnumberedChapterMatching
+        mergeMinimumSources
+        mergeChapterDisplay
+        mergeFallbackSourcesEnabled
+        mergeOfflineMode
+        mergeDownloadOnceForMirrors
+        mergeChapterLevelEnabled
+        mergeSplitRevalidateOnUpdate
         duplicatesEnabled
         reindexEnabled
         doctorEnabled
