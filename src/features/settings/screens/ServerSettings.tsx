@@ -63,7 +63,7 @@ import { convertToAutoBackupFlags, getAutoBackupFlagsInfo } from '@/features/bac
 import type { BackupFlagInclusionState } from '@/features/backup/Backup.types.ts';
 import { getDateString } from '@/base/utils/DateHelper.ts';
 import { ListSubheader } from '@/base/components/lists/ListSubheader.tsx';
-import { ForkToolsSettings, type ForkToolSettings } from '@/features/settings/components/ForkToolsSettings.tsx';
+import { ForkToolsSettings } from '@/features/settings/components/ForkToolsSettings.tsx';
 
 const convertSyncDataToBackupFlags = (settings: ServerSettingsType): BackupFlagInclusionState => ({
     includeManga: settings.syncDataManga,
@@ -247,7 +247,7 @@ export const ServerSettings = () => {
         <List sx={{ pt: 0 }}>
             {localSettings}
             <ForkToolsSettings
-                settings={serverSettings as unknown as ServerSettingsType & ForkToolSettings}
+                settings={serverSettings}
                 updateSettings={updateSettings}
             />
             <List

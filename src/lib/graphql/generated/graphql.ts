@@ -3165,6 +3165,11 @@ export type ServerSettingsFragment = {
     syncYomiApiKey: string;
     syncYomiEnabled: boolean;
     syncYomiHost: string;
+    forkStockMode: boolean;
+    mergeEnabled: boolean;
+    duplicatesEnabled: boolean;
+    reindexEnabled: boolean;
+    doctorEnabled: boolean;
     downloadConversions: Array<{
         __typename: 'SettingsDownloadConversionType';
         mimeType: string;
@@ -3278,6 +3283,11 @@ export type ResetServerSettingsMutation = {
             syncYomiApiKey: string;
             syncYomiEnabled: boolean;
             syncYomiHost: string;
+            forkStockMode: boolean;
+            mergeEnabled: boolean;
+            duplicatesEnabled: boolean;
+            reindexEnabled: boolean;
+            doctorEnabled: boolean;
             downloadConversions: Array<{
                 __typename: 'SettingsDownloadConversionType';
                 mimeType: string;
@@ -3401,6 +3411,11 @@ export type UpdateServerSettingsMutation = {
             syncYomiApiKey: string;
             syncYomiEnabled: boolean;
             syncYomiHost: string;
+            forkStockMode: boolean;
+            mergeEnabled: boolean;
+            duplicatesEnabled: boolean;
+            reindexEnabled: boolean;
+            doctorEnabled: boolean;
             downloadConversions: Array<{
                 __typename: 'SettingsDownloadConversionType';
                 mimeType: string;
@@ -3520,6 +3535,11 @@ export type GetServerSettingsQuery = {
         syncYomiApiKey: string;
         syncYomiEnabled: boolean;
         syncYomiHost: string;
+        forkStockMode: boolean;
+        mergeEnabled: boolean;
+        duplicatesEnabled: boolean;
+        reindexEnabled: boolean;
+        doctorEnabled: boolean;
         downloadConversions: Array<{
             __typename: 'SettingsDownloadConversionType';
             mimeType: string;

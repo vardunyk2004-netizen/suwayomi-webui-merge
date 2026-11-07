@@ -12,10 +12,11 @@ import ListItemText from '@mui/material/ListItemText';
 import Switch from '@mui/material/Switch';
 import { useLingui } from '@lingui/react/macro';
 import { ListSubheader } from '@/base/components/lists/ListSubheader.tsx';
-import type { PartialSettingsTypeInput, SettingsType } from '@/lib/graphql/generated/graphql-base.types.ts';
+import type { ServerSettings } from '@/features/settings/Settings.types.ts';
+import type { PartialSettingsTypeInput } from '@/lib/graphql/generated/graphql-base.types.ts';
 
-export type ForkToolSettings = Pick<
-    SettingsType,
+type ForkToolSettings = Pick<
+    ServerSettings,
     'forkStockMode' | 'mergeEnabled' | 'duplicatesEnabled' | 'reindexEnabled' | 'doctorEnabled'
 >;
 
