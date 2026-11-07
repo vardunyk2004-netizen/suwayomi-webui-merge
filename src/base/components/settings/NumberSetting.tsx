@@ -23,7 +23,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Slider from '@mui/material/Slider';
 import DialogContentText from '@mui/material/DialogContentText';
 import WarningIcon from '@mui/icons-material/Warning';
-import type { MessageDescriptor } from '@lingui/core';
 import type { SxProps, Theme } from '@mui/material/styles';
 import { useLingui } from '@lingui/react/macro';
 
@@ -43,7 +42,7 @@ type BaseProps = {
     handleUpdate: (value: number) => void;
     showSlider?: never;
     disabled?: boolean;
-    disabledDescription?: MessageDescriptor;
+    disabledDescription?: string;
     listItemTextSx?: SxProps<Theme>;
     handleLiveUpdate?: (value: number) => void;
 };
@@ -123,7 +122,7 @@ export const NumberSetting = ({
                 {settingIcon ? <ListItemIcon>{settingIcon}</ListItemIcon> : null}
                 <ListItemText
                     primary={settingTitle}
-                    secondary={disabled && disabledDescription ? t(disabledDescription) : settingValue}
+                    secondary={disabled && disabledDescription ? disabledDescription : settingValue}
                     sx={sx}
                     slotProps={{
                         secondary: { sx: { display: 'flex', flexDirection: 'column' } },

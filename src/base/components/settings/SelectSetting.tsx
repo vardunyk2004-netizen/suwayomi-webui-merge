@@ -47,7 +47,7 @@ export const SelectSetting = <SettingValue extends string | number>({
     values: SelectSettingValue<SettingValue>[];
     handleChange: (value: SettingValue) => void;
     disabled?: boolean;
-    disabledDescription?: MessageDescriptor;
+    disabledDescription?: string;
 }) => {
     const { t } = useLingui();
 
@@ -59,7 +59,7 @@ export const SelectSetting = <SettingValue extends string | number>({
     let secondaryText = t`Loading…`;
 
     if (disabled && disabledDescription) {
-        secondaryText = t(disabledDescription);
+        secondaryText = disabledDescription;
     } else if (valueDisplayText) {
         secondaryText = t(valueDisplayText as MessageDescriptor);
     }
