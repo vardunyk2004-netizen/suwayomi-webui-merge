@@ -58,10 +58,7 @@ export const ForkToolsSettings = ({ settings, updateSetting }: ForkToolsSettings
                 />
             </ListItem>
             <ListItem>
-                <ListItemText
-                    primary={t`Duplicate detection`}
-                    secondary={t`Enable duplicate manga detection.`}
-                />
+                <ListItemText primary={t`Duplicate detection`} secondary={t`Enable duplicate manga detection.`} />
                 <Switch
                     edge="end"
                     checked={settings.duplicatesEnabled}
@@ -70,10 +67,7 @@ export const ForkToolsSettings = ({ settings, updateSetting }: ForkToolsSettings
                 />
             </ListItem>
             <ListItem>
-                <ListItemText
-                    primary={t`Download reindex`}
-                    secondary={t`Enable download reindex tools.`}
-                />
+                <ListItemText primary={t`Download reindex`} secondary={t`Enable download reindex tools.`} />
                 <Switch
                     edge="end"
                     checked={settings.reindexEnabled}
