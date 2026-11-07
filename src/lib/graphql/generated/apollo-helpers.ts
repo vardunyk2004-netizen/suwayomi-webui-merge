@@ -1190,9 +1190,11 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'databaseUrl'
     | 'databaseUsername'
     | 'debugLogsEnabled'
+    | 'doctorEnabled'
     | 'downloadAsCbz'
     | 'downloadConversions'
     | 'downloadsPath'
+    | 'duplicatesEnabled'
     | 'electronPath'
     | 'excludeCompleted'
     | 'excludeEntryWithUnreadChapters'
@@ -1205,6 +1207,7 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'flareSolverrSessionTtl'
     | 'flareSolverrTimeout'
     | 'flareSolverrUrl'
+    | 'forkStockMode'
     | 'globalUpdateInterval'
     | 'gqlDebugLogsEnabled'
     | 'initialOpenInBrowserEnabled'
@@ -1227,6 +1230,7 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeEnabled'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -1237,6 +1241,7 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'opdsSkipChapterMetadataFeed'
     | 'opdsUseBinaryFileSizes'
     | 'port'
+    | 'reindexEnabled'
     | 'serveConversions'
     | 'socksProxyEnabled'
     | 'socksProxyHost'
@@ -1289,9 +1294,11 @@ export type PartialSettingsTypeFieldPolicy = {
     databaseUrl?: FieldPolicy<any> | FieldReadFunction<any>;
     databaseUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     debugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    doctorEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadAsCbz?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadsPath?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     electronPath?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeCompleted?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeEntryWithUnreadChapters?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1304,6 +1311,7 @@ export type PartialSettingsTypeFieldPolicy = {
     flareSolverrSessionTtl?: FieldPolicy<any> | FieldReadFunction<any>;
     flareSolverrTimeout?: FieldPolicy<any> | FieldReadFunction<any>;
     flareSolverrUrl?: FieldPolicy<any> | FieldReadFunction<any>;
+    forkStockMode?: FieldPolicy<any> | FieldReadFunction<any>;
     globalUpdateInterval?: FieldPolicy<any> | FieldReadFunction<any>;
     gqlDebugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     initialOpenInBrowserEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1326,6 +1334,7 @@ export type PartialSettingsTypeFieldPolicy = {
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1336,6 +1345,7 @@ export type PartialSettingsTypeFieldPolicy = {
     opdsSkipChapterMetadataFeed?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsUseBinaryFileSizes?: FieldPolicy<any> | FieldReadFunction<any>;
     port?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     serveConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyHost?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1619,9 +1629,11 @@ export type SettingsKeySpecifier = (
     | 'databaseUrl'
     | 'databaseUsername'
     | 'debugLogsEnabled'
+    | 'doctorEnabled'
     | 'downloadAsCbz'
     | 'downloadConversions'
     | 'downloadsPath'
+    | 'duplicatesEnabled'
     | 'electronPath'
     | 'excludeCompleted'
     | 'excludeEntryWithUnreadChapters'
@@ -1634,6 +1646,7 @@ export type SettingsKeySpecifier = (
     | 'flareSolverrSessionTtl'
     | 'flareSolverrTimeout'
     | 'flareSolverrUrl'
+    | 'forkStockMode'
     | 'globalUpdateInterval'
     | 'gqlDebugLogsEnabled'
     | 'initialOpenInBrowserEnabled'
@@ -1656,6 +1669,7 @@ export type SettingsKeySpecifier = (
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeEnabled'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -1666,6 +1680,7 @@ export type SettingsKeySpecifier = (
     | 'opdsSkipChapterMetadataFeed'
     | 'opdsUseBinaryFileSizes'
     | 'port'
+    | 'reindexEnabled'
     | 'serveConversions'
     | 'socksProxyEnabled'
     | 'socksProxyHost'
@@ -1718,9 +1733,11 @@ export type SettingsFieldPolicy = {
     databaseUrl?: FieldPolicy<any> | FieldReadFunction<any>;
     databaseUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     debugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    doctorEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadAsCbz?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadsPath?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     electronPath?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeCompleted?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeEntryWithUnreadChapters?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1733,6 +1750,7 @@ export type SettingsFieldPolicy = {
     flareSolverrSessionTtl?: FieldPolicy<any> | FieldReadFunction<any>;
     flareSolverrTimeout?: FieldPolicy<any> | FieldReadFunction<any>;
     flareSolverrUrl?: FieldPolicy<any> | FieldReadFunction<any>;
+    forkStockMode?: FieldPolicy<any> | FieldReadFunction<any>;
     globalUpdateInterval?: FieldPolicy<any> | FieldReadFunction<any>;
     gqlDebugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     initialOpenInBrowserEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1755,6 +1773,7 @@ export type SettingsFieldPolicy = {
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1765,6 +1784,7 @@ export type SettingsFieldPolicy = {
     opdsSkipChapterMetadataFeed?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsUseBinaryFileSizes?: FieldPolicy<any> | FieldReadFunction<any>;
     port?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     serveConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyHost?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1868,9 +1888,11 @@ export type SettingsTypeKeySpecifier = (
     | 'databaseUrl'
     | 'databaseUsername'
     | 'debugLogsEnabled'
+    | 'doctorEnabled'
     | 'downloadAsCbz'
     | 'downloadConversions'
     | 'downloadsPath'
+    | 'duplicatesEnabled'
     | 'electronPath'
     | 'excludeCompleted'
     | 'excludeEntryWithUnreadChapters'
@@ -1883,6 +1905,7 @@ export type SettingsTypeKeySpecifier = (
     | 'flareSolverrSessionTtl'
     | 'flareSolverrTimeout'
     | 'flareSolverrUrl'
+    | 'forkStockMode'
     | 'globalUpdateInterval'
     | 'gqlDebugLogsEnabled'
     | 'initialOpenInBrowserEnabled'
@@ -1905,6 +1928,7 @@ export type SettingsTypeKeySpecifier = (
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeEnabled'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -1915,6 +1939,7 @@ export type SettingsTypeKeySpecifier = (
     | 'opdsSkipChapterMetadataFeed'
     | 'opdsUseBinaryFileSizes'
     | 'port'
+    | 'reindexEnabled'
     | 'serveConversions'
     | 'socksProxyEnabled'
     | 'socksProxyHost'
@@ -1967,9 +1992,11 @@ export type SettingsTypeFieldPolicy = {
     databaseUrl?: FieldPolicy<any> | FieldReadFunction<any>;
     databaseUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     debugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    doctorEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadAsCbz?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadsPath?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     electronPath?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeCompleted?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeEntryWithUnreadChapters?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1982,6 +2009,7 @@ export type SettingsTypeFieldPolicy = {
     flareSolverrSessionTtl?: FieldPolicy<any> | FieldReadFunction<any>;
     flareSolverrTimeout?: FieldPolicy<any> | FieldReadFunction<any>;
     flareSolverrUrl?: FieldPolicy<any> | FieldReadFunction<any>;
+    forkStockMode?: FieldPolicy<any> | FieldReadFunction<any>;
     globalUpdateInterval?: FieldPolicy<any> | FieldReadFunction<any>;
     gqlDebugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     initialOpenInBrowserEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2004,6 +2032,7 @@ export type SettingsTypeFieldPolicy = {
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2014,6 +2043,7 @@ export type SettingsTypeFieldPolicy = {
     opdsSkipChapterMetadataFeed?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsUseBinaryFileSizes?: FieldPolicy<any> | FieldReadFunction<any>;
     port?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     serveConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyHost?: FieldPolicy<any> | FieldReadFunction<any>;

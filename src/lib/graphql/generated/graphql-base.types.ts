@@ -1966,9 +1966,11 @@ export type PartialSettingsType = Settings & {
     databaseUrl?: Maybe<Scalars['String']['output']>;
     databaseUsername?: Maybe<Scalars['String']['output']>;
     debugLogsEnabled?: Maybe<Scalars['Boolean']['output']>;
+    doctorEnabled?: Maybe<Scalars['Boolean']['output']>;
     downloadAsCbz?: Maybe<Scalars['Boolean']['output']>;
     downloadConversions?: Maybe<Array<SettingsDownloadConversionType>>;
     downloadsPath?: Maybe<Scalars['String']['output']>;
+    duplicatesEnabled?: Maybe<Scalars['Boolean']['output']>;
     electronPath?: Maybe<Scalars['String']['output']>;
     excludeCompleted?: Maybe<Scalars['Boolean']['output']>;
     excludeEntryWithUnreadChapters?: Maybe<Scalars['Boolean']['output']>;
@@ -1982,6 +1984,7 @@ export type PartialSettingsType = Settings & {
     flareSolverrSessionTtl?: Maybe<Scalars['Int']['output']>;
     flareSolverrTimeout?: Maybe<Scalars['Int']['output']>;
     flareSolverrUrl?: Maybe<Scalars['String']['output']>;
+    forkStockMode?: Maybe<Scalars['Boolean']['output']>;
     globalUpdateInterval?: Maybe<Scalars['Float']['output']>;
     /** @deprecated Removed - does not do anything */
     gqlDebugLogsEnabled?: Maybe<Scalars['Boolean']['output']>;
@@ -2010,6 +2013,7 @@ export type PartialSettingsType = Settings & {
     maxLogFiles?: Maybe<Scalars['Int']['output']>;
     maxLogFolderSize?: Maybe<Scalars['String']['output']>;
     maxSourcesInParallel?: Maybe<Scalars['Int']['output']>;
+    mergeEnabled?: Maybe<Scalars['Boolean']['output']>;
     opdsCbzMimetype?: Maybe<CbzMediaType>;
     opdsChapterSortOrder?: Maybe<SortOrder>;
     opdsEnablePageReadProgress?: Maybe<Scalars['Boolean']['output']>;
@@ -2020,6 +2024,7 @@ export type PartialSettingsType = Settings & {
     opdsSkipChapterMetadataFeed?: Maybe<Scalars['Boolean']['output']>;
     opdsUseBinaryFileSizes?: Maybe<Scalars['Boolean']['output']>;
     port?: Maybe<Scalars['Int']['output']>;
+    reindexEnabled?: Maybe<Scalars['Boolean']['output']>;
     serveConversions?: Maybe<Array<SettingsDownloadConversionType>>;
     socksProxyEnabled?: Maybe<Scalars['Boolean']['output']>;
     socksProxyHost?: Maybe<Scalars['String']['output']>;
@@ -2068,9 +2073,11 @@ export type PartialSettingsTypeInput = {
     databaseUrl?: InputMaybe<Scalars['String']['input']>;
     databaseUsername?: InputMaybe<Scalars['String']['input']>;
     debugLogsEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    doctorEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     downloadAsCbz?: InputMaybe<Scalars['Boolean']['input']>;
     downloadConversions?: InputMaybe<Array<SettingsDownloadConversionTypeInput>>;
     downloadsPath?: InputMaybe<Scalars['String']['input']>;
+    duplicatesEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     electronPath?: InputMaybe<Scalars['String']['input']>;
     excludeCompleted?: InputMaybe<Scalars['Boolean']['input']>;
     excludeEntryWithUnreadChapters?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2082,6 +2089,7 @@ export type PartialSettingsTypeInput = {
     flareSolverrSessionTtl?: InputMaybe<Scalars['Int']['input']>;
     flareSolverrTimeout?: InputMaybe<Scalars['Int']['input']>;
     flareSolverrUrl?: InputMaybe<Scalars['String']['input']>;
+    forkStockMode?: InputMaybe<Scalars['Boolean']['input']>;
     globalUpdateInterval?: InputMaybe<Scalars['Float']['input']>;
     initialOpenInBrowserEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     ip?: InputMaybe<Scalars['String']['input']>;
@@ -2098,6 +2106,7 @@ export type PartialSettingsTypeInput = {
     maxLogFiles?: InputMaybe<Scalars['Int']['input']>;
     maxLogFolderSize?: InputMaybe<Scalars['String']['input']>;
     maxSourcesInParallel?: InputMaybe<Scalars['Int']['input']>;
+    mergeEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     opdsCbzMimetype?: InputMaybe<CbzMediaType>;
     opdsChapterSortOrder?: InputMaybe<SortOrder>;
     opdsEnablePageReadProgress?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2108,6 +2117,7 @@ export type PartialSettingsTypeInput = {
     opdsSkipChapterMetadataFeed?: InputMaybe<Scalars['Boolean']['input']>;
     opdsUseBinaryFileSizes?: InputMaybe<Scalars['Boolean']['input']>;
     port?: InputMaybe<Scalars['Int']['input']>;
+    reindexEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     serveConversions?: InputMaybe<Array<SettingsDownloadConversionTypeInput>>;
     socksProxyEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     socksProxyHost?: InputMaybe<Scalars['String']['input']>;
@@ -2616,9 +2626,11 @@ export type Settings = {
     databaseUrl?: Maybe<Scalars['String']['output']>;
     databaseUsername?: Maybe<Scalars['String']['output']>;
     debugLogsEnabled?: Maybe<Scalars['Boolean']['output']>;
+    doctorEnabled?: Maybe<Scalars['Boolean']['output']>;
     downloadAsCbz?: Maybe<Scalars['Boolean']['output']>;
     downloadConversions?: Maybe<Array<SettingsDownloadConversion>>;
     downloadsPath?: Maybe<Scalars['String']['output']>;
+    duplicatesEnabled?: Maybe<Scalars['Boolean']['output']>;
     electronPath?: Maybe<Scalars['String']['output']>;
     excludeCompleted?: Maybe<Scalars['Boolean']['output']>;
     excludeEntryWithUnreadChapters?: Maybe<Scalars['Boolean']['output']>;
@@ -2632,6 +2644,7 @@ export type Settings = {
     flareSolverrSessionTtl?: Maybe<Scalars['Int']['output']>;
     flareSolverrTimeout?: Maybe<Scalars['Int']['output']>;
     flareSolverrUrl?: Maybe<Scalars['String']['output']>;
+    forkStockMode?: Maybe<Scalars['Boolean']['output']>;
     globalUpdateInterval?: Maybe<Scalars['Float']['output']>;
     /** @deprecated Removed - does not do anything */
     gqlDebugLogsEnabled?: Maybe<Scalars['Boolean']['output']>;
@@ -2660,6 +2673,7 @@ export type Settings = {
     maxLogFiles?: Maybe<Scalars['Int']['output']>;
     maxLogFolderSize?: Maybe<Scalars['String']['output']>;
     maxSourcesInParallel?: Maybe<Scalars['Int']['output']>;
+    mergeEnabled?: Maybe<Scalars['Boolean']['output']>;
     opdsCbzMimetype?: Maybe<CbzMediaType>;
     opdsChapterSortOrder?: Maybe<SortOrder>;
     opdsEnablePageReadProgress?: Maybe<Scalars['Boolean']['output']>;
@@ -2670,6 +2684,7 @@ export type Settings = {
     opdsSkipChapterMetadataFeed?: Maybe<Scalars['Boolean']['output']>;
     opdsUseBinaryFileSizes?: Maybe<Scalars['Boolean']['output']>;
     port?: Maybe<Scalars['Int']['output']>;
+    reindexEnabled?: Maybe<Scalars['Boolean']['output']>;
     serveConversions?: Maybe<Array<SettingsDownloadConversion>>;
     socksProxyEnabled?: Maybe<Scalars['Boolean']['output']>;
     socksProxyHost?: Maybe<Scalars['String']['output']>;
@@ -2771,9 +2786,11 @@ export type SettingsType = Settings & {
     databaseUrl: Scalars['String']['output'];
     databaseUsername: Scalars['String']['output'];
     debugLogsEnabled: Scalars['Boolean']['output'];
+    doctorEnabled: Scalars['Boolean']['output'];
     downloadAsCbz: Scalars['Boolean']['output'];
     downloadConversions: Array<SettingsDownloadConversionType>;
     downloadsPath: Scalars['String']['output'];
+    duplicatesEnabled: Scalars['Boolean']['output'];
     electronPath: Scalars['String']['output'];
     excludeCompleted: Scalars['Boolean']['output'];
     excludeEntryWithUnreadChapters: Scalars['Boolean']['output'];
@@ -2787,6 +2804,7 @@ export type SettingsType = Settings & {
     flareSolverrSessionTtl: Scalars['Int']['output'];
     flareSolverrTimeout: Scalars['Int']['output'];
     flareSolverrUrl: Scalars['String']['output'];
+    forkStockMode: Scalars['Boolean']['output'];
     globalUpdateInterval: Scalars['Float']['output'];
     /** @deprecated Removed - does not do anything */
     gqlDebugLogsEnabled: Scalars['Boolean']['output'];
@@ -2815,6 +2833,7 @@ export type SettingsType = Settings & {
     maxLogFiles: Scalars['Int']['output'];
     maxLogFolderSize: Scalars['String']['output'];
     maxSourcesInParallel: Scalars['Int']['output'];
+    mergeEnabled: Scalars['Boolean']['output'];
     opdsCbzMimetype: CbzMediaType;
     opdsChapterSortOrder: SortOrder;
     opdsEnablePageReadProgress: Scalars['Boolean']['output'];
@@ -2825,6 +2844,7 @@ export type SettingsType = Settings & {
     opdsSkipChapterMetadataFeed: Scalars['Boolean']['output'];
     opdsUseBinaryFileSizes: Scalars['Boolean']['output'];
     port: Scalars['Int']['output'];
+    reindexEnabled: Scalars['Boolean']['output'];
     serveConversions: Array<SettingsDownloadConversionType>;
     socksProxyEnabled: Scalars['Boolean']['output'];
     socksProxyHost: Scalars['String']['output'];
