@@ -30,10 +30,7 @@ import { makeToast } from '@/base/utils/Toast.ts';
 import type { MetadataUpdateSettings } from '@/features/app-updates/AppUpdateChecker.types.ts';
 import { getErrorMessage } from '@/lib/HelperFunctions.ts';
 import { useAppTitle } from '@/features/navigation-bar/hooks/useAppTitle.ts';
-import type {
-    PartialSettingsTypeInput,
-    SettingsType,
-} from '@/lib/graphql/generated/graphql-base.types.ts';
+import type { PartialSettingsTypeInput } from '@/lib/graphql/generated/graphql-base.types.ts';
 import {
     AuthMode,
     CbzMediaType,
