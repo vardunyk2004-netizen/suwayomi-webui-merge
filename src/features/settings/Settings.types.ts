@@ -43,7 +43,7 @@ export interface ISearchSettings {
 }
 
 export type ServerSettings = Omit<GetServerSettingsQuery['settings'], '__typename'> &
-    Pick<SettingsType, 'forkStockMode' | 'mergeEnabled' | 'duplicatesEnabled' | 'reindexEnabled' | 'doctorEnabled'>;
+    Partial<Pick<SettingsType, 'forkStockMode' | 'mergeEnabled' | 'duplicatesEnabled' | 'reindexEnabled' | 'doctorEnabled'>>;
 
 export type WebUISettingsType = Pick<
     ServerSettings,
