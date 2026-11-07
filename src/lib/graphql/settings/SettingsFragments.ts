@@ -147,5 +147,12 @@ export const SERVER_SETTINGS = gql`
         syncYomiApiKey
         syncYomiEnabled
         syncYomiHost
+
+        # Fork tools
+        forkStockMode
+        mergeEnabled
+        duplicatesEnabled
+        reindexEnabled
+        doctorEnabled
     }
 `;
