@@ -46,7 +46,11 @@ export type ServerSettings = Omit<GetServerSettingsQuery['settings'], '__typenam
     Partial<
         Pick<
             SettingsType,
-            'forkStockMode' | 'mergeEnabled' | 'duplicatesEnabled' | 'reindexEnabled' | 'doctorEnabled'
+            | 'forkStockMode'
+            | 'mergeEnabled'
+            | 'duplicatesEnabled'
+            | 'reindexEnabled'
+            | 'doctorEnabled'
         >
     >;
 
