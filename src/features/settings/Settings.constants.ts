@@ -25,6 +25,7 @@ import {
     KoreaderSyncChecksumMethod,
     KoreaderSyncConflictStrategy,
     MergeChapterDisplay,
+    MergeDedupeStrategy,
     MergeDefaultMode,
     MergeOfflineMode,
     MergeUnnumberedChapterMatching,
@@ -277,6 +278,29 @@ export const MERGE_DEFAULT_MODE_SELECT_VALUES: SelectSettingValue<MergeDefaultMo
     [MergeDefaultMode.Mirror, { text: msg`Mirror sources` }],
     [MergeDefaultMode.Sequence, { text: msg`Sequence sources` }],
 ];
+
+const MERGE_DEDUPE_STRATEGY_TO_TRANSLATIONS: Record<MergeDedupeStrategy, SelectSettingValueDisplayInfo> = {
+    [MergeDedupeStrategy.PreferredSource]: {
+        text: msg`Preferred source`,
+        description: msg`Use the first matching chapter in the configured source order.`,
+    },
+    [MergeDedupeStrategy.MostPages]: {
+        text: msg`Most pages`,
+        description: msg`Prefer the source chapter with the most pages.`,
+    },
+    [MergeDedupeStrategy.NewestUpload]: {
+        text: msg`Newest upload`,
+        description: msg`Prefer the chapter with the newest source upload date.`,
+    },
+    [MergeDedupeStrategy.ManualPerChapter]: {
+        text: msg`Choose per chapter`,
+        description: msg`Let you choose the preferred source separately for each chapter.`,
+    },
+};
+
+export const MERGE_DEDUPE_STRATEGY_SELECT_VALUES: SelectSettingValue<MergeDedupeStrategy>[] = Object.values(
+    MergeDedupeStrategy,
+).map((strategy) => [strategy, MERGE_DEDUPE_STRATEGY_TO_TRANSLATIONS[strategy]]);
 
 export const MERGE_UNNUMBERED_MATCHING_SELECT_VALUES: SelectSettingValue<MergeUnnumberedChapterMatching>[] = [
     [MergeUnnumberedChapterMatching.TitleScanlator, { text: msg`Match title and scanlator` }],

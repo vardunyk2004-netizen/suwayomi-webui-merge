@@ -18,6 +18,7 @@ import type { ServerSettings } from '@/features/settings/Settings.types.ts';
 import type { PartialSettingsTypeInput } from '@/lib/graphql/generated/graphql-base.types.ts';
 import {
     MERGE_CHAPTER_DISPLAY_SELECT_VALUES,
+    MERGE_DEDUPE_STRATEGY_SELECT_VALUES,
     MERGE_DEFAULT_MODE_SELECT_VALUES,
     MERGE_OFFLINE_MODE_SELECT_VALUES,
     MERGE_UNNUMBERED_MATCHING_SELECT_VALUES,
@@ -28,6 +29,7 @@ type ForkToolSettings = Pick<
     | 'forkStockMode'
     | 'mergeEnabled'
     | 'mergeDefaultMode'
+    | 'mergeDedupeStrategy'
     | 'mergeUnnumberedChapterMatching'
     | 'mergeMinimumSources'
     | 'mergeChapterDisplay'
@@ -90,6 +92,15 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 disabled={mergeSettingsDisabled}
                 disabledDescription={t`Enable manga merging to change this setting.`}
                 handleChange={(value) => updateSettings({ mergeDefaultMode: value })}
+            />
+            <SelectSetting
+                settingName={t`Duplicate chapter strategy`}
+                dialogDescription={t`Choose which source chapter to use when mirror sources contain the same chapter.`}
+                value={settings.mergeDedupeStrategy}
+                values={MERGE_DEDUPE_STRATEGY_SELECT_VALUES}
+                disabled={mergeSettingsDisabled}
+                disabledDescription={t`Enable manga merging to change this setting.`}
+                handleChange={(value) => updateSettings({ mergeDedupeStrategy: value })}
             />
             <SelectSetting
                 settingName={t`Unnumbered chapter matching`}

@@ -3168,6 +3168,7 @@ export type ServerSettingsFragment = {
     forkStockMode: boolean;
     mergeEnabled: boolean;
     mergeDefaultMode: Types.MergeDefaultMode;
+    mergeDedupeStrategy: Types.MergeDedupeStrategy;
     mergeUnnumberedChapterMatching: Types.MergeUnnumberedChapterMatching;
     mergeMinimumSources: number;
     mergeChapterDisplay: Types.MergeChapterDisplay;
@@ -3295,6 +3296,7 @@ export type ResetServerSettingsMutation = {
             forkStockMode: boolean;
             mergeEnabled: boolean;
             mergeDefaultMode: Types.MergeDefaultMode;
+            mergeDedupeStrategy: Types.MergeDedupeStrategy;
             mergeUnnumberedChapterMatching: Types.MergeUnnumberedChapterMatching;
             mergeMinimumSources: number;
             mergeChapterDisplay: Types.MergeChapterDisplay;
@@ -3432,6 +3434,7 @@ export type UpdateServerSettingsMutation = {
             forkStockMode: boolean;
             mergeEnabled: boolean;
             mergeDefaultMode: Types.MergeDefaultMode;
+            mergeDedupeStrategy: Types.MergeDedupeStrategy;
             mergeUnnumberedChapterMatching: Types.MergeUnnumberedChapterMatching;
             mergeMinimumSources: number;
             mergeChapterDisplay: Types.MergeChapterDisplay;
@@ -3565,6 +3568,7 @@ export type GetServerSettingsQuery = {
         forkStockMode: boolean;
         mergeEnabled: boolean;
         mergeDefaultMode: Types.MergeDefaultMode;
+        mergeDedupeStrategy: Types.MergeDedupeStrategy;
         mergeUnnumberedChapterMatching: Types.MergeUnnumberedChapterMatching;
         mergeMinimumSources: number;
         mergeChapterDisplay: Types.MergeChapterDisplay;
