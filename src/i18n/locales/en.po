@@ -4387,3 +4387,135 @@ msgstr "Your library is empty"
 #: src/features/settings/Settings.constants.ts
 msgid "Your library will be accessible. Use this only on private networks or when otherwise securing access."
 msgstr "Your library will be accessible. Use this only on private networks or when otherwise securing access."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Avoid downloading the same chapter from multiple mirror sources."
+msgstr "Avoid downloading the same chapter from multiple mirror sources."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Chapter-level merge and split"
+msgstr "Chapter-level merge and split"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose how the merge planner matches chapters without numbers."
+msgstr "Choose how the merge planner matches chapters without numbers."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose how merged chapters behave while offline."
+msgstr "Choose how merged chapters behave while offline."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose whether merged chapters show original or normalized names."
+msgstr "Choose whether merged chapters show original or normalized names."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose which merge mode is pre-selected in the merge wizard."
+msgstr "Choose which merge mode is pre-selected in the merge wizard."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Default merge mode"
+msgstr "Default merge mode"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Download mirror chapters once"
+msgstr "Download mirror chapters once"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable manga merging to change this setting."
+msgstr "Enable manga merging to change this setting."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Fallback sources"
+msgstr "Fallback sources"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Minimum merge sources"
+msgstr "Minimum merge sources"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Keep all unnumbered chapters"
+msgstr "Keep all unnumbered chapters"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Match title and scanlator"
+msgstr "Match title and scanlator"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Materialize merged chapters"
+msgstr "Materialize merged chapters"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Merged chapter display"
+msgstr "Merged chapter display"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Offline merge behavior"
+msgstr "Offline merge behavior"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Normalized chapter names"
+msgstr "Normalized chapter names"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Original chapter names"
+msgstr "Original chapter names"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Re-check split chapter page counts during updates and flag changed splits for review."
+msgstr "Re-check split chapter page counts during updates and flag changed splits for review."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Revalidate splits on update"
+msgstr "Revalidate splits on update"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Require online access"
+msgstr "Require online access"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the minimum number of source manga that a merge must retain."
+msgstr "Set the minimum number of source manga that a merge must retain."
+
+#: src/features/settings/Settings.constants.ts
+msgid "Sequence sources"
+msgstr "Sequence sources"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Try another source when a page list or image fails."
+msgstr "Try another source when a page list or image fails."
+
+#: src/features/settings/Settings.constants.ts
+msgid "Use existing downloads"
+msgstr "Use existing downloads"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Unnumbered chapter matching"
+msgstr "Unnumbered chapter matching"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Mirror sources"
+msgstr "Mirror sources"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable merging and splitting individual chapters."
+msgstr "Enable merging and splitting individual chapters."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable the manga merge and chapter split tools."
+msgstr "Enable the manga merge and chapter split tools."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Manga merging"
+msgstr "Manga merging"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Merge & library tools"
+msgstr "Merge & library tools"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Fork stock mode"
+msgstr "Fork stock mode"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Disable all fork tools and use stock server behavior."
+msgstr "Disable all fork tools and use stock server behavior."

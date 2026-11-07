@@ -24,6 +24,10 @@ import {
     AuthMode,
     KoreaderSyncChecksumMethod,
     KoreaderSyncConflictStrategy,
+    MergeChapterDisplay,
+    MergeDefaultMode,
+    MergeOfflineMode,
+    MergeUnnumberedChapterMatching,
     StartSyncResult,
     SyncState,
     WebUiChannel,
@@ -268,6 +272,27 @@ export const KOREADER_SYNC_CHECKSUM_METHOD_TO_TRANSLATIONS: Record<
 };
 export const KOREADER_SYNC_CHECKSUM_METHOD_SELECT_VALUES: SelectSettingValue<KoreaderSyncChecksumMethod>[] =
     KOREADER_SYNC_CHECKSUM_METHODES.map((method) => [method, KOREADER_SYNC_CHECKSUM_METHOD_TO_TRANSLATIONS[method]]);
+
+export const MERGE_DEFAULT_MODE_SELECT_VALUES: SelectSettingValue<MergeDefaultMode>[] = [
+    [MergeDefaultMode.Mirror, { text: msg`Mirror sources` }],
+    [MergeDefaultMode.Sequence, { text: msg`Sequence sources` }],
+];
+
+export const MERGE_UNNUMBERED_MATCHING_SELECT_VALUES: SelectSettingValue<MergeUnnumberedChapterMatching>[] = [
+    [MergeUnnumberedChapterMatching.TitleScanlator, { text: msg`Match title and scanlator` }],
+    [MergeUnnumberedChapterMatching.KeepAll, { text: msg`Keep all unnumbered chapters` }],
+];
+
+export const MERGE_CHAPTER_DISPLAY_SELECT_VALUES: SelectSettingValue<MergeChapterDisplay>[] = [
+    [MergeChapterDisplay.Original, { text: msg`Original chapter names` }],
+    [MergeChapterDisplay.Normalized, { text: msg`Normalized chapter names` }],
+];
+
+export const MERGE_OFFLINE_MODE_SELECT_VALUES: SelectSettingValue<MergeOfflineMode>[] = [
+    [MergeOfflineMode.UseExisting, { text: msg`Use existing downloads` }],
+    [MergeOfflineMode.Materialize, { text: msg`Materialize merged chapters` }],
+    [MergeOfflineMode.OnlineOnly, { text: msg`Require online access` }],
+];
 
 export const IMAGE_PROCESSING_COMPRESSION = {
     min: 0,

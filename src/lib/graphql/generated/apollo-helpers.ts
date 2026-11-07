@@ -1230,7 +1230,16 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeChapterDisplay'
+    | 'mergeChapterLevelEnabled'
+    | 'mergeDefaultMode'
+    | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
+    | 'mergeFallbackSourcesEnabled'
+    | 'mergeMinimumSources'
+    | 'mergeOfflineMode'
+    | 'mergeSplitRevalidateOnUpdate'
+    | 'mergeUnnumberedChapterMatching'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -1334,7 +1343,16 @@ export type PartialSettingsTypeFieldPolicy = {
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeFallbackSourcesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeMinimumSources?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeOfflineMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeSplitRevalidateOnUpdate?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUnnumberedChapterMatching?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1669,7 +1687,16 @@ export type SettingsKeySpecifier = (
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeChapterDisplay'
+    | 'mergeChapterLevelEnabled'
+    | 'mergeDefaultMode'
+    | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
+    | 'mergeFallbackSourcesEnabled'
+    | 'mergeMinimumSources'
+    | 'mergeOfflineMode'
+    | 'mergeSplitRevalidateOnUpdate'
+    | 'mergeUnnumberedChapterMatching'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -1773,7 +1800,16 @@ export type SettingsFieldPolicy = {
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeFallbackSourcesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeMinimumSources?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeOfflineMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeSplitRevalidateOnUpdate?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUnnumberedChapterMatching?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1928,7 +1964,16 @@ export type SettingsTypeKeySpecifier = (
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeChapterDisplay'
+    | 'mergeChapterLevelEnabled'
+    | 'mergeDefaultMode'
+    | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
+    | 'mergeFallbackSourcesEnabled'
+    | 'mergeMinimumSources'
+    | 'mergeOfflineMode'
+    | 'mergeSplitRevalidateOnUpdate'
+    | 'mergeUnnumberedChapterMatching'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -2032,7 +2077,16 @@ export type SettingsTypeFieldPolicy = {
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeFallbackSourcesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeMinimumSources?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeOfflineMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeSplitRevalidateOnUpdate?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUnnumberedChapterMatching?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;

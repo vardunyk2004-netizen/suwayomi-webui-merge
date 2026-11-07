@@ -39,6 +39,7 @@ export const SelectSetting = <SettingValue extends string | number>({
     values,
     handleChange,
     disabled = false,
+    disabledDescription,
 }: {
     settingName: string;
     dialogDescription?: string;
@@ -46,6 +47,7 @@ export const SelectSetting = <SettingValue extends string | number>({
     values: SelectSettingValue<SettingValue>[];
     handleChange: (value: SettingValue) => void;
     disabled?: boolean;
+    disabledDescription?: string;
 }) => {
     const { t } = useLingui();
 
@@ -81,7 +83,13 @@ export const SelectSetting = <SettingValue extends string | number>({
             <ListItemButton disabled={disabled} onClick={() => setIsDialogOpen(true)}>
                 <ListItemText
                     primary={settingName}
-                    secondary={valueDisplayText ? t(valueDisplayText as MessageDescriptor) : t`Loading…`}
+                    secondary={
+                        disabled && disabledDescription
+                            ? t(disabledDescription)
+                            : valueDisplayText
+                              ? t(valueDisplayText as MessageDescriptor)
+                              : t`Loading…`
+                    }
                     slotProps={{
                         secondary: { sx: { display: 'flex', flexDirection: 'column' } },
                     }}

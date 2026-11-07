@@ -1409,6 +1409,27 @@ export type MangaUpdateType = {
     status: MangaJobStatus;
 };
 
+export enum MergeChapterDisplay {
+    Normalized = 'NORMALIZED',
+    Original = 'ORIGINAL',
+}
+
+export enum MergeDefaultMode {
+    Mirror = 'MIRROR',
+    Sequence = 'SEQUENCE',
+}
+
+export enum MergeOfflineMode {
+    Materialize = 'MATERIALIZE',
+    OnlineOnly = 'ONLINE_ONLY',
+    UseExisting = 'USE_EXISTING',
+}
+
+export enum MergeUnnumberedChapterMatching {
+    KeepAll = 'KEEP_ALL',
+    TitleScanlator = 'TITLE_SCANLATOR',
+}
+
 export type MetaConditionInput = {
     key?: InputMaybe<Scalars['String']['input']>;
     value?: InputMaybe<Scalars['String']['input']>;
@@ -2013,7 +2034,16 @@ export type PartialSettingsType = Settings & {
     maxLogFiles?: Maybe<Scalars['Int']['output']>;
     maxLogFolderSize?: Maybe<Scalars['String']['output']>;
     maxSourcesInParallel?: Maybe<Scalars['Int']['output']>;
+    mergeChapterDisplay?: Maybe<MergeChapterDisplay>;
+    mergeChapterLevelEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeDefaultMode?: Maybe<MergeDefaultMode>;
+    mergeDownloadOnceForMirrors?: Maybe<Scalars['Boolean']['output']>;
     mergeEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeFallbackSourcesEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeMinimumSources?: Maybe<Scalars['Int']['output']>;
+    mergeOfflineMode?: Maybe<MergeOfflineMode>;
+    mergeSplitRevalidateOnUpdate?: Maybe<Scalars['Boolean']['output']>;
+    mergeUnnumberedChapterMatching?: Maybe<MergeUnnumberedChapterMatching>;
     opdsCbzMimetype?: Maybe<CbzMediaType>;
     opdsChapterSortOrder?: Maybe<SortOrder>;
     opdsEnablePageReadProgress?: Maybe<Scalars['Boolean']['output']>;
@@ -2106,7 +2136,16 @@ export type PartialSettingsTypeInput = {
     maxLogFiles?: InputMaybe<Scalars['Int']['input']>;
     maxLogFolderSize?: InputMaybe<Scalars['String']['input']>;
     maxSourcesInParallel?: InputMaybe<Scalars['Int']['input']>;
+    mergeChapterDisplay?: InputMaybe<MergeChapterDisplay>;
+    mergeChapterLevelEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeDefaultMode?: InputMaybe<MergeDefaultMode>;
+    mergeDownloadOnceForMirrors?: InputMaybe<Scalars['Boolean']['input']>;
     mergeEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeFallbackSourcesEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeMinimumSources?: InputMaybe<Scalars['Int']['input']>;
+    mergeOfflineMode?: InputMaybe<MergeOfflineMode>;
+    mergeSplitRevalidateOnUpdate?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeUnnumberedChapterMatching?: InputMaybe<MergeUnnumberedChapterMatching>;
     opdsCbzMimetype?: InputMaybe<CbzMediaType>;
     opdsChapterSortOrder?: InputMaybe<SortOrder>;
     opdsEnablePageReadProgress?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2673,7 +2712,16 @@ export type Settings = {
     maxLogFiles?: Maybe<Scalars['Int']['output']>;
     maxLogFolderSize?: Maybe<Scalars['String']['output']>;
     maxSourcesInParallel?: Maybe<Scalars['Int']['output']>;
+    mergeChapterDisplay?: Maybe<MergeChapterDisplay>;
+    mergeChapterLevelEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeDefaultMode?: Maybe<MergeDefaultMode>;
+    mergeDownloadOnceForMirrors?: Maybe<Scalars['Boolean']['output']>;
     mergeEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeFallbackSourcesEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeMinimumSources?: Maybe<Scalars['Int']['output']>;
+    mergeOfflineMode?: Maybe<MergeOfflineMode>;
+    mergeSplitRevalidateOnUpdate?: Maybe<Scalars['Boolean']['output']>;
+    mergeUnnumberedChapterMatching?: Maybe<MergeUnnumberedChapterMatching>;
     opdsCbzMimetype?: Maybe<CbzMediaType>;
     opdsChapterSortOrder?: Maybe<SortOrder>;
     opdsEnablePageReadProgress?: Maybe<Scalars['Boolean']['output']>;
@@ -2833,7 +2881,16 @@ export type SettingsType = Settings & {
     maxLogFiles: Scalars['Int']['output'];
     maxLogFolderSize: Scalars['String']['output'];
     maxSourcesInParallel: Scalars['Int']['output'];
+    mergeChapterDisplay: MergeChapterDisplay;
+    mergeChapterLevelEnabled: Scalars['Boolean']['output'];
+    mergeDefaultMode: MergeDefaultMode;
+    mergeDownloadOnceForMirrors: Scalars['Boolean']['output'];
     mergeEnabled: Scalars['Boolean']['output'];
+    mergeFallbackSourcesEnabled: Scalars['Boolean']['output'];
+    mergeMinimumSources: Scalars['Int']['output'];
+    mergeOfflineMode: MergeOfflineMode;
+    mergeSplitRevalidateOnUpdate: Scalars['Boolean']['output'];
+    mergeUnnumberedChapterMatching: MergeUnnumberedChapterMatching;
     opdsCbzMimetype: CbzMediaType;
     opdsChapterSortOrder: SortOrder;
     opdsEnablePageReadProgress: Scalars['Boolean']['output'];

@@ -42,6 +42,7 @@ type BaseProps = {
     handleUpdate: (value: number) => void;
     showSlider?: never;
     disabled?: boolean;
+    disabledDescription?: string;
     listItemTextSx?: SxProps<Theme>;
     handleLiveUpdate?: (value: number) => void;
 };
@@ -67,6 +68,7 @@ export const NumberSetting = ({
     handleUpdate,
     showSlider,
     disabled = false,
+    disabledDescription,
     handleLiveUpdate,
     listItemTextSx: sx,
 }: Props) => {
@@ -120,7 +122,7 @@ export const NumberSetting = ({
                 {settingIcon ? <ListItemIcon>{settingIcon}</ListItemIcon> : null}
                 <ListItemText
                     primary={settingTitle}
-                    secondary={settingValue}
+                    secondary={disabled && disabledDescription ? t(disabledDescription) : settingValue}
                     sx={sx}
                     slotProps={{
                         secondary: { sx: { display: 'flex', flexDirection: 'column' } },
