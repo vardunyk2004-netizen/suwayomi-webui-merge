@@ -170,6 +170,9 @@ export const SERVER_SETTINGS = gql`
         lifecycleTrashRetentionDays
         lifecycleRestoreSourcesOnRemoveMerged
         lifecycleConfirmPurgeText
+        mergeUpdateReapplyPlan
+        mergeUpdateIsolateSourceFailures
+        mergeDetectRemovedChapters
         duplicatesEnabled
         reindexEnabled
         doctorEnabled
