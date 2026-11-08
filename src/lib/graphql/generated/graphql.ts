@@ -3194,6 +3194,11 @@ export type ServerSettingsFragment = {
     mergeBackupFlattenExport: boolean;
     mergeOpdsVisibility: Types.MergeOpdsVisibility;
     duplicatesEnabled: boolean;
+    duplicatesStrongThreshold: number;
+    duplicatesMinThreshold: number;
+    duplicatesWeightTitle: number;
+    duplicatesWeightCoreTitle: number;
+    duplicatesWeightToken: number;
     reindexEnabled: boolean;
     doctorEnabled: boolean;
     downloadConversions: Array<{
@@ -3338,6 +3343,11 @@ export type ResetServerSettingsMutation = {
             mergeBackupFlattenExport: boolean;
             mergeOpdsVisibility: Types.MergeOpdsVisibility;
             duplicatesEnabled: boolean;
+            duplicatesStrongThreshold: number;
+            duplicatesMinThreshold: number;
+            duplicatesWeightTitle: number;
+            duplicatesWeightCoreTitle: number;
+            duplicatesWeightToken: number;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
             downloadConversions: Array<{
@@ -3492,6 +3502,11 @@ export type UpdateServerSettingsMutation = {
             mergeBackupFlattenExport: boolean;
             mergeOpdsVisibility: Types.MergeOpdsVisibility;
             duplicatesEnabled: boolean;
+            duplicatesStrongThreshold: number;
+            duplicatesMinThreshold: number;
+            duplicatesWeightTitle: number;
+            duplicatesWeightCoreTitle: number;
+            duplicatesWeightToken: number;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
             downloadConversions: Array<{
@@ -3642,6 +3657,11 @@ export type GetServerSettingsQuery = {
         mergeBackupFlattenExport: boolean;
         mergeOpdsVisibility: Types.MergeOpdsVisibility;
         duplicatesEnabled: boolean;
+        duplicatesStrongThreshold: number;
+        duplicatesMinThreshold: number;
+        duplicatesWeightTitle: number;
+        duplicatesWeightCoreTitle: number;
+        duplicatesWeightToken: number;
         reindexEnabled: boolean;
         doctorEnabled: boolean;
         downloadConversions: Array<{
