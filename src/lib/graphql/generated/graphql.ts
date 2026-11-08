@@ -3186,6 +3186,9 @@ export type ServerSettingsFragment = {
     lifecycleTrashRetentionDays: number;
     lifecycleRestoreSourcesOnRemoveMerged: boolean;
     lifecycleConfirmPurgeText: boolean;
+    mergeUpdateReapplyPlan: boolean;
+    mergeUpdateIsolateSourceFailures: boolean;
+    mergeDetectRemovedChapters: boolean;
     duplicatesEnabled: boolean;
     reindexEnabled: boolean;
     doctorEnabled: boolean;
@@ -3323,6 +3326,9 @@ export type ResetServerSettingsMutation = {
             lifecycleTrashRetentionDays: number;
             lifecycleRestoreSourcesOnRemoveMerged: boolean;
             lifecycleConfirmPurgeText: boolean;
+            mergeUpdateReapplyPlan: boolean;
+            mergeUpdateIsolateSourceFailures: boolean;
+            mergeDetectRemovedChapters: boolean;
             duplicatesEnabled: boolean;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
@@ -3470,6 +3476,9 @@ export type UpdateServerSettingsMutation = {
             lifecycleTrashRetentionDays: number;
             lifecycleRestoreSourcesOnRemoveMerged: boolean;
             lifecycleConfirmPurgeText: boolean;
+            mergeUpdateReapplyPlan: boolean;
+            mergeUpdateIsolateSourceFailures: boolean;
+            mergeDetectRemovedChapters: boolean;
             duplicatesEnabled: boolean;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
@@ -3613,6 +3622,9 @@ export type GetServerSettingsQuery = {
         lifecycleTrashRetentionDays: number;
         lifecycleRestoreSourcesOnRemoveMerged: boolean;
         lifecycleConfirmPurgeText: boolean;
+        mergeUpdateReapplyPlan: boolean;
+        mergeUpdateIsolateSourceFailures: boolean;
+        mergeDetectRemovedChapters: boolean;
         duplicatesEnabled: boolean;
         reindexEnabled: boolean;
         doctorEnabled: boolean;
