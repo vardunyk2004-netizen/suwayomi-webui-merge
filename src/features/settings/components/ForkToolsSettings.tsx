@@ -22,6 +22,9 @@ import {
     MERGE_DEFAULT_MODE_SELECT_VALUES,
     MERGE_OFFLINE_MODE_SELECT_VALUES,
     MERGE_UNNUMBERED_MATCHING_SELECT_VALUES,
+    PROGRESS_BOOKMARK_POLICY_SELECT_VALUES,
+    PROGRESS_CONFLICT_POLICY_SELECT_VALUES,
+    PROGRESS_DIRECTION_SELECT_VALUES,
 } from '@/features/settings/Settings.constants.ts';
 
 type ForkToolSettings = Pick<
@@ -38,6 +41,11 @@ type ForkToolSettings = Pick<
     | 'mergeDownloadOnceForMirrors'
     | 'mergeChapterLevelEnabled'
     | 'mergeSplitRevalidateOnUpdate'
+    | 'progressSyncEnabled'
+    | 'progressConflictPolicy'
+    | 'progressReadIsMonotonic'
+    | 'progressBookmarkPolicy'
+    | 'progressDirection'
     | 'duplicatesEnabled'
     | 'reindexEnabled'
     | 'doctorEnabled'
@@ -52,6 +60,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
     const { t } = useLingui();
     const dependentSwitchDisabled = settings.forkStockMode;
     const mergeSettingsDisabled = dependentSwitchDisabled || !settings.mergeEnabled;
+    const progressSettingsDisabled = mergeSettingsDisabled || !settings.progressSyncEnabled;
 
     return (
         <List
@@ -207,6 +216,65 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                     onChange={(event) => updateSettings({ mergeSplitRevalidateOnUpdate: event.target.checked })}
                 />
             </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Synchronize reading progress`}
+                    secondary={
+                        mergeSettingsDisabled
+                            ? t`Enable manga merging to change this setting.`
+                            : t`Keep read state and progress aligned between merged and source chapters.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.progressSyncEnabled}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) => updateSettings({ progressSyncEnabled: event.target.checked })}
+                />
+            </ListItem>
+            <SelectSetting
+                settingName={t`Progress conflict policy`}
+                dialogDescription={t`Choose which chapter's progress wins when source and merged progress differ.`}
+                value={settings.progressConflictPolicy}
+                values={PROGRESS_CONFLICT_POLICY_SELECT_VALUES}
+                disabled={progressSettingsDisabled}
+                disabledDescription={t`Enable progress synchronization to change this setting.`}
+                handleChange={(value) => updateSettings({ progressConflictPolicy: value })}
+            />
+            <ListItem>
+                <ListItemText
+                    primary={t`Keep read progress monotonic`}
+                    secondary={
+                        progressSettingsDisabled
+                            ? t`Enable progress synchronization to change this setting.`
+                            : t`Prevent synchronized progress from changing a read chapter back to unread.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.progressReadIsMonotonic}
+                    disabled={progressSettingsDisabled}
+                    onChange={(event) => updateSettings({ progressReadIsMonotonic: event.target.checked })}
+                />
+            </ListItem>
+            <SelectSetting
+                settingName={t`Progress bookmark policy`}
+                dialogDescription={t`Choose how bookmarks are combined between source and merged chapters.`}
+                value={settings.progressBookmarkPolicy}
+                values={PROGRESS_BOOKMARK_POLICY_SELECT_VALUES}
+                disabled={progressSettingsDisabled}
+                disabledDescription={t`Enable progress synchronization to change this setting.`}
+                handleChange={(value) => updateSettings({ progressBookmarkPolicy: value })}
+            />
+            <SelectSetting
+                settingName={t`Progress synchronization direction`}
+                dialogDescription={t`Choose whether progress synchronizes both ways or only to source chapters.`}
+                value={settings.progressDirection}
+                values={PROGRESS_DIRECTION_SELECT_VALUES}
+                disabled={progressSettingsDisabled}
+                disabledDescription={t`Enable progress synchronization to change this setting.`}
+                handleChange={(value) => updateSettings({ progressDirection: value })}
+            />
             <ListItem>
                 <ListItemText primary={t`Duplicate detection`} secondary={t`Enable duplicate manga detection.`} />
                 <Switch

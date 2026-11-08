@@ -29,6 +29,9 @@ import {
     MergeDefaultMode,
     MergeOfflineMode,
     MergeUnnumberedChapterMatching,
+    ProgressBookmarkPolicy,
+    ProgressConflictPolicy,
+    ProgressDirection,
     StartSyncResult,
     SyncState,
     WebUiChannel,
@@ -316,6 +319,22 @@ export const MERGE_OFFLINE_MODE_SELECT_VALUES: SelectSettingValue<MergeOfflineMo
     [MergeOfflineMode.UseExisting, { text: msg`Use existing downloads` }],
     [MergeOfflineMode.Materialize, { text: msg`Materialize merged chapters` }],
     [MergeOfflineMode.OnlineOnly, { text: msg`Require online access` }],
+];
+
+export const PROGRESS_CONFLICT_POLICY_SELECT_VALUES: SelectSettingValue<ProgressConflictPolicy>[] = [
+    [ProgressConflictPolicy.NewestWins, { text: msg`Newest progress wins` }],
+    [ProgressConflictPolicy.VirtualWins, { text: msg`Merged chapter progress wins` }],
+    [ProgressConflictPolicy.SourceWins, { text: msg`Source chapter progress wins` }],
+];
+
+export const PROGRESS_BOOKMARK_POLICY_SELECT_VALUES: SelectSettingValue<ProgressBookmarkPolicy>[] = [
+    [ProgressBookmarkPolicy.Union, { text: msg`Keep bookmarks from both chapters` }],
+    [ProgressBookmarkPolicy.FollowLatest, { text: msg`Use the latest bookmark change` }],
+];
+
+export const PROGRESS_DIRECTION_SELECT_VALUES: SelectSettingValue<ProgressDirection>[] = [
+    [ProgressDirection.Both, { text: msg`Synchronize both ways` }],
+    [ProgressDirection.ToSourceOnly, { text: msg`Synchronize only to source chapters` }],
 ];
 
 export const IMAGE_PROCESSING_COMPRESSION = {
