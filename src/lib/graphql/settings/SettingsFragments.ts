@@ -178,6 +178,11 @@ export const SERVER_SETTINGS = gql`
         mergeBackupFlattenExport
         mergeOpdsVisibility
         duplicatesEnabled
+        duplicatesStrongThreshold
+        duplicatesMinThreshold
+        duplicatesWeightTitle
+        duplicatesWeightCoreTitle
+        duplicatesWeightToken
         reindexEnabled
         doctorEnabled
     }
