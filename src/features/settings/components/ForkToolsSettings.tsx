@@ -21,6 +21,7 @@ import {
     MERGE_DEDUPE_STRATEGY_SELECT_VALUES,
     MERGE_DEFAULT_MODE_SELECT_VALUES,
     MERGE_OFFLINE_MODE_SELECT_VALUES,
+    MERGE_OPDS_VISIBILITY_SELECT_VALUES,
     MERGE_UNNUMBERED_MATCHING_SELECT_VALUES,
     PROGRESS_BOOKMARK_POLICY_SELECT_VALUES,
     PROGRESS_CONFLICT_POLICY_SELECT_VALUES,
@@ -53,6 +54,10 @@ type ForkToolSettings = Pick<
     | 'mergeUpdateReapplyPlan'
     | 'mergeUpdateIsolateSourceFailures'
     | 'mergeDetectRemovedChapters'
+    | 'mergeExcludeFromSync'
+    | 'mergeBackupEnabled'
+    | 'mergeBackupFlattenExport'
+    | 'mergeOpdsVisibility'
     | 'duplicatesEnabled'
     | 'reindexEnabled'
     | 'doctorEnabled'
@@ -69,6 +74,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
     const mergeSettingsDisabled = dependentSwitchDisabled || !settings.mergeEnabled;
     const progressSettingsDisabled = mergeSettingsDisabled || !settings.progressSyncEnabled;
     const lifecycleSettingsDisabled = mergeSettingsDisabled || !settings.lifecycleTrashEnabled;
+    const backupSettingsDisabled = mergeSettingsDisabled || !settings.mergeBackupEnabled;
 
     return (
         <List
@@ -395,6 +401,63 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                     onChange={(event) => updateSettings({ mergeDetectRemovedChapters: event.target.checked })}
                 />
             </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Exclude merge data from SyncYomi`}
+                    secondary={
+                        mergeSettingsDisabled
+                            ? t`Enable manga merging to change this setting.`
+                            : t`Keep fork-owned merge, lifecycle and journal data out of SyncYomi.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.mergeExcludeFromSync}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) => updateSettings({ mergeExcludeFromSync: event.target.checked })}
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Include merge data in backups`}
+                    secondary={
+                        mergeSettingsDisabled
+                            ? t`Enable manga merging to change this setting.`
+                            : t`Include merge configuration and source links in server backups.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.mergeBackupEnabled}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) => updateSettings({ mergeBackupEnabled: event.target.checked })}
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Flatten merged manga in backup exports`}
+                    secondary={
+                        backupSettingsDisabled
+                            ? t`Enable merge backups to change this setting.`
+                            : t`Export merged manga as ordinary manga using the preferred source chapters.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.mergeBackupFlattenExport}
+                    disabled={backupSettingsDisabled}
+                    onChange={(event) => updateSettings({ mergeBackupFlattenExport: event.target.checked })}
+                />
+            </ListItem>
+            <SelectSetting
+                settingName={t`OPDS merged manga visibility`}
+                dialogDescription={t`Choose whether OPDS feeds show merged manga only or both merged and source manga.`}
+                value={settings.mergeOpdsVisibility}
+                values={MERGE_OPDS_VISIBILITY_SELECT_VALUES}
+                disabled={mergeSettingsDisabled}
+                disabledDescription={t`Enable manga merging to change this setting.`}
+                handleChange={(value) => updateSettings({ mergeOpdsVisibility: value })}
+            />
             <ListItem>
                 <ListItemText primary={t`Duplicate detection`} secondary={t`Enable duplicate manga detection.`} />
                 <Switch

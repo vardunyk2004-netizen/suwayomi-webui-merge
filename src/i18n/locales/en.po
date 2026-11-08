@@ -4519,3 +4519,47 @@ msgstr "Fork stock mode"
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Disable all fork tools and use stock server behavior."
 msgstr "Disable all fork tools and use stock server behavior."
+
+#: src/features/settings/Settings.constants.ts
+msgid "Merged manga only"
+msgstr "Merged manga only"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Merged and source manga"
+msgstr "Merged and source manga"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Exclude merge data from SyncYomi"
+msgstr "Exclude merge data from SyncYomi"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Keep fork-owned merge, lifecycle and journal data out of SyncYomi."
+msgstr "Keep fork-owned merge, lifecycle and journal data out of SyncYomi."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Include merge data in backups"
+msgstr "Include merge data in backups"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Include merge configuration and source links in server backups."
+msgstr "Include merge configuration and source links in server backups."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Flatten merged manga in backup exports"
+msgstr "Flatten merged manga in backup exports"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable merge backups to change this setting."
+msgstr "Enable merge backups to change this setting."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Export merged manga as ordinary manga using the preferred source chapters."
+msgstr "Export merged manga as ordinary manga using the preferred source chapters."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "OPDS merged manga visibility"
+msgstr "OPDS merged manga visibility"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose whether OPDS feeds show merged manga only or both merged and source manga."
+msgstr "Choose whether OPDS feeds show merged manga only or both merged and source manga."

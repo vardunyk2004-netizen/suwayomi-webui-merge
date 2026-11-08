@@ -27,6 +27,7 @@ import {
     MergeChapterDisplay,
     MergeDedupeStrategy,
     MergeDefaultMode,
+    MergeOpdsVisibility,
     MergeOfflineMode,
     MergeUnnumberedChapterMatching,
     ProgressBookmarkPolicy,
@@ -319,6 +320,11 @@ export const MERGE_OFFLINE_MODE_SELECT_VALUES: SelectSettingValue<MergeOfflineMo
     [MergeOfflineMode.UseExisting, { text: msg`Use existing downloads` }],
     [MergeOfflineMode.Materialize, { text: msg`Materialize merged chapters` }],
     [MergeOfflineMode.OnlineOnly, { text: msg`Require online access` }],
+];
+
+export const MERGE_OPDS_VISIBILITY_SELECT_VALUES: SelectSettingValue<MergeOpdsVisibility>[] = [
+    [MergeOpdsVisibility.MergedOnly, { text: msg`Merged manga only` }],
+    [MergeOpdsVisibility.Both, { text: msg`Merged and source manga` }],
 ];
 
 export const PROGRESS_CONFLICT_POLICY_SELECT_VALUES: SelectSettingValue<ProgressConflictPolicy>[] = [
