@@ -3177,6 +3177,11 @@ export type ServerSettingsFragment = {
     mergeDownloadOnceForMirrors: boolean;
     mergeChapterLevelEnabled: boolean;
     mergeSplitRevalidateOnUpdate: boolean;
+    progressSyncEnabled: boolean;
+    progressConflictPolicy: Types.ProgressConflictPolicy;
+    progressReadIsMonotonic: boolean;
+    progressBookmarkPolicy: Types.ProgressBookmarkPolicy;
+    progressDirection: Types.ProgressDirection;
     duplicatesEnabled: boolean;
     reindexEnabled: boolean;
     doctorEnabled: boolean;
@@ -3305,6 +3310,11 @@ export type ResetServerSettingsMutation = {
             mergeDownloadOnceForMirrors: boolean;
             mergeChapterLevelEnabled: boolean;
             mergeSplitRevalidateOnUpdate: boolean;
+            progressSyncEnabled: boolean;
+            progressConflictPolicy: Types.ProgressConflictPolicy;
+            progressReadIsMonotonic: boolean;
+            progressBookmarkPolicy: Types.ProgressBookmarkPolicy;
+            progressDirection: Types.ProgressDirection;
             duplicatesEnabled: boolean;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
@@ -3443,6 +3453,11 @@ export type UpdateServerSettingsMutation = {
             mergeDownloadOnceForMirrors: boolean;
             mergeChapterLevelEnabled: boolean;
             mergeSplitRevalidateOnUpdate: boolean;
+            progressSyncEnabled: boolean;
+            progressConflictPolicy: Types.ProgressConflictPolicy;
+            progressReadIsMonotonic: boolean;
+            progressBookmarkPolicy: Types.ProgressBookmarkPolicy;
+            progressDirection: Types.ProgressDirection;
             duplicatesEnabled: boolean;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
@@ -3577,6 +3592,11 @@ export type GetServerSettingsQuery = {
         mergeDownloadOnceForMirrors: boolean;
         mergeChapterLevelEnabled: boolean;
         mergeSplitRevalidateOnUpdate: boolean;
+        progressSyncEnabled: boolean;
+        progressConflictPolicy: Types.ProgressConflictPolicy;
+        progressReadIsMonotonic: boolean;
+        progressBookmarkPolicy: Types.ProgressBookmarkPolicy;
+        progressDirection: Types.ProgressDirection;
         duplicatesEnabled: boolean;
         reindexEnabled: boolean;
         doctorEnabled: boolean;
