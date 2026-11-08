@@ -46,6 +46,10 @@ type ForkToolSettings = Pick<
     | 'progressReadIsMonotonic'
     | 'progressBookmarkPolicy'
     | 'progressDirection'
+    | 'lifecycleTrashEnabled'
+    | 'lifecycleTrashRetentionDays'
+    | 'lifecycleRestoreSourcesOnRemoveMerged'
+    | 'lifecycleConfirmPurgeText'
     | 'duplicatesEnabled'
     | 'reindexEnabled'
     | 'doctorEnabled'
@@ -61,6 +65,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
     const dependentSwitchDisabled = settings.forkStockMode;
     const mergeSettingsDisabled = dependentSwitchDisabled || !settings.mergeEnabled;
     const progressSettingsDisabled = mergeSettingsDisabled || !settings.progressSyncEnabled;
+    const lifecycleSettingsDisabled = mergeSettingsDisabled || !settings.lifecycleTrashEnabled;
 
     return (
         <List
@@ -275,6 +280,70 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 disabledDescription={t`Enable progress synchronization to change this setting.`}
                 handleChange={(value) => updateSettings({ progressDirection: value })}
             />
+            <ListItem>
+                <ListItemText
+                    primary={t`Enable trash for removed fork items`}
+                    secondary={
+                        mergeSettingsDisabled
+                            ? t`Enable manga merging to change this setting.`
+                            : t`Keep soft-removed fork items in trash so they can be restored.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.lifecycleTrashEnabled}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) => updateSettings({ lifecycleTrashEnabled: event.target.checked })}
+                />
+            </ListItem>
+            <NumberSetting
+                settingTitle={t`Trash retention days`}
+                dialogDescription={t`Set how long trashed items are retained; zero keeps them indefinitely.`}
+                settingValue={settings.lifecycleTrashRetentionDays.toString()}
+                value={settings.lifecycleTrashRetentionDays}
+                defaultValue={30}
+                minValue={0}
+                maxValue={3650}
+                stepSize={1}
+                valueUnit={t`days`}
+                disabled={lifecycleSettingsDisabled}
+                disabledDescription={t`Enable trash to change this setting.`}
+                handleUpdate={(value) => updateSettings({ lifecycleTrashRetentionDays: value })}
+            />
+            <ListItem>
+                <ListItemText
+                    primary={t`Restore sources when a merged manga is removed`}
+                    secondary={
+                        mergeSettingsDisabled
+                            ? t`Enable manga merging to change this setting.`
+                            : t`Return source manga to the library when their merged manga is removed.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.lifecycleRestoreSourcesOnRemoveMerged}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) =>
+                        updateSettings({ lifecycleRestoreSourcesOnRemoveMerged: event.target.checked })
+                    }
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Require typed confirmation before purge`}
+                    secondary={
+                        lifecycleSettingsDisabled
+                            ? t`Enable trash to change this setting.`
+                            : t`Require typing the confirmation phrase before permanently purging trash.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.lifecycleConfirmPurgeText}
+                    disabled={lifecycleSettingsDisabled}
+                    onChange={(event) => updateSettings({ lifecycleConfirmPurgeText: event.target.checked })}
+                />
+            </ListItem>
             <ListItem>
                 <ListItemText primary={t`Duplicate detection`} secondary={t`Enable duplicate manga detection.`} />
                 <Switch
