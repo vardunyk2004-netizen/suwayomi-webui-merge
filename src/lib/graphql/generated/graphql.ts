@@ -3189,6 +3189,10 @@ export type ServerSettingsFragment = {
     mergeUpdateReapplyPlan: boolean;
     mergeUpdateIsolateSourceFailures: boolean;
     mergeDetectRemovedChapters: boolean;
+    mergeExcludeFromSync: boolean;
+    mergeBackupEnabled: boolean;
+    mergeBackupFlattenExport: boolean;
+    mergeOpdsVisibility: Types.MergeOpdsVisibility;
     duplicatesEnabled: boolean;
     reindexEnabled: boolean;
     doctorEnabled: boolean;
@@ -3329,6 +3333,10 @@ export type ResetServerSettingsMutation = {
             mergeUpdateReapplyPlan: boolean;
             mergeUpdateIsolateSourceFailures: boolean;
             mergeDetectRemovedChapters: boolean;
+            mergeExcludeFromSync: boolean;
+            mergeBackupEnabled: boolean;
+            mergeBackupFlattenExport: boolean;
+            mergeOpdsVisibility: Types.MergeOpdsVisibility;
             duplicatesEnabled: boolean;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
@@ -3479,6 +3487,10 @@ export type UpdateServerSettingsMutation = {
             mergeUpdateReapplyPlan: boolean;
             mergeUpdateIsolateSourceFailures: boolean;
             mergeDetectRemovedChapters: boolean;
+            mergeExcludeFromSync: boolean;
+            mergeBackupEnabled: boolean;
+            mergeBackupFlattenExport: boolean;
+            mergeOpdsVisibility: Types.MergeOpdsVisibility;
             duplicatesEnabled: boolean;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
@@ -3625,6 +3637,10 @@ export type GetServerSettingsQuery = {
         mergeUpdateReapplyPlan: boolean;
         mergeUpdateIsolateSourceFailures: boolean;
         mergeDetectRemovedChapters: boolean;
+        mergeExcludeFromSync: boolean;
+        mergeBackupEnabled: boolean;
+        mergeBackupFlattenExport: boolean;
+        mergeOpdsVisibility: Types.MergeOpdsVisibility;
         duplicatesEnabled: boolean;
         reindexEnabled: boolean;
         doctorEnabled: boolean;
