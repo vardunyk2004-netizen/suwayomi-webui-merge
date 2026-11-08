@@ -92,6 +92,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.forkStockMode}
+                    slotProps={{ input: { 'aria-label': t`Fork stock mode` } }}
                     onChange={(event) => updateSettings({ forkStockMode: event.target.checked })}
                 />
             </ListItem>
@@ -103,6 +104,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeEnabled}
+                    slotProps={{ input: { 'aria-label': t`Manga merging` } }}
                     disabled={dependentSwitchDisabled}
                     onChange={(event) => updateSettings({ mergeEnabled: event.target.checked })}
                 />
@@ -169,6 +171,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeFallbackSourcesEnabled}
+                    slotProps={{ input: { 'aria-label': t`Fallback sources` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeFallbackSourcesEnabled: event.target.checked })}
                 />
@@ -194,6 +197,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeDownloadOnceForMirrors}
+                    slotProps={{ input: { 'aria-label': t`Download mirror chapters once` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeDownloadOnceForMirrors: event.target.checked })}
                 />
@@ -210,6 +214,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeChapterLevelEnabled}
+                    slotProps={{ input: { 'aria-label': t`Chapter-level merge and split` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeChapterLevelEnabled: event.target.checked })}
                 />
@@ -226,6 +231,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeSplitRevalidateOnUpdate}
+                    slotProps={{ input: { 'aria-label': t`Revalidate splits on update` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeSplitRevalidateOnUpdate: event.target.checked })}
                 />
@@ -242,6 +248,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.progressSyncEnabled}
+                    slotProps={{ input: { 'aria-label': t`Synchronize reading progress` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ progressSyncEnabled: event.target.checked })}
                 />
@@ -267,6 +274,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.progressReadIsMonotonic}
+                    slotProps={{ input: { 'aria-label': t`Keep read progress monotonic` } }}
                     disabled={progressSettingsDisabled}
                     onChange={(event) => updateSettings({ progressReadIsMonotonic: event.target.checked })}
                 />
@@ -301,6 +309,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.lifecycleTrashEnabled}
+                    slotProps={{ input: { 'aria-label': t`Enable trash for removed fork items` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ lifecycleTrashEnabled: event.target.checked })}
                 />
@@ -331,6 +340,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.lifecycleRestoreSourcesOnRemoveMerged}
+                    slotProps={{ input: { 'aria-label': t`Restore sources when a merged manga is removed` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) =>
                         updateSettings({ lifecycleRestoreSourcesOnRemoveMerged: event.target.checked })
@@ -349,6 +359,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.lifecycleConfirmPurgeText}
+                    slotProps={{ input: { 'aria-label': t`Require typed confirmation before purge` } }}
                     disabled={lifecycleSettingsDisabled}
                     onChange={(event) => updateSettings({ lifecycleConfirmPurgeText: event.target.checked })}
                 />
@@ -365,6 +376,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeUpdateReapplyPlan}
+                    slotProps={{ input: { 'aria-label': t`Reapply merge plan on source updates` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeUpdateReapplyPlan: event.target.checked })}
                 />
@@ -381,6 +393,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeUpdateIsolateSourceFailures}
+                    slotProps={{ input: { 'aria-label': t`Continue after a source update failure` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeUpdateIsolateSourceFailures: event.target.checked })}
                 />
@@ -397,6 +410,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeDetectRemovedChapters}
+                    slotProps={{ input: { 'aria-label': t`Detect removed source chapters` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeDetectRemovedChapters: event.target.checked })}
                 />
@@ -413,6 +427,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeExcludeFromSync}
+                    slotProps={{ input: { 'aria-label': t`Exclude merge data from SyncYomi` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeExcludeFromSync: event.target.checked })}
                 />
@@ -429,6 +444,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeBackupEnabled}
+                    slotProps={{ input: { 'aria-label': t`Include merge data` } }}
                     disabled={mergeSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeBackupEnabled: event.target.checked })}
                 />
@@ -445,6 +461,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.mergeBackupFlattenExport}
+                    slotProps={{ input: { 'aria-label': t`Flatten merged export` } }}
                     disabled={backupSettingsDisabled}
                     onChange={(event) => updateSettings({ mergeBackupFlattenExport: event.target.checked })}
                 />
@@ -463,6 +480,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.duplicatesEnabled}
+                    slotProps={{ input: { 'aria-label': t`Duplicate detection` } }}
                     disabled={dependentSwitchDisabled}
                     onChange={(event) => updateSettings({ duplicatesEnabled: event.target.checked })}
                 />
@@ -472,6 +490,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.reindexEnabled}
+                    slotProps={{ input: { 'aria-label': t`Download reindex` } }}
                     disabled={dependentSwitchDisabled}
                     onChange={(event) => updateSettings({ reindexEnabled: event.target.checked })}
                 />
@@ -484,6 +503,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 <Switch
                     edge="end"
                     checked={settings.doctorEnabled}
+                    slotProps={{ input: { 'aria-label': t`Consistency checks` } }}
                     disabled={dependentSwitchDisabled}
                     onChange={(event) => updateSettings({ doctorEnabled: event.target.checked })}
                 />
