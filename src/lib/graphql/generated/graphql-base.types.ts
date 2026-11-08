@@ -634,6 +634,12 @@ export type DequeueChapterDownloadsPayload = {
     downloadStatus: DownloadStatus;
 };
 
+export enum DoctorSchedule {
+    Daily = 'DAILY',
+    Off = 'OFF',
+    Weekly = 'WEEKLY',
+}
+
 export type DoubleFilterInput = {
     distinctFrom?: InputMaybe<Scalars['Float']['input']>;
     distinctFromAll?: InputMaybe<Array<Scalars['Float']['input']>>;
@@ -1027,6 +1033,13 @@ export type FilterChangeInput = {
     textState?: InputMaybe<Scalars['String']['input']>;
     triState?: InputMaybe<TriState>;
 };
+
+export enum ForkFeaturesAvailableStatus {
+    Available = 'AVAILABLE',
+    DisabledBySetting = 'DISABLED_BY_SETTING',
+    DisabledByStockMode = 'DISABLED_BY_STOCK_MODE',
+    Unavailable = 'UNAVAILABLE',
+}
 
 export type GlobalMetaNodeList = NodeList & {
     __typename?: 'GlobalMetaNodeList';
@@ -1430,6 +1443,17 @@ export enum MergeOfflineMode {
     Materialize = 'MATERIALIZE',
     OnlineOnly = 'ONLINE_ONLY',
     UseExisting = 'USE_EXISTING',
+}
+
+export enum MergeOpdsVisibility {
+    Both = 'BOTH',
+    MergedOnly = 'MERGED_ONLY',
+}
+
+export enum MergeTrackerPolicy {
+    Copy = 'COPY',
+    Ignore = 'IGNORE',
+    Merge = 'MERGE',
 }
 
 export enum MergeUnnumberedChapterMatching {
@@ -1995,10 +2019,26 @@ export type PartialSettingsType = Settings & {
     databaseUsername?: Maybe<Scalars['String']['output']>;
     debugLogsEnabled?: Maybe<Scalars['Boolean']['output']>;
     doctorEnabled?: Maybe<Scalars['Boolean']['output']>;
+    doctorSchedule?: Maybe<DoctorSchedule>;
     downloadAsCbz?: Maybe<Scalars['Boolean']['output']>;
     downloadConversions?: Maybe<Array<SettingsDownloadConversionType>>;
     downloadsPath?: Maybe<Scalars['String']['output']>;
+    duplicatesAutoSuggestMerges?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesBackgroundRefresh?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesBlockSequels?: Maybe<Scalars['Boolean']['output']>;
     duplicatesEnabled?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesMinThreshold?: Maybe<Scalars['Int']['output']>;
+    duplicatesStrongThreshold?: Maybe<Scalars['Int']['output']>;
+    duplicatesUseThumbnailHash?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesUseTrackerMatching?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesWeightAlias?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightChapter?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightCoreTitle?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightThumbnail?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightTitle?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightToken?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightTracker?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightUrl?: Maybe<Scalars['Float']['output']>;
     electronPath?: Maybe<Scalars['String']['output']>;
     excludeCompleted?: Maybe<Scalars['Boolean']['output']>;
     excludeEntryWithUnreadChapters?: Maybe<Scalars['Boolean']['output']>;
@@ -2036,22 +2076,35 @@ export type PartialSettingsType = Settings & {
     koreaderSyncUserkey?: Maybe<Scalars['String']['output']>;
     /** @deprecated Moved to preference store. User is supposed to use a login/logout mutation, replace with MOVE TO PREFERENCES */
     koreaderSyncUsername?: Maybe<Scalars['String']['output']>;
+    lifecycleConfirmPurgeText?: Maybe<Scalars['Boolean']['output']>;
+    lifecycleRestoreSourcesOnRemoveMerged?: Maybe<Scalars['Boolean']['output']>;
+    lifecycleTrashEnabled?: Maybe<Scalars['Boolean']['output']>;
+    lifecycleTrashRetentionDays?: Maybe<Scalars['Int']['output']>;
     localSourcePath?: Maybe<Scalars['String']['output']>;
     maxLogFileSize?: Maybe<Scalars['String']['output']>;
     maxLogFiles?: Maybe<Scalars['Int']['output']>;
     maxLogFolderSize?: Maybe<Scalars['String']['output']>;
     maxSourcesInParallel?: Maybe<Scalars['Int']['output']>;
+    mergeBackupEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeBackupFlattenExport?: Maybe<Scalars['Boolean']['output']>;
     mergeChapterDisplay?: Maybe<MergeChapterDisplay>;
     mergeChapterLevelEnabled?: Maybe<Scalars['Boolean']['output']>;
     mergeDedupeStrategy?: Maybe<MergeDedupeStrategy>;
     mergeDefaultMode?: Maybe<MergeDefaultMode>;
+    mergeDetectRemovedChapters?: Maybe<Scalars['Boolean']['output']>;
     mergeDownloadOnceForMirrors?: Maybe<Scalars['Boolean']['output']>;
     mergeEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeExcludeFromSync?: Maybe<Scalars['Boolean']['output']>;
     mergeFallbackSourcesEnabled?: Maybe<Scalars['Boolean']['output']>;
     mergeMinimumSources?: Maybe<Scalars['Int']['output']>;
     mergeOfflineMode?: Maybe<MergeOfflineMode>;
+    mergeOpdsVisibility?: Maybe<MergeOpdsVisibility>;
     mergeSplitRevalidateOnUpdate?: Maybe<Scalars['Boolean']['output']>;
+    mergeTrackerPolicy?: Maybe<MergeTrackerPolicy>;
     mergeUnnumberedChapterMatching?: Maybe<MergeUnnumberedChapterMatching>;
+    mergeUpdateIsolateSourceFailures?: Maybe<Scalars['Boolean']['output']>;
+    mergeUpdateReapplyPlan?: Maybe<Scalars['Boolean']['output']>;
+    migrationBlockMergedSources?: Maybe<Scalars['Boolean']['output']>;
     opdsCbzMimetype?: Maybe<CbzMediaType>;
     opdsChapterSortOrder?: Maybe<SortOrder>;
     opdsEnablePageReadProgress?: Maybe<Scalars['Boolean']['output']>;
@@ -2062,6 +2115,14 @@ export type PartialSettingsType = Settings & {
     opdsSkipChapterMetadataFeed?: Maybe<Scalars['Boolean']['output']>;
     opdsUseBinaryFileSizes?: Maybe<Scalars['Boolean']['output']>;
     port?: Maybe<Scalars['Int']['output']>;
+    progressBookmarkPolicy?: Maybe<ProgressBookmarkPolicy>;
+    progressConflictPolicy?: Maybe<ProgressConflictPolicy>;
+    progressDirection?: Maybe<ProgressDirection>;
+    progressReadIsMonotonic?: Maybe<Scalars['Boolean']['output']>;
+    progressSyncEnabled?: Maybe<Scalars['Boolean']['output']>;
+    reindexAdoptMode?: Maybe<ReindexAdoptMode>;
+    reindexAllowFuzzy?: Maybe<Scalars['Boolean']['output']>;
+    reindexDefaultDryRun?: Maybe<Scalars['Boolean']['output']>;
     reindexEnabled?: Maybe<Scalars['Boolean']['output']>;
     serveConversions?: Maybe<Array<SettingsDownloadConversionType>>;
     socksProxyEnabled?: Maybe<Scalars['Boolean']['output']>;
@@ -2070,6 +2131,7 @@ export type PartialSettingsType = Settings & {
     socksProxyPort?: Maybe<Scalars['String']['output']>;
     socksProxyUsername?: Maybe<Scalars['String']['output']>;
     socksProxyVersion?: Maybe<Scalars['Int']['output']>;
+    sourcePinEnabled?: Maybe<Scalars['Boolean']['output']>;
     syncDataCategories?: Maybe<Scalars['Boolean']['output']>;
     syncDataChapters?: Maybe<Scalars['Boolean']['output']>;
     syncDataHistory?: Maybe<Scalars['Boolean']['output']>;
@@ -2112,10 +2174,26 @@ export type PartialSettingsTypeInput = {
     databaseUsername?: InputMaybe<Scalars['String']['input']>;
     debugLogsEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     doctorEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    doctorSchedule?: InputMaybe<DoctorSchedule>;
     downloadAsCbz?: InputMaybe<Scalars['Boolean']['input']>;
     downloadConversions?: InputMaybe<Array<SettingsDownloadConversionTypeInput>>;
     downloadsPath?: InputMaybe<Scalars['String']['input']>;
+    duplicatesAutoSuggestMerges?: InputMaybe<Scalars['Boolean']['input']>;
+    duplicatesBackgroundRefresh?: InputMaybe<Scalars['Boolean']['input']>;
+    duplicatesBlockSequels?: InputMaybe<Scalars['Boolean']['input']>;
     duplicatesEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    duplicatesMinThreshold?: InputMaybe<Scalars['Int']['input']>;
+    duplicatesStrongThreshold?: InputMaybe<Scalars['Int']['input']>;
+    duplicatesUseThumbnailHash?: InputMaybe<Scalars['Boolean']['input']>;
+    duplicatesUseTrackerMatching?: InputMaybe<Scalars['Boolean']['input']>;
+    duplicatesWeightAlias?: InputMaybe<Scalars['Float']['input']>;
+    duplicatesWeightChapter?: InputMaybe<Scalars['Float']['input']>;
+    duplicatesWeightCoreTitle?: InputMaybe<Scalars['Float']['input']>;
+    duplicatesWeightThumbnail?: InputMaybe<Scalars['Float']['input']>;
+    duplicatesWeightTitle?: InputMaybe<Scalars['Float']['input']>;
+    duplicatesWeightToken?: InputMaybe<Scalars['Float']['input']>;
+    duplicatesWeightTracker?: InputMaybe<Scalars['Float']['input']>;
+    duplicatesWeightUrl?: InputMaybe<Scalars['Float']['input']>;
     electronPath?: InputMaybe<Scalars['String']['input']>;
     excludeCompleted?: InputMaybe<Scalars['Boolean']['input']>;
     excludeEntryWithUnreadChapters?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2139,22 +2217,35 @@ export type PartialSettingsTypeInput = {
     koreaderSyncPercentageTolerance?: InputMaybe<Scalars['Float']['input']>;
     koreaderSyncStrategyBackward?: InputMaybe<KoreaderSyncConflictStrategy>;
     koreaderSyncStrategyForward?: InputMaybe<KoreaderSyncConflictStrategy>;
+    lifecycleConfirmPurgeText?: InputMaybe<Scalars['Boolean']['input']>;
+    lifecycleRestoreSourcesOnRemoveMerged?: InputMaybe<Scalars['Boolean']['input']>;
+    lifecycleTrashEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    lifecycleTrashRetentionDays?: InputMaybe<Scalars['Int']['input']>;
     localSourcePath?: InputMaybe<Scalars['String']['input']>;
     maxLogFileSize?: InputMaybe<Scalars['String']['input']>;
     maxLogFiles?: InputMaybe<Scalars['Int']['input']>;
     maxLogFolderSize?: InputMaybe<Scalars['String']['input']>;
     maxSourcesInParallel?: InputMaybe<Scalars['Int']['input']>;
+    mergeBackupEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeBackupFlattenExport?: InputMaybe<Scalars['Boolean']['input']>;
     mergeChapterDisplay?: InputMaybe<MergeChapterDisplay>;
     mergeChapterLevelEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     mergeDedupeStrategy?: InputMaybe<MergeDedupeStrategy>;
     mergeDefaultMode?: InputMaybe<MergeDefaultMode>;
+    mergeDetectRemovedChapters?: InputMaybe<Scalars['Boolean']['input']>;
     mergeDownloadOnceForMirrors?: InputMaybe<Scalars['Boolean']['input']>;
     mergeEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeExcludeFromSync?: InputMaybe<Scalars['Boolean']['input']>;
     mergeFallbackSourcesEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     mergeMinimumSources?: InputMaybe<Scalars['Int']['input']>;
     mergeOfflineMode?: InputMaybe<MergeOfflineMode>;
+    mergeOpdsVisibility?: InputMaybe<MergeOpdsVisibility>;
     mergeSplitRevalidateOnUpdate?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeTrackerPolicy?: InputMaybe<MergeTrackerPolicy>;
     mergeUnnumberedChapterMatching?: InputMaybe<MergeUnnumberedChapterMatching>;
+    mergeUpdateIsolateSourceFailures?: InputMaybe<Scalars['Boolean']['input']>;
+    mergeUpdateReapplyPlan?: InputMaybe<Scalars['Boolean']['input']>;
+    migrationBlockMergedSources?: InputMaybe<Scalars['Boolean']['input']>;
     opdsCbzMimetype?: InputMaybe<CbzMediaType>;
     opdsChapterSortOrder?: InputMaybe<SortOrder>;
     opdsEnablePageReadProgress?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2165,6 +2256,14 @@ export type PartialSettingsTypeInput = {
     opdsSkipChapterMetadataFeed?: InputMaybe<Scalars['Boolean']['input']>;
     opdsUseBinaryFileSizes?: InputMaybe<Scalars['Boolean']['input']>;
     port?: InputMaybe<Scalars['Int']['input']>;
+    progressBookmarkPolicy?: InputMaybe<ProgressBookmarkPolicy>;
+    progressConflictPolicy?: InputMaybe<ProgressConflictPolicy>;
+    progressDirection?: InputMaybe<ProgressDirection>;
+    progressReadIsMonotonic?: InputMaybe<Scalars['Boolean']['input']>;
+    progressSyncEnabled?: InputMaybe<Scalars['Boolean']['input']>;
+    reindexAdoptMode?: InputMaybe<ReindexAdoptMode>;
+    reindexAllowFuzzy?: InputMaybe<Scalars['Boolean']['input']>;
+    reindexDefaultDryRun?: InputMaybe<Scalars['Boolean']['input']>;
     reindexEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     serveConversions?: InputMaybe<Array<SettingsDownloadConversionTypeInput>>;
     socksProxyEnabled?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2173,6 +2272,7 @@ export type PartialSettingsTypeInput = {
     socksProxyPort?: InputMaybe<Scalars['String']['input']>;
     socksProxyUsername?: InputMaybe<Scalars['String']['input']>;
     socksProxyVersion?: InputMaybe<Scalars['Int']['input']>;
+    sourcePinEnabled?: InputMaybe<Scalars['Boolean']['input']>;
     syncDataCategories?: InputMaybe<Scalars['Boolean']['input']>;
     syncDataChapters?: InputMaybe<Scalars['Boolean']['input']>;
     syncDataHistory?: InputMaybe<Scalars['Boolean']['input']>;
@@ -2205,6 +2305,22 @@ export type Preference =
     | ListPreference
     | MultiSelectListPreference
     | SwitchPreference;
+
+export enum ProgressBookmarkPolicy {
+    FollowLatest = 'FOLLOW_LATEST',
+    Union = 'UNION',
+}
+
+export enum ProgressConflictPolicy {
+    NewestWins = 'NEWEST_WINS',
+    SourceWins = 'SOURCE_WINS',
+    VirtualWins = 'VIRTUAL_WINS',
+}
+
+export enum ProgressDirection {
+    Both = 'BOTH',
+    ToSourceOnly = 'TO_SOURCE_ONLY',
+}
 
 export type PullKoSyncProgressInput = {
     chapterId: Scalars['Int']['input'];
@@ -2245,6 +2361,7 @@ export type Query = {
     extensionStore: ExtensionStoreType;
     extensionStores: ExtensionStoreNodeList;
     extensions: ExtensionNodeList;
+    forkFeaturesAvailable: ForkFeaturesAvailableStatus;
     getWebUIUpdateStatus: WebUiUpdateStatus;
     koSyncStatus: KoSyncStatusPayload;
     lastSyncStatus?: Maybe<SyncStatus>;
@@ -2424,6 +2541,11 @@ export type RefreshTokenPayload = {
     accessToken: Scalars['String']['output'];
     clientMutationId?: Maybe<Scalars['String']['output']>;
 };
+
+export enum ReindexAdoptMode {
+    Copy = 'COPY',
+    Move = 'MOVE',
+}
 
 export type RemoveExtensionStoreInput = {
     clientMutationId?: InputMaybe<Scalars['String']['input']>;
@@ -2675,10 +2797,26 @@ export type Settings = {
     databaseUsername?: Maybe<Scalars['String']['output']>;
     debugLogsEnabled?: Maybe<Scalars['Boolean']['output']>;
     doctorEnabled?: Maybe<Scalars['Boolean']['output']>;
+    doctorSchedule?: Maybe<DoctorSchedule>;
     downloadAsCbz?: Maybe<Scalars['Boolean']['output']>;
     downloadConversions?: Maybe<Array<SettingsDownloadConversion>>;
     downloadsPath?: Maybe<Scalars['String']['output']>;
+    duplicatesAutoSuggestMerges?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesBackgroundRefresh?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesBlockSequels?: Maybe<Scalars['Boolean']['output']>;
     duplicatesEnabled?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesMinThreshold?: Maybe<Scalars['Int']['output']>;
+    duplicatesStrongThreshold?: Maybe<Scalars['Int']['output']>;
+    duplicatesUseThumbnailHash?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesUseTrackerMatching?: Maybe<Scalars['Boolean']['output']>;
+    duplicatesWeightAlias?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightChapter?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightCoreTitle?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightThumbnail?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightTitle?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightToken?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightTracker?: Maybe<Scalars['Float']['output']>;
+    duplicatesWeightUrl?: Maybe<Scalars['Float']['output']>;
     electronPath?: Maybe<Scalars['String']['output']>;
     excludeCompleted?: Maybe<Scalars['Boolean']['output']>;
     excludeEntryWithUnreadChapters?: Maybe<Scalars['Boolean']['output']>;
@@ -2716,22 +2854,35 @@ export type Settings = {
     koreaderSyncUserkey?: Maybe<Scalars['String']['output']>;
     /** @deprecated Moved to preference store. User is supposed to use a login/logout mutation, replace with MOVE TO PREFERENCES */
     koreaderSyncUsername?: Maybe<Scalars['String']['output']>;
+    lifecycleConfirmPurgeText?: Maybe<Scalars['Boolean']['output']>;
+    lifecycleRestoreSourcesOnRemoveMerged?: Maybe<Scalars['Boolean']['output']>;
+    lifecycleTrashEnabled?: Maybe<Scalars['Boolean']['output']>;
+    lifecycleTrashRetentionDays?: Maybe<Scalars['Int']['output']>;
     localSourcePath?: Maybe<Scalars['String']['output']>;
     maxLogFileSize?: Maybe<Scalars['String']['output']>;
     maxLogFiles?: Maybe<Scalars['Int']['output']>;
     maxLogFolderSize?: Maybe<Scalars['String']['output']>;
     maxSourcesInParallel?: Maybe<Scalars['Int']['output']>;
+    mergeBackupEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeBackupFlattenExport?: Maybe<Scalars['Boolean']['output']>;
     mergeChapterDisplay?: Maybe<MergeChapterDisplay>;
     mergeChapterLevelEnabled?: Maybe<Scalars['Boolean']['output']>;
     mergeDedupeStrategy?: Maybe<MergeDedupeStrategy>;
     mergeDefaultMode?: Maybe<MergeDefaultMode>;
+    mergeDetectRemovedChapters?: Maybe<Scalars['Boolean']['output']>;
     mergeDownloadOnceForMirrors?: Maybe<Scalars['Boolean']['output']>;
     mergeEnabled?: Maybe<Scalars['Boolean']['output']>;
+    mergeExcludeFromSync?: Maybe<Scalars['Boolean']['output']>;
     mergeFallbackSourcesEnabled?: Maybe<Scalars['Boolean']['output']>;
     mergeMinimumSources?: Maybe<Scalars['Int']['output']>;
     mergeOfflineMode?: Maybe<MergeOfflineMode>;
+    mergeOpdsVisibility?: Maybe<MergeOpdsVisibility>;
     mergeSplitRevalidateOnUpdate?: Maybe<Scalars['Boolean']['output']>;
+    mergeTrackerPolicy?: Maybe<MergeTrackerPolicy>;
     mergeUnnumberedChapterMatching?: Maybe<MergeUnnumberedChapterMatching>;
+    mergeUpdateIsolateSourceFailures?: Maybe<Scalars['Boolean']['output']>;
+    mergeUpdateReapplyPlan?: Maybe<Scalars['Boolean']['output']>;
+    migrationBlockMergedSources?: Maybe<Scalars['Boolean']['output']>;
     opdsCbzMimetype?: Maybe<CbzMediaType>;
     opdsChapterSortOrder?: Maybe<SortOrder>;
     opdsEnablePageReadProgress?: Maybe<Scalars['Boolean']['output']>;
@@ -2742,6 +2893,14 @@ export type Settings = {
     opdsSkipChapterMetadataFeed?: Maybe<Scalars['Boolean']['output']>;
     opdsUseBinaryFileSizes?: Maybe<Scalars['Boolean']['output']>;
     port?: Maybe<Scalars['Int']['output']>;
+    progressBookmarkPolicy?: Maybe<ProgressBookmarkPolicy>;
+    progressConflictPolicy?: Maybe<ProgressConflictPolicy>;
+    progressDirection?: Maybe<ProgressDirection>;
+    progressReadIsMonotonic?: Maybe<Scalars['Boolean']['output']>;
+    progressSyncEnabled?: Maybe<Scalars['Boolean']['output']>;
+    reindexAdoptMode?: Maybe<ReindexAdoptMode>;
+    reindexAllowFuzzy?: Maybe<Scalars['Boolean']['output']>;
+    reindexDefaultDryRun?: Maybe<Scalars['Boolean']['output']>;
     reindexEnabled?: Maybe<Scalars['Boolean']['output']>;
     serveConversions?: Maybe<Array<SettingsDownloadConversion>>;
     socksProxyEnabled?: Maybe<Scalars['Boolean']['output']>;
@@ -2750,6 +2909,7 @@ export type Settings = {
     socksProxyPort?: Maybe<Scalars['String']['output']>;
     socksProxyUsername?: Maybe<Scalars['String']['output']>;
     socksProxyVersion?: Maybe<Scalars['Int']['output']>;
+    sourcePinEnabled?: Maybe<Scalars['Boolean']['output']>;
     syncDataCategories?: Maybe<Scalars['Boolean']['output']>;
     syncDataChapters?: Maybe<Scalars['Boolean']['output']>;
     syncDataHistory?: Maybe<Scalars['Boolean']['output']>;
@@ -2845,10 +3005,26 @@ export type SettingsType = Settings & {
     databaseUsername: Scalars['String']['output'];
     debugLogsEnabled: Scalars['Boolean']['output'];
     doctorEnabled: Scalars['Boolean']['output'];
+    doctorSchedule: DoctorSchedule;
     downloadAsCbz: Scalars['Boolean']['output'];
     downloadConversions: Array<SettingsDownloadConversionType>;
     downloadsPath: Scalars['String']['output'];
+    duplicatesAutoSuggestMerges: Scalars['Boolean']['output'];
+    duplicatesBackgroundRefresh: Scalars['Boolean']['output'];
+    duplicatesBlockSequels: Scalars['Boolean']['output'];
     duplicatesEnabled: Scalars['Boolean']['output'];
+    duplicatesMinThreshold: Scalars['Int']['output'];
+    duplicatesStrongThreshold: Scalars['Int']['output'];
+    duplicatesUseThumbnailHash: Scalars['Boolean']['output'];
+    duplicatesUseTrackerMatching: Scalars['Boolean']['output'];
+    duplicatesWeightAlias: Scalars['Float']['output'];
+    duplicatesWeightChapter: Scalars['Float']['output'];
+    duplicatesWeightCoreTitle: Scalars['Float']['output'];
+    duplicatesWeightThumbnail: Scalars['Float']['output'];
+    duplicatesWeightTitle: Scalars['Float']['output'];
+    duplicatesWeightToken: Scalars['Float']['output'];
+    duplicatesWeightTracker: Scalars['Float']['output'];
+    duplicatesWeightUrl: Scalars['Float']['output'];
     electronPath: Scalars['String']['output'];
     excludeCompleted: Scalars['Boolean']['output'];
     excludeEntryWithUnreadChapters: Scalars['Boolean']['output'];
@@ -2886,22 +3062,35 @@ export type SettingsType = Settings & {
     koreaderSyncUserkey: Scalars['String']['output'];
     /** @deprecated Moved to preference store. User is supposed to use a login/logout mutation, replace with MOVE TO PREFERENCES */
     koreaderSyncUsername: Scalars['String']['output'];
+    lifecycleConfirmPurgeText: Scalars['Boolean']['output'];
+    lifecycleRestoreSourcesOnRemoveMerged: Scalars['Boolean']['output'];
+    lifecycleTrashEnabled: Scalars['Boolean']['output'];
+    lifecycleTrashRetentionDays: Scalars['Int']['output'];
     localSourcePath: Scalars['String']['output'];
     maxLogFileSize: Scalars['String']['output'];
     maxLogFiles: Scalars['Int']['output'];
     maxLogFolderSize: Scalars['String']['output'];
     maxSourcesInParallel: Scalars['Int']['output'];
+    mergeBackupEnabled: Scalars['Boolean']['output'];
+    mergeBackupFlattenExport: Scalars['Boolean']['output'];
     mergeChapterDisplay: MergeChapterDisplay;
     mergeChapterLevelEnabled: Scalars['Boolean']['output'];
     mergeDedupeStrategy: MergeDedupeStrategy;
     mergeDefaultMode: MergeDefaultMode;
+    mergeDetectRemovedChapters: Scalars['Boolean']['output'];
     mergeDownloadOnceForMirrors: Scalars['Boolean']['output'];
     mergeEnabled: Scalars['Boolean']['output'];
+    mergeExcludeFromSync: Scalars['Boolean']['output'];
     mergeFallbackSourcesEnabled: Scalars['Boolean']['output'];
     mergeMinimumSources: Scalars['Int']['output'];
     mergeOfflineMode: MergeOfflineMode;
+    mergeOpdsVisibility: MergeOpdsVisibility;
     mergeSplitRevalidateOnUpdate: Scalars['Boolean']['output'];
+    mergeTrackerPolicy: MergeTrackerPolicy;
     mergeUnnumberedChapterMatching: MergeUnnumberedChapterMatching;
+    mergeUpdateIsolateSourceFailures: Scalars['Boolean']['output'];
+    mergeUpdateReapplyPlan: Scalars['Boolean']['output'];
+    migrationBlockMergedSources: Scalars['Boolean']['output'];
     opdsCbzMimetype: CbzMediaType;
     opdsChapterSortOrder: SortOrder;
     opdsEnablePageReadProgress: Scalars['Boolean']['output'];
@@ -2912,6 +3101,14 @@ export type SettingsType = Settings & {
     opdsSkipChapterMetadataFeed: Scalars['Boolean']['output'];
     opdsUseBinaryFileSizes: Scalars['Boolean']['output'];
     port: Scalars['Int']['output'];
+    progressBookmarkPolicy: ProgressBookmarkPolicy;
+    progressConflictPolicy: ProgressConflictPolicy;
+    progressDirection: ProgressDirection;
+    progressReadIsMonotonic: Scalars['Boolean']['output'];
+    progressSyncEnabled: Scalars['Boolean']['output'];
+    reindexAdoptMode: ReindexAdoptMode;
+    reindexAllowFuzzy: Scalars['Boolean']['output'];
+    reindexDefaultDryRun: Scalars['Boolean']['output'];
     reindexEnabled: Scalars['Boolean']['output'];
     serveConversions: Array<SettingsDownloadConversionType>;
     socksProxyEnabled: Scalars['Boolean']['output'];
@@ -2920,6 +3117,7 @@ export type SettingsType = Settings & {
     socksProxyPort: Scalars['String']['output'];
     socksProxyUsername: Scalars['String']['output'];
     socksProxyVersion: Scalars['Int']['output'];
+    sourcePinEnabled: Scalars['Boolean']['output'];
     syncDataCategories: Scalars['Boolean']['output'];
     syncDataChapters: Scalars['Boolean']['output'];
     syncDataHistory: Scalars['Boolean']['output'];

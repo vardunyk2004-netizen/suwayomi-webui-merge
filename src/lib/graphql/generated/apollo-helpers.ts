@@ -1191,10 +1191,26 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'databaseUsername'
     | 'debugLogsEnabled'
     | 'doctorEnabled'
+    | 'doctorSchedule'
     | 'downloadAsCbz'
     | 'downloadConversions'
     | 'downloadsPath'
+    | 'duplicatesAutoSuggestMerges'
+    | 'duplicatesBackgroundRefresh'
+    | 'duplicatesBlockSequels'
     | 'duplicatesEnabled'
+    | 'duplicatesMinThreshold'
+    | 'duplicatesStrongThreshold'
+    | 'duplicatesUseThumbnailHash'
+    | 'duplicatesUseTrackerMatching'
+    | 'duplicatesWeightAlias'
+    | 'duplicatesWeightChapter'
+    | 'duplicatesWeightCoreTitle'
+    | 'duplicatesWeightThumbnail'
+    | 'duplicatesWeightTitle'
+    | 'duplicatesWeightToken'
+    | 'duplicatesWeightTracker'
+    | 'duplicatesWeightUrl'
     | 'electronPath'
     | 'excludeCompleted'
     | 'excludeEntryWithUnreadChapters'
@@ -1225,22 +1241,35 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'koreaderSyncStrategyForward'
     | 'koreaderSyncUserkey'
     | 'koreaderSyncUsername'
+    | 'lifecycleConfirmPurgeText'
+    | 'lifecycleRestoreSourcesOnRemoveMerged'
+    | 'lifecycleTrashEnabled'
+    | 'lifecycleTrashRetentionDays'
     | 'localSourcePath'
     | 'maxLogFileSize'
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeBackupEnabled'
+    | 'mergeBackupFlattenExport'
     | 'mergeChapterDisplay'
     | 'mergeChapterLevelEnabled'
     | 'mergeDedupeStrategy'
     | 'mergeDefaultMode'
+    | 'mergeDetectRemovedChapters'
     | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
+    | 'mergeExcludeFromSync'
     | 'mergeFallbackSourcesEnabled'
     | 'mergeMinimumSources'
     | 'mergeOfflineMode'
+    | 'mergeOpdsVisibility'
     | 'mergeSplitRevalidateOnUpdate'
+    | 'mergeTrackerPolicy'
     | 'mergeUnnumberedChapterMatching'
+    | 'mergeUpdateIsolateSourceFailures'
+    | 'mergeUpdateReapplyPlan'
+    | 'migrationBlockMergedSources'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -1251,6 +1280,14 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'opdsSkipChapterMetadataFeed'
     | 'opdsUseBinaryFileSizes'
     | 'port'
+    | 'progressBookmarkPolicy'
+    | 'progressConflictPolicy'
+    | 'progressDirection'
+    | 'progressReadIsMonotonic'
+    | 'progressSyncEnabled'
+    | 'reindexAdoptMode'
+    | 'reindexAllowFuzzy'
+    | 'reindexDefaultDryRun'
     | 'reindexEnabled'
     | 'serveConversions'
     | 'socksProxyEnabled'
@@ -1259,6 +1296,7 @@ export type PartialSettingsTypeKeySpecifier = (
     | 'socksProxyPort'
     | 'socksProxyUsername'
     | 'socksProxyVersion'
+    | 'sourcePinEnabled'
     | 'syncDataCategories'
     | 'syncDataChapters'
     | 'syncDataHistory'
@@ -1305,10 +1343,26 @@ export type PartialSettingsTypeFieldPolicy = {
     databaseUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     debugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     doctorEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    doctorSchedule?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadAsCbz?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadsPath?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesAutoSuggestMerges?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesBackgroundRefresh?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesBlockSequels?: FieldPolicy<any> | FieldReadFunction<any>;
     duplicatesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesMinThreshold?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesStrongThreshold?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesUseThumbnailHash?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesUseTrackerMatching?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightAlias?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightChapter?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightCoreTitle?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightThumbnail?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightTitle?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightToken?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightTracker?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightUrl?: FieldPolicy<any> | FieldReadFunction<any>;
     electronPath?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeCompleted?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeEntryWithUnreadChapters?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1339,22 +1393,35 @@ export type PartialSettingsTypeFieldPolicy = {
     koreaderSyncStrategyForward?: FieldPolicy<any> | FieldReadFunction<any>;
     koreaderSyncUserkey?: FieldPolicy<any> | FieldReadFunction<any>;
     koreaderSyncUsername?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleConfirmPurgeText?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleRestoreSourcesOnRemoveMerged?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleTrashEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleTrashRetentionDays?: FieldPolicy<any> | FieldReadFunction<any>;
     localSourcePath?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFileSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeBackupEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeBackupFlattenExport?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDedupeStrategy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDetectRemovedChapters?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeExcludeFromSync?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeFallbackSourcesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeMinimumSources?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeOfflineMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeOpdsVisibility?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeSplitRevalidateOnUpdate?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeTrackerPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeUnnumberedChapterMatching?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUpdateIsolateSourceFailures?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUpdateReapplyPlan?: FieldPolicy<any> | FieldReadFunction<any>;
+    migrationBlockMergedSources?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1365,6 +1432,14 @@ export type PartialSettingsTypeFieldPolicy = {
     opdsSkipChapterMetadataFeed?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsUseBinaryFileSizes?: FieldPolicy<any> | FieldReadFunction<any>;
     port?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressBookmarkPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressConflictPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressDirection?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressReadIsMonotonic?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressSyncEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexAdoptMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexAllowFuzzy?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexDefaultDryRun?: FieldPolicy<any> | FieldReadFunction<any>;
     reindexEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     serveConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1373,6 +1448,7 @@ export type PartialSettingsTypeFieldPolicy = {
     socksProxyPort?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyVersion?: FieldPolicy<any> | FieldReadFunction<any>;
+    sourcePinEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataCategories?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataChapters?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataHistory?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1433,6 +1509,7 @@ export type QueryKeySpecifier = (
     | 'extensionStore'
     | 'extensionStores'
     | 'extensions'
+    | 'forkFeaturesAvailable'
     | 'getWebUIUpdateStatus'
     | 'koSyncStatus'
     | 'lastSyncStatus'
@@ -1469,6 +1546,7 @@ export type QueryFieldPolicy = {
     extensionStore?: FieldPolicy<any> | FieldReadFunction<any>;
     extensionStores?: FieldPolicy<any> | FieldReadFunction<any>;
     extensions?: FieldPolicy<any> | FieldReadFunction<any>;
+    forkFeaturesAvailable?: FieldPolicy<any> | FieldReadFunction<any>;
     getWebUIUpdateStatus?: FieldPolicy<any> | FieldReadFunction<any>;
     koSyncStatus?: FieldPolicy<any> | FieldReadFunction<any>;
     lastSyncStatus?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1650,10 +1728,26 @@ export type SettingsKeySpecifier = (
     | 'databaseUsername'
     | 'debugLogsEnabled'
     | 'doctorEnabled'
+    | 'doctorSchedule'
     | 'downloadAsCbz'
     | 'downloadConversions'
     | 'downloadsPath'
+    | 'duplicatesAutoSuggestMerges'
+    | 'duplicatesBackgroundRefresh'
+    | 'duplicatesBlockSequels'
     | 'duplicatesEnabled'
+    | 'duplicatesMinThreshold'
+    | 'duplicatesStrongThreshold'
+    | 'duplicatesUseThumbnailHash'
+    | 'duplicatesUseTrackerMatching'
+    | 'duplicatesWeightAlias'
+    | 'duplicatesWeightChapter'
+    | 'duplicatesWeightCoreTitle'
+    | 'duplicatesWeightThumbnail'
+    | 'duplicatesWeightTitle'
+    | 'duplicatesWeightToken'
+    | 'duplicatesWeightTracker'
+    | 'duplicatesWeightUrl'
     | 'electronPath'
     | 'excludeCompleted'
     | 'excludeEntryWithUnreadChapters'
@@ -1684,22 +1778,35 @@ export type SettingsKeySpecifier = (
     | 'koreaderSyncStrategyForward'
     | 'koreaderSyncUserkey'
     | 'koreaderSyncUsername'
+    | 'lifecycleConfirmPurgeText'
+    | 'lifecycleRestoreSourcesOnRemoveMerged'
+    | 'lifecycleTrashEnabled'
+    | 'lifecycleTrashRetentionDays'
     | 'localSourcePath'
     | 'maxLogFileSize'
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeBackupEnabled'
+    | 'mergeBackupFlattenExport'
     | 'mergeChapterDisplay'
     | 'mergeChapterLevelEnabled'
     | 'mergeDedupeStrategy'
     | 'mergeDefaultMode'
+    | 'mergeDetectRemovedChapters'
     | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
+    | 'mergeExcludeFromSync'
     | 'mergeFallbackSourcesEnabled'
     | 'mergeMinimumSources'
     | 'mergeOfflineMode'
+    | 'mergeOpdsVisibility'
     | 'mergeSplitRevalidateOnUpdate'
+    | 'mergeTrackerPolicy'
     | 'mergeUnnumberedChapterMatching'
+    | 'mergeUpdateIsolateSourceFailures'
+    | 'mergeUpdateReapplyPlan'
+    | 'migrationBlockMergedSources'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -1710,6 +1817,14 @@ export type SettingsKeySpecifier = (
     | 'opdsSkipChapterMetadataFeed'
     | 'opdsUseBinaryFileSizes'
     | 'port'
+    | 'progressBookmarkPolicy'
+    | 'progressConflictPolicy'
+    | 'progressDirection'
+    | 'progressReadIsMonotonic'
+    | 'progressSyncEnabled'
+    | 'reindexAdoptMode'
+    | 'reindexAllowFuzzy'
+    | 'reindexDefaultDryRun'
     | 'reindexEnabled'
     | 'serveConversions'
     | 'socksProxyEnabled'
@@ -1718,6 +1833,7 @@ export type SettingsKeySpecifier = (
     | 'socksProxyPort'
     | 'socksProxyUsername'
     | 'socksProxyVersion'
+    | 'sourcePinEnabled'
     | 'syncDataCategories'
     | 'syncDataChapters'
     | 'syncDataHistory'
@@ -1764,10 +1880,26 @@ export type SettingsFieldPolicy = {
     databaseUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     debugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     doctorEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    doctorSchedule?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadAsCbz?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadsPath?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesAutoSuggestMerges?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesBackgroundRefresh?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesBlockSequels?: FieldPolicy<any> | FieldReadFunction<any>;
     duplicatesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesMinThreshold?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesStrongThreshold?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesUseThumbnailHash?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesUseTrackerMatching?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightAlias?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightChapter?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightCoreTitle?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightThumbnail?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightTitle?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightToken?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightTracker?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightUrl?: FieldPolicy<any> | FieldReadFunction<any>;
     electronPath?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeCompleted?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeEntryWithUnreadChapters?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1798,22 +1930,35 @@ export type SettingsFieldPolicy = {
     koreaderSyncStrategyForward?: FieldPolicy<any> | FieldReadFunction<any>;
     koreaderSyncUserkey?: FieldPolicy<any> | FieldReadFunction<any>;
     koreaderSyncUsername?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleConfirmPurgeText?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleRestoreSourcesOnRemoveMerged?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleTrashEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleTrashRetentionDays?: FieldPolicy<any> | FieldReadFunction<any>;
     localSourcePath?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFileSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeBackupEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeBackupFlattenExport?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDedupeStrategy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDetectRemovedChapters?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeExcludeFromSync?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeFallbackSourcesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeMinimumSources?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeOfflineMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeOpdsVisibility?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeSplitRevalidateOnUpdate?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeTrackerPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeUnnumberedChapterMatching?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUpdateIsolateSourceFailures?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUpdateReapplyPlan?: FieldPolicy<any> | FieldReadFunction<any>;
+    migrationBlockMergedSources?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1824,6 +1969,14 @@ export type SettingsFieldPolicy = {
     opdsSkipChapterMetadataFeed?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsUseBinaryFileSizes?: FieldPolicy<any> | FieldReadFunction<any>;
     port?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressBookmarkPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressConflictPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressDirection?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressReadIsMonotonic?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressSyncEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexAdoptMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexAllowFuzzy?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexDefaultDryRun?: FieldPolicy<any> | FieldReadFunction<any>;
     reindexEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     serveConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1832,6 +1985,7 @@ export type SettingsFieldPolicy = {
     socksProxyPort?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyVersion?: FieldPolicy<any> | FieldReadFunction<any>;
+    sourcePinEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataCategories?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataChapters?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataHistory?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -1929,10 +2083,26 @@ export type SettingsTypeKeySpecifier = (
     | 'databaseUsername'
     | 'debugLogsEnabled'
     | 'doctorEnabled'
+    | 'doctorSchedule'
     | 'downloadAsCbz'
     | 'downloadConversions'
     | 'downloadsPath'
+    | 'duplicatesAutoSuggestMerges'
+    | 'duplicatesBackgroundRefresh'
+    | 'duplicatesBlockSequels'
     | 'duplicatesEnabled'
+    | 'duplicatesMinThreshold'
+    | 'duplicatesStrongThreshold'
+    | 'duplicatesUseThumbnailHash'
+    | 'duplicatesUseTrackerMatching'
+    | 'duplicatesWeightAlias'
+    | 'duplicatesWeightChapter'
+    | 'duplicatesWeightCoreTitle'
+    | 'duplicatesWeightThumbnail'
+    | 'duplicatesWeightTitle'
+    | 'duplicatesWeightToken'
+    | 'duplicatesWeightTracker'
+    | 'duplicatesWeightUrl'
     | 'electronPath'
     | 'excludeCompleted'
     | 'excludeEntryWithUnreadChapters'
@@ -1963,22 +2133,35 @@ export type SettingsTypeKeySpecifier = (
     | 'koreaderSyncStrategyForward'
     | 'koreaderSyncUserkey'
     | 'koreaderSyncUsername'
+    | 'lifecycleConfirmPurgeText'
+    | 'lifecycleRestoreSourcesOnRemoveMerged'
+    | 'lifecycleTrashEnabled'
+    | 'lifecycleTrashRetentionDays'
     | 'localSourcePath'
     | 'maxLogFileSize'
     | 'maxLogFiles'
     | 'maxLogFolderSize'
     | 'maxSourcesInParallel'
+    | 'mergeBackupEnabled'
+    | 'mergeBackupFlattenExport'
     | 'mergeChapterDisplay'
     | 'mergeChapterLevelEnabled'
     | 'mergeDedupeStrategy'
     | 'mergeDefaultMode'
+    | 'mergeDetectRemovedChapters'
     | 'mergeDownloadOnceForMirrors'
     | 'mergeEnabled'
+    | 'mergeExcludeFromSync'
     | 'mergeFallbackSourcesEnabled'
     | 'mergeMinimumSources'
     | 'mergeOfflineMode'
+    | 'mergeOpdsVisibility'
     | 'mergeSplitRevalidateOnUpdate'
+    | 'mergeTrackerPolicy'
     | 'mergeUnnumberedChapterMatching'
+    | 'mergeUpdateIsolateSourceFailures'
+    | 'mergeUpdateReapplyPlan'
+    | 'migrationBlockMergedSources'
     | 'opdsCbzMimetype'
     | 'opdsChapterSortOrder'
     | 'opdsEnablePageReadProgress'
@@ -1989,6 +2172,14 @@ export type SettingsTypeKeySpecifier = (
     | 'opdsSkipChapterMetadataFeed'
     | 'opdsUseBinaryFileSizes'
     | 'port'
+    | 'progressBookmarkPolicy'
+    | 'progressConflictPolicy'
+    | 'progressDirection'
+    | 'progressReadIsMonotonic'
+    | 'progressSyncEnabled'
+    | 'reindexAdoptMode'
+    | 'reindexAllowFuzzy'
+    | 'reindexDefaultDryRun'
     | 'reindexEnabled'
     | 'serveConversions'
     | 'socksProxyEnabled'
@@ -1997,6 +2188,7 @@ export type SettingsTypeKeySpecifier = (
     | 'socksProxyPort'
     | 'socksProxyUsername'
     | 'socksProxyVersion'
+    | 'sourcePinEnabled'
     | 'syncDataCategories'
     | 'syncDataChapters'
     | 'syncDataHistory'
@@ -2043,10 +2235,26 @@ export type SettingsTypeFieldPolicy = {
     databaseUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     debugLogsEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     doctorEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    doctorSchedule?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadAsCbz?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     downloadsPath?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesAutoSuggestMerges?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesBackgroundRefresh?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesBlockSequels?: FieldPolicy<any> | FieldReadFunction<any>;
     duplicatesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesMinThreshold?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesStrongThreshold?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesUseThumbnailHash?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesUseTrackerMatching?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightAlias?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightChapter?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightCoreTitle?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightThumbnail?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightTitle?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightToken?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightTracker?: FieldPolicy<any> | FieldReadFunction<any>;
+    duplicatesWeightUrl?: FieldPolicy<any> | FieldReadFunction<any>;
     electronPath?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeCompleted?: FieldPolicy<any> | FieldReadFunction<any>;
     excludeEntryWithUnreadChapters?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2077,22 +2285,35 @@ export type SettingsTypeFieldPolicy = {
     koreaderSyncStrategyForward?: FieldPolicy<any> | FieldReadFunction<any>;
     koreaderSyncUserkey?: FieldPolicy<any> | FieldReadFunction<any>;
     koreaderSyncUsername?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleConfirmPurgeText?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleRestoreSourcesOnRemoveMerged?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleTrashEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    lifecycleTrashRetentionDays?: FieldPolicy<any> | FieldReadFunction<any>;
     localSourcePath?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFileSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFiles?: FieldPolicy<any> | FieldReadFunction<any>;
     maxLogFolderSize?: FieldPolicy<any> | FieldReadFunction<any>;
     maxSourcesInParallel?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeBackupEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeBackupFlattenExport?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterDisplay?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeChapterLevelEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDedupeStrategy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDefaultMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeDetectRemovedChapters?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeDownloadOnceForMirrors?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeExcludeFromSync?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeFallbackSourcesEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeMinimumSources?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeOfflineMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeOpdsVisibility?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeSplitRevalidateOnUpdate?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeTrackerPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
     mergeUnnumberedChapterMatching?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUpdateIsolateSourceFailures?: FieldPolicy<any> | FieldReadFunction<any>;
+    mergeUpdateReapplyPlan?: FieldPolicy<any> | FieldReadFunction<any>;
+    migrationBlockMergedSources?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsCbzMimetype?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsChapterSortOrder?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsEnablePageReadProgress?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2103,6 +2324,14 @@ export type SettingsTypeFieldPolicy = {
     opdsSkipChapterMetadataFeed?: FieldPolicy<any> | FieldReadFunction<any>;
     opdsUseBinaryFileSizes?: FieldPolicy<any> | FieldReadFunction<any>;
     port?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressBookmarkPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressConflictPolicy?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressDirection?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressReadIsMonotonic?: FieldPolicy<any> | FieldReadFunction<any>;
+    progressSyncEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexAdoptMode?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexAllowFuzzy?: FieldPolicy<any> | FieldReadFunction<any>;
+    reindexDefaultDryRun?: FieldPolicy<any> | FieldReadFunction<any>;
     reindexEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     serveConversions?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
@@ -2111,6 +2340,7 @@ export type SettingsTypeFieldPolicy = {
     socksProxyPort?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyUsername?: FieldPolicy<any> | FieldReadFunction<any>;
     socksProxyVersion?: FieldPolicy<any> | FieldReadFunction<any>;
+    sourcePinEnabled?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataCategories?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataChapters?: FieldPolicy<any> | FieldReadFunction<any>;
     syncDataHistory?: FieldPolicy<any> | FieldReadFunction<any>;
