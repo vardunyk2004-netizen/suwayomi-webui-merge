@@ -50,6 +50,9 @@ type ForkToolSettings = Pick<
     | 'lifecycleTrashRetentionDays'
     | 'lifecycleRestoreSourcesOnRemoveMerged'
     | 'lifecycleConfirmPurgeText'
+    | 'mergeUpdateReapplyPlan'
+    | 'mergeUpdateIsolateSourceFailures'
+    | 'mergeDetectRemovedChapters'
     | 'duplicatesEnabled'
     | 'reindexEnabled'
     | 'doctorEnabled'
@@ -342,6 +345,54 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                     checked={settings.lifecycleConfirmPurgeText}
                     disabled={lifecycleSettingsDisabled}
                     onChange={(event) => updateSettings({ lifecycleConfirmPurgeText: event.target.checked })}
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Reapply merge plan on source updates`}
+                    secondary={
+                        mergeSettingsDisabled
+                            ? t`Enable manga merging to change this setting.`
+                            : t`Reapply merge filters, exclusions and duplicate choices after source updates.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.mergeUpdateReapplyPlan}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) => updateSettings({ mergeUpdateReapplyPlan: event.target.checked })}
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Continue after a source update failure`}
+                    secondary={
+                        mergeSettingsDisabled
+                            ? t`Enable manga merging to change this setting.`
+                            : t`Allow remaining merge sources to update when one source fails.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.mergeUpdateIsolateSourceFailures}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) => updateSettings({ mergeUpdateIsolateSourceFailures: event.target.checked })}
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Detect removed source chapters`}
+                    secondary={
+                        mergeSettingsDisabled
+                            ? t`Enable manga merging to change this setting.`
+                            : t`Mark removed source chapters missing and attempt safe relinking after updates.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.mergeDetectRemovedChapters}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) => updateSettings({ mergeDetectRemovedChapters: event.target.checked })}
                 />
             </ListItem>
             <ListItem>
