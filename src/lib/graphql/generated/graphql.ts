@@ -3182,6 +3182,10 @@ export type ServerSettingsFragment = {
     progressReadIsMonotonic: boolean;
     progressBookmarkPolicy: Types.ProgressBookmarkPolicy;
     progressDirection: Types.ProgressDirection;
+    lifecycleTrashEnabled: boolean;
+    lifecycleTrashRetentionDays: number;
+    lifecycleRestoreSourcesOnRemoveMerged: boolean;
+    lifecycleConfirmPurgeText: boolean;
     duplicatesEnabled: boolean;
     reindexEnabled: boolean;
     doctorEnabled: boolean;
@@ -3315,6 +3319,10 @@ export type ResetServerSettingsMutation = {
             progressReadIsMonotonic: boolean;
             progressBookmarkPolicy: Types.ProgressBookmarkPolicy;
             progressDirection: Types.ProgressDirection;
+            lifecycleTrashEnabled: boolean;
+            lifecycleTrashRetentionDays: number;
+            lifecycleRestoreSourcesOnRemoveMerged: boolean;
+            lifecycleConfirmPurgeText: boolean;
             duplicatesEnabled: boolean;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
@@ -3458,6 +3466,10 @@ export type UpdateServerSettingsMutation = {
             progressReadIsMonotonic: boolean;
             progressBookmarkPolicy: Types.ProgressBookmarkPolicy;
             progressDirection: Types.ProgressDirection;
+            lifecycleTrashEnabled: boolean;
+            lifecycleTrashRetentionDays: number;
+            lifecycleRestoreSourcesOnRemoveMerged: boolean;
+            lifecycleConfirmPurgeText: boolean;
             duplicatesEnabled: boolean;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
@@ -3597,6 +3609,10 @@ export type GetServerSettingsQuery = {
         progressReadIsMonotonic: boolean;
         progressBookmarkPolicy: Types.ProgressBookmarkPolicy;
         progressDirection: Types.ProgressDirection;
+        lifecycleTrashEnabled: boolean;
+        lifecycleTrashRetentionDays: number;
+        lifecycleRestoreSourcesOnRemoveMerged: boolean;
+        lifecycleConfirmPurgeText: boolean;
         duplicatesEnabled: boolean;
         reindexEnabled: boolean;
         doctorEnabled: boolean;
