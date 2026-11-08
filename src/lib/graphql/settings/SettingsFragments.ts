@@ -161,6 +161,11 @@ export const SERVER_SETTINGS = gql`
         mergeDownloadOnceForMirrors
         mergeChapterLevelEnabled
         mergeSplitRevalidateOnUpdate
+        progressSyncEnabled
+        progressConflictPolicy
+        progressReadIsMonotonic
+        progressBookmarkPolicy
+        progressDirection
         duplicatesEnabled
         reindexEnabled
         doctorEnabled
