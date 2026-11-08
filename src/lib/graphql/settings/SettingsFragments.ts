@@ -173,6 +173,10 @@ export const SERVER_SETTINGS = gql`
         mergeUpdateReapplyPlan
         mergeUpdateIsolateSourceFailures
         mergeDetectRemovedChapters
+        mergeExcludeFromSync
+        mergeBackupEnabled
+        mergeBackupFlattenExport
+        mergeOpdsVisibility
         duplicatesEnabled
         reindexEnabled
         doctorEnabled
