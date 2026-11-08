@@ -419,7 +419,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
             </ListItem>
             <ListItem>
                 <ListItemText
-                    primary={t`Include merge data in backups`}
+                    primary={t`Include merge data`}
                     secondary={
                         mergeSettingsDisabled
                             ? t`Enable manga merging to change this setting.`
@@ -435,7 +435,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
             </ListItem>
             <ListItem>
                 <ListItemText
-                    primary={t`Flatten merged manga in backup exports`}
+                    primary={t`Flatten merged export`}
                     secondary={
                         backupSettingsDisabled
                             ? t`Enable merge backups to change this setting.`

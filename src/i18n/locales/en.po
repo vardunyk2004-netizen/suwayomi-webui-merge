@@ -4537,16 +4537,16 @@ msgid "Keep fork-owned merge, lifecycle and journal data out of SyncYomi."
 msgstr "Keep fork-owned merge, lifecycle and journal data out of SyncYomi."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Include merge data in backups"
-msgstr "Include merge data in backups"
+msgid "Include merge data"
+msgstr "Include merge data"
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Include merge configuration and source links in server backups."
 msgstr "Include merge configuration and source links in server backups."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Flatten merged manga in backup exports"
-msgstr "Flatten merged manga in backup exports"
+msgid "Flatten merged export"
+msgstr "Flatten merged export"
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Enable merge backups to change this setting."
