@@ -166,6 +166,10 @@ export const SERVER_SETTINGS = gql`
         progressReadIsMonotonic
         progressBookmarkPolicy
         progressDirection
+        lifecycleTrashEnabled
+        lifecycleTrashRetentionDays
+        lifecycleRestoreSourcesOnRemoveMerged
+        lifecycleConfirmPurgeText
         duplicatesEnabled
         reindexEnabled
         doctorEnabled
