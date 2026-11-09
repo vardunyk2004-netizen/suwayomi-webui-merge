@@ -64,6 +64,11 @@ type ForkToolSettings = Pick<
     | 'duplicatesWeightTitle'
     | 'duplicatesWeightCoreTitle'
     | 'duplicatesWeightToken'
+    | 'duplicatesWeightAlias'
+    | 'duplicatesWeightUrl'
+    | 'duplicatesWeightChapter'
+    | 'duplicatesWeightThumbnail'
+    | 'duplicatesWeightTracker'
     | 'reindexEnabled'
     | 'doctorEnabled'
 >;
@@ -560,6 +565,76 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                 disabled={duplicateSettingsDisabled}
                 disabledDescription={t`Enable duplicate detection to change this setting.`}
                 handleUpdate={(value) => updateSettings({ duplicatesWeightToken: value })}
+            />
+            <NumberSetting
+                settingTitle={t`Alias score weight`}
+                dialogDescription={t`Set the score weight for known title aliases.`}
+                settingValue={settings.duplicatesWeightAlias.toFixed(2)}
+                value={settings.duplicatesWeightAlias}
+                defaultValue={0.1}
+                minValue={0}
+                maxValue={1}
+                stepSize={0.01}
+                valueUnit=""
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesWeightAlias: value })}
+            />
+            <NumberSetting
+                settingTitle={t`URL score weight`}
+                dialogDescription={t`Set the score weight for matching source URLs.`}
+                settingValue={settings.duplicatesWeightUrl.toFixed(2)}
+                value={settings.duplicatesWeightUrl}
+                defaultValue={0.1}
+                minValue={0}
+                maxValue={1}
+                stepSize={0.01}
+                valueUnit=""
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesWeightUrl: value })}
+            />
+            <NumberSetting
+                settingTitle={t`Chapter-list score weight`}
+                dialogDescription={t`Set the score weight for chapter-list similarity.`}
+                settingValue={settings.duplicatesWeightChapter.toFixed(2)}
+                value={settings.duplicatesWeightChapter}
+                defaultValue={0.1}
+                minValue={0}
+                maxValue={1}
+                stepSize={0.01}
+                valueUnit=""
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesWeightChapter: value })}
+            />
+            <NumberSetting
+                settingTitle={t`Thumbnail similarity score weight`}
+                dialogDescription={t`Set the score weight for thumbnail similarity.`}
+                settingValue={settings.duplicatesWeightThumbnail.toFixed(2)}
+                value={settings.duplicatesWeightThumbnail}
+                defaultValue={0.05}
+                minValue={0}
+                maxValue={1}
+                stepSize={0.01}
+                valueUnit=""
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesWeightThumbnail: value })}
+            />
+            <NumberSetting
+                settingTitle={t`Tracker match score weight`}
+                dialogDescription={t`Set the score weight for matching tracker records.`}
+                settingValue={settings.duplicatesWeightTracker.toFixed(2)}
+                value={settings.duplicatesWeightTracker}
+                defaultValue={0.05}
+                minValue={0}
+                maxValue={1}
+                stepSize={0.01}
+                valueUnit=""
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesWeightTracker: value })}
             />
             <ListItem>
                 <ListItemText primary={t`Download reindex`} secondary={t`Enable download reindex tools.`} />

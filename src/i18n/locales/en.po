@@ -452,6 +452,10 @@ msgstr "After changing this setting go to the \"About\" page and check for a web
 msgid "Age rating"
 msgstr "Age rating"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Alias score weight"
+msgstr "Alias score weight"
+
 #: src/features/backup/Backup.utils.ts
 #: src/features/category/components/CategoriesInclusionSetting.tsx
 #: src/features/chapter/components/actions/ChaptersDownloadActionMenuItems.tsx
@@ -462,6 +466,10 @@ msgstr "All"
 #: src/features/downloads/screens/DownloadSettings.tsx
 msgid "Allow deleting bookmarked chapters"
 msgstr "Allow deleting bookmarked chapters"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Allow remaining merge sources to update when one source fails."
+msgstr "Allow remaining merge sources to update when one source fails."
 
 #: src/features/reader/filters/settings/components/ReaderSettingRGBA.tsx
 msgid "Alpha"
@@ -593,6 +601,10 @@ msgstr "Automatically use webtoon mode for entries that are detected to likely u
 #: src/features/migration/components/MigrationDestinationSourceList.tsx
 msgid "Available"
 msgstr "Available"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Avoid downloading the same chapter from multiple mirror sources."
+msgstr "Avoid downloading the same chapter from multiple mirror sources."
 
 #: src/features/backup/screens/Backup.tsx
 msgid "Back up library as a Tachiyomi backup"
@@ -881,6 +893,14 @@ msgstr "Chapter sort order"
 msgid "Chapter transition warning"
 msgstr "Chapter transition warning"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Chapter-level merge and split"
+msgstr "Chapter-level merge and split"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Chapter-list score weight"
+msgstr "Chapter-list score weight"
+
 #: src/features/backup/Backup.constants.ts
 msgid "Chapters"
 msgstr "Chapters"
@@ -901,9 +921,49 @@ msgstr "Check out"
 msgid "Checking for update"
 msgstr "Checking for update"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose how bookmarks are combined between source and merged chapters."
+msgstr "Choose how bookmarks are combined between source and merged chapters."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose how merged chapters behave while offline."
+msgstr "Choose how merged chapters behave while offline."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose how the merge planner matches chapters without numbers."
+msgstr "Choose how the merge planner matches chapters without numbers."
+
+#: src/features/settings/Settings.constants.ts
+msgid "Choose per chapter"
+msgstr "Choose per chapter"
+
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Choose the order in which chapters are displayed."
 msgstr "Choose the order in which chapters are displayed."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose whether merged chapters show original or normalized names."
+msgstr "Choose whether merged chapters show original or normalized names."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose whether OPDS feeds show merged manga only or both merged and source manga."
+msgstr "Choose whether OPDS feeds show merged manga only or both merged and source manga."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose whether progress synchronizes both ways or only to source chapters."
+msgstr "Choose whether progress synchronizes both ways or only to source chapters."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose which chapter's progress wins when source and merged progress differ."
+msgstr "Choose which chapter's progress wins when source and merged progress differ."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose which merge mode is pre-selected in the merge wizard."
+msgstr "Choose which merge mode is pre-selected in the merge wizard."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose which source chapter to use when mirror sources contain the same chapter."
+msgstr "Choose which source chapter to use when mirror sources contain the same chapter."
 
 #: src/features/library/screens/LibrarySettings.tsx
 msgid "Cleanup database"
@@ -1004,9 +1064,17 @@ msgstr "Connected as {currentUsername} to {currentServerAddress}"
 msgid "Connected as {initialUsername} to {initialServerAddress}"
 msgstr "Connected as {initialUsername} to {initialServerAddress}"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Consistency checks"
+msgstr "Consistency checks"
+
 #: src/features/migration/components/MigrationContinueButton.tsx
 msgid "Continue"
 msgstr "Continue"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Continue after a source update failure"
+msgstr "Continue after a source update failure"
 
 #: src/features/manga/components/ContinueReadingTooltip.tsx
 msgid "Continue reading\n"
@@ -1051,6 +1119,10 @@ msgstr "Copy"
 #: src/features/extension/store/screens/ExtensionStores.tsx
 msgid "Copy index url"
 msgstr "Copy index url"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Core title score weight"
+msgstr "Core title score weight"
 
 #: src/features/extension/store/screens/ExtensionStores.tsx
 msgid "Could not add extension store"
@@ -1377,6 +1449,10 @@ msgstr "Database url"
 msgid "Day"
 msgstr "Day"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "days"
+msgstr "days"
+
 #: src/features/settings/screens/About.tsx
 msgid "Debug information"
 msgstr "Debug information"
@@ -1400,6 +1476,10 @@ msgstr "Default"
 #: src/features/category/components/CreateOrEditCategoryDialog.tsx
 msgid "Default category when adding new manga to the library"
 msgstr "Default category when adding new manga to the library"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Default merge mode"
+msgstr "Default merge mode"
 
 #: src/base/components/AppbarSearch.tsx
 #: src/base/components/settings/MutableListSetting.tsx
@@ -1473,6 +1553,10 @@ msgstr "Desktop"
 msgid "Destination — {0}"
 msgstr "Destination — {0}"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Detect removed source chapters"
+msgstr "Detect removed source chapters"
+
 #: src/features/device/screens/DeviceSetting.tsx
 #: src/features/settings/screens/Settings.tsx
 msgid "Device"
@@ -1481,6 +1565,10 @@ msgstr "Device"
 #: src/features/device/screens/DeviceSetting.tsx
 msgid "Devices"
 msgstr "Devices"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Disable all fork tools and use stock server behavior."
+msgstr "Disable all fork tools and use stock server behavior."
 
 #: src/features/settings/Settings.constants.ts
 msgid "Disable authentication"
@@ -1566,6 +1654,10 @@ msgstr "Download badges"
 msgid "Download location"
 msgstr "Download location"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Download mirror chapters once"
+msgstr "Download mirror chapters once"
+
 #: src/features/downloads/screens/DownloadSettings.tsx
 msgid "Download new chapters"
 msgstr "Download new chapters"
@@ -1574,6 +1666,10 @@ msgstr "Download new chapters"
 #: src/features/navigation-bar/NavigationBar.constants.ts
 msgid "Download queue"
 msgstr "Download queue"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Download reindex"
+msgstr "Download reindex"
 
 #: src/features/chapter/Chapter.constants.ts
 msgid "Download selected"
@@ -1604,9 +1700,17 @@ msgstr "Drag to prioritize"
 msgid "Dune"
 msgstr "Dune"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Duplicate chapter strategy"
+msgstr "Duplicate chapter strategy"
+
 #: src/features/library/components/LibraryOptionsPanel.tsx
 msgid "Duplicate chapters"
 msgstr "Duplicate chapters"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Duplicate detection"
+msgstr "Duplicate detection"
 
 #: src/features/library/screens/LibraryDuplicates.tsx
 #: src/features/library/screens/LibrarySettings.tsx
@@ -1665,13 +1769,57 @@ msgstr "Enable auto background color in continuous reading mode"
 msgid "Enable debug logs"
 msgstr "Enable debug logs"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable download reindex tools."
+msgstr "Enable download reindex tools."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable duplicate detection to change this setting."
+msgstr "Enable duplicate detection to change this setting."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable duplicate manga detection."
+msgstr "Enable duplicate manga detection."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable library and download consistency checks."
+msgstr "Enable library and download consistency checks."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable manga merging to change this setting."
+msgstr "Enable manga merging to change this setting."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable merge backups to change this setting."
+msgstr "Enable merge backups to change this setting."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable merging and splitting individual chapters."
+msgstr "Enable merging and splitting individual chapters."
+
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Enable page read progress"
 msgstr "Enable page read progress"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable progress synchronization to change this setting."
+msgstr "Enable progress synchronization to change this setting."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable the manga merge and chapter split tools."
+msgstr "Enable the manga merge and chapter split tools."
+
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Enable the WebView via CEF (Chromium)"
 msgstr "Enable the WebView via CEF (Chromium)"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable trash for removed fork items"
+msgstr "Enable trash for removed fork items"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable trash to change this setting."
+msgstr "Enable trash to change this setting."
 
 #: src/base/components/inputs/LanguageSelect.tsx
 msgid "Enabled languages"
@@ -1736,6 +1884,10 @@ msgstr "Example for possible values: 1 (bytes), 1KB (kilobytes), 1MB (megabytes)
 msgid "Exclude"
 msgstr "Exclude"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Exclude merge data from SyncYomi"
+msgstr "Exclude merge data from SyncYomi"
+
 #: src/features/chapter/components/ChapterExcludeSanlatorsFilter.tsx
 msgid "Exclude scanlators"
 msgstr "Exclude scanlators"
@@ -1765,6 +1917,10 @@ msgstr "Exit to manga page"
 #: src/features/reader/viewer/components/ReaderTransitionPage.tsx
 msgid "Exit to previous page"
 msgstr "Exit to previous page"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Export merged manga as ordinary manga using the preferred source chapters."
+msgstr "Export merged manga as ordinary manga using the preferred source chapters."
 
 #: src/features/browse/screens/Browse.tsx
 msgid "Extension"
@@ -1823,6 +1979,10 @@ msgstr "Failed to disconnect from KOReader Sync server."
 #: src/features/tracker/screens/TrackingSettings.tsx
 msgid "Failed to save changes"
 msgstr "Failed to save changes"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Fallback sources"
+msgstr "Fallback sources"
 
 #: src/features/settings/Settings.constants.ts
 msgid "Features and changes in this version might not be completely ready yet and can cause bugs.\n"
@@ -1926,6 +2086,10 @@ msgstr "Flaresolverr setup confirmation"
 msgid "FlareSolverr will automatically rotate expired sessions based on the TTL provided in minutes"
 msgstr "FlareSolverr will automatically rotate expired sessions based on the TTL provided in minutes"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Flatten merged export"
+msgstr "Flatten merged export"
+
 #: src/features/settings/screens/WebUISettings.tsx
 msgid "Flavor"
 msgstr "Flavor"
@@ -1938,9 +2102,17 @@ msgstr "Forest Dew"
 msgid "Forget manga categories"
 msgstr "Forget manga categories"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Fork stock mode"
+msgstr "Fork stock mode"
+
 #: src/features/downloads/components/DeleteChaptersWhileReadingSetting.tsx
 msgid "Fourth to last read chapter"
 msgstr "Fourth to last read chapter"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Full title score weight"
+msgstr "Full title score weight"
 
 #: src/features/reader/settings/general/ReaderGeneralSettings.tsx
 msgid "Fullscreen"
@@ -2133,6 +2305,14 @@ msgstr "In Library"
 msgid "Include"
 msgstr "Include"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Include merge configuration and source links in server backups."
+msgstr "Include merge configuration and source links in server backups."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Include merge data"
+msgstr "Include merge data"
+
 #: src/features/backup/screens/Backup.tsx
 #: src/features/category/components/CategoriesInclusionSetting.tsx
 msgid "Include: {includedCategoriesText}"
@@ -2248,12 +2428,32 @@ msgid "JWT refresh token expiry"
 msgstr "JWT refresh token expiry"
 
 #: src/features/settings/Settings.constants.ts
+msgid "Keep all unnumbered chapters"
+msgstr "Keep all unnumbered chapters"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Keep bookmarks from both chapters"
+msgstr "Keep bookmarks from both chapters"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Keep fork-owned merge, lifecycle and journal data out of SyncYomi."
+msgstr "Keep fork-owned merge, lifecycle and journal data out of SyncYomi."
+
+#: src/features/settings/Settings.constants.ts
 msgid "Keep local"
 msgstr "Keep local"
 
 #: src/features/reader/settings/behaviour/ReaderBehaviourSettings.tsx
 msgid "Keep previous and upcoming chapters visible while reading in continuous reading modes, allowing seamless scrolling between chapters."
 msgstr "Keep previous and upcoming chapters visible while reading in continuous reading modes, allowing seamless scrolling between chapters."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Keep read progress monotonic"
+msgstr "Keep read progress monotonic"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Keep read state and progress aligned between merged and source chapters."
+msgstr "Keep read state and progress aligned between merged and source chapters."
 
 #: src/features/settings/Settings.constants.ts
 msgid "Keep remote"
@@ -2262,6 +2462,10 @@ msgstr "Keep remote"
 #: src/features/reader/settings/behaviour/ReaderBehaviourSettings.tsx
 msgid "Keep screen on"
 msgstr "Keep screen on"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Keep soft-removed fork items in trash so they can be restored."
+msgstr "Keep soft-removed fork items in trash so they can be restored."
 
 #: src/features/reader/settings/ReaderSettings.constants.tsx
 msgid "Keybinds"
@@ -2351,6 +2555,10 @@ msgstr "Legacy"
 #: src/features/backup/screens/Backup.tsx
 msgid "legacy backups are not supported!"
 msgstr "legacy backups are not supported!"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Let you choose the preferred source separately for each chapter."
+msgstr "Let you choose the preferred source separately for each chapter."
 
 #: src/features/backup/Backup.constants.ts
 #: src/features/library/screens/Library.tsx
@@ -2477,6 +2685,10 @@ msgstr "Manga"
 msgid "Manga item width"
 msgstr "Manga item width"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Manga merging"
+msgstr "Manga merging"
+
 #: src/features/settings/screens/Appearance.tsx
 msgid "Manga thumbnail as background"
 msgstr "Manga thumbnail as background"
@@ -2531,6 +2743,10 @@ msgstr "Mark chapters as read on download"
 msgid "Mark previous as read"
 msgstr "Mark previous as read"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Mark removed source chapters missing and attempt safe relinking after updates."
+msgstr "Mark removed source chapters missing and attempt safe relinking after updates."
+
 #: src/features/chapter/Chapter.constants.ts
 msgid "Mark selected as read"
 msgstr "Mark selected as read"
@@ -2551,9 +2767,17 @@ msgstr "Match found"
 msgid "Match the library search even with typos or words in a different order, and show the closest matches first"
 msgstr "Match the library search even with typos or words in a different order, and show the closest matches first"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Match title and scanlator"
+msgstr "Match title and scanlator"
+
 #: src/features/migration/components/migration-entry/MigrationEntry.tsx
 msgid "Matches"
 msgstr "Matches"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Materialize merged chapters"
+msgstr "Materialize merged chapters"
 
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Maximum log file size"
@@ -2570,6 +2794,26 @@ msgstr "Medium"
 #: src/features/reader/tap-zones/ReaderTapZone.constants.ts
 msgid "Menu"
 msgstr "Menu"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Merge & library tools"
+msgstr "Merge & library tools"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Merged and source manga"
+msgstr "Merged and source manga"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Merged chapter display"
+msgstr "Merged chapter display"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Merged chapter progress wins"
+msgstr "Merged chapter progress wins"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Merged manga only"
+msgstr "Merged manga only"
 
 #: src/features/settings/Settings.constants.ts
 msgid "Merging"
@@ -2634,6 +2878,14 @@ msgstr "MIME-Type"
 msgid "MIME-Type target"
 msgstr "MIME-Type target"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Minimum duplicate candidate threshold"
+msgstr "Minimum duplicate candidate threshold"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Minimum merge sources"
+msgstr "Minimum merge sources"
+
 #: src/features/theme/Themes.ts
 msgid "Minty Miracles"
 msgstr "Minty Miracles"
@@ -2641,6 +2893,10 @@ msgstr "Minty Miracles"
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Minute"
 msgstr "Minute"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Mirror sources"
+msgstr "Mirror sources"
 
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Misc"
@@ -2663,6 +2919,10 @@ msgstr "Modern"
 #: src/features/settings/screens/More.tsx
 msgid "More"
 msgstr "More"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Most pages"
+msgstr "Most pages"
 
 #: src/features/theme/Themes.ts
 msgid "Mountain Sunset"
@@ -2706,6 +2966,14 @@ msgstr "Never"
 #: src/features/category/components/CreateOrEditCategoryDialog.tsx
 msgid "New category"
 msgstr "New category"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Newest progress wins"
+msgstr "Newest progress wins"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Newest upload"
+msgstr "Newest upload"
 
 #: src/features/reader/tap-zones/ReaderTapZone.constants.ts
 msgid "Next"
@@ -2778,6 +3046,10 @@ msgstr "No sources installed"
 msgid "None"
 msgstr "None"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Normalized chapter names"
+msgstr "Normalized chapter names"
+
 #: src/features/tracker/Tracker.constants.ts
 msgid "Not yet published"
 msgstr "Not yet published"
@@ -2820,6 +3092,10 @@ msgstr "Obsolete"
 #: src/features/tracker/Tracker.constants.ts
 msgid "OEL"
 msgstr "OEL"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Offline merge behavior"
+msgstr "Offline merge behavior"
 
 #: src/features/reader/overlay/navigation/desktop/quick-settings/components/ReaderNavBarDesktopOffsetDoubleSpread.tsx
 #: src/features/reader/settings/behaviour/ReaderBehaviourSettings.tsx
@@ -2873,6 +3149,10 @@ msgstr "Only works if the current chapter plus the next chapter are already down
 msgid "OPDS"
 msgstr "OPDS"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "OPDS merged manga visibility"
+msgstr "OPDS merged manga visibility"
+
 #: src/features/reader/services/ReaderControls.ts
 msgid "Open"
 msgstr "Open"
@@ -2925,6 +3205,10 @@ msgstr "or"
 #: src/features/theme/Themes.ts
 msgid "Orange Juice"
 msgstr "Orange Juice"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Original chapter names"
+msgstr "Original chapter names"
 
 #: src/features/reader/settings/ReaderSettings.constants.tsx
 msgid "Original size"
@@ -2983,6 +3267,10 @@ msgstr "Pin source"
 msgid "Pinned"
 msgstr "Pinned"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "points"
+msgstr "points"
+
 #: src/features/source/browse/screens/SourceMangas.tsx
 msgid "Popular"
 msgstr "Popular"
@@ -2995,6 +3283,18 @@ msgstr "Port"
 msgid "PostgreSQL"
 msgstr "PostgreSQL"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Prefer the chapter with the newest source upload date."
+msgstr "Prefer the chapter with the newest source upload date."
+
+#: src/features/settings/Settings.constants.ts
+msgid "Prefer the source chapter with the most pages."
+msgstr "Prefer the source chapter with the most pages."
+
+#: src/features/settings/Settings.constants.ts
+msgid "Preferred source"
+msgstr "Preferred source"
+
 #: src/features/reader/settings/behaviour/ReaderBehaviourSettings.tsx
 msgid "Preload images"
 msgstr "Preload images"
@@ -3002,6 +3302,10 @@ msgstr "Preload images"
 #: src/features/reader/hotkeys/settings/components/RecordHotkey.tsx
 msgid "Press keys"
 msgstr "Press keys"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Prevent synchronized progress from changing a read chapter back to unread."
+msgstr "Prevent synchronized progress from changing a read chapter back to unread."
 
 #: src/features/reader/settings/general/components/ReaderSettingSafeAreaInset.tsx
 msgid "Prevents content from overlapping device cutouts and screen edges"
@@ -3042,6 +3346,18 @@ msgstr "Progress bar size"
 msgid "Progress bar style"
 msgstr "Progress bar style"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Progress bookmark policy"
+msgstr "Progress bookmark policy"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Progress conflict policy"
+msgstr "Progress conflict policy"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Progress synchronization direction"
+msgstr "Progress synchronization direction"
+
 #: src/features/settings/Settings.constants.ts
 msgid "Prompt"
 msgstr "Prompt"
@@ -3071,6 +3387,10 @@ msgstr "Quick settings"
 msgid "Random"
 msgstr "Random"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Re-check split chapter page counts during updates and flag changed splits for review."
+msgstr "Re-check split chapter page counts during updates and flag changed splits for review."
+
 #: src/features/reader/settings/screens/GlobalReaderSettings.tsx
 #: src/features/settings/screens/Settings.tsx
 msgid "Reader"
@@ -3093,6 +3413,14 @@ msgstr "Reading direction"
 #: src/features/reader/settings/layout/components/ReaderSettingReadingMode.tsx
 msgid "Reading mode"
 msgstr "Reading mode"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Reapply merge filters, exclusions and duplicate choices after source updates."
+msgstr "Reapply merge filters, exclusions and duplicate choices after source updates."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Reapply merge plan on source updates"
+msgstr "Reapply merge plan on source updates"
 
 #: src/base/components/AppbarSearch.tsx
 msgid "Recent searches"
@@ -3176,6 +3504,18 @@ msgstr "Remove selected from the library"
 msgid "Removed non library manga from categories"
 msgstr "Removed non library manga from categories"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Require online access"
+msgstr "Require online access"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Require typed confirmation before purge"
+msgstr "Require typed confirmation before purge"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Require typing the confirmation phrase before permanently purging trash."
+msgstr "Require typing the confirmation phrase before permanently purging trash."
+
 #: src/base/components/buttons/ResetButton.tsx
 #: src/base/components/settings/CheckboxListSetting.tsx
 #: src/features/reader/hotkeys/settings/components/RecordHotkey.tsx
@@ -3200,6 +3540,10 @@ msgstr "Restore"
 #: src/features/backup/screens/Backup.tsx
 msgid "Restore Backup"
 msgstr "Restore Backup"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Restore sources when a merged manga is removed"
+msgstr "Restore sources when a merged manga is removed"
 
 #: src/features/settings/Settings.constants.ts
 msgid "Restoring"
@@ -3228,6 +3572,14 @@ msgstr "Retry all"
 #: src/features/reader/overlay/navigation/desktop/components/ReaderNavBarDesktopActions.tsx
 msgid "Retry errored pages"
 msgstr "Retry errored pages"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Return source manga to the library when their merged manga is removed."
+msgstr "Return source manga to the library when their merged manga is removed."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Revalidate splits on update"
+msgstr "Revalidate splits on update"
 
 #: src/features/reader/overlay/progress-bar/settings/components/ReaderSettingProgressBarPosition.tsx
 #: src/features/reader/settings/general/components/ReaderSettingSafeAreaInset.tsx
@@ -3413,6 +3765,10 @@ msgstr "Selected"
 msgid "Sepia"
 msgstr "Sepia"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Sequence sources"
+msgstr "Sequence sources"
+
 #: src/features/reader/settings/layout/ReaderLayoutSettings.tsx
 msgid "Series settings"
 msgstr "Series settings"
@@ -3459,6 +3815,54 @@ msgstr "Set as active theme"
 msgid "Set categories"
 msgstr "Set categories"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set how long trashed items are retained; zero keeps them indefinitely."
+msgstr "Set how long trashed items are retained; zero keeps them indefinitely."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the minimum 0–100 score for a duplicate candidate to be shown."
+msgstr "Set the minimum 0–100 score for a duplicate candidate to be shown."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the minimum 0–100 score for a strong duplicate match."
+msgstr "Set the minimum 0–100 score for a strong duplicate match."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the minimum number of source manga that a merge must retain."
+msgstr "Set the minimum number of source manga that a merge must retain."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for an exact full-title match."
+msgstr "Set the score weight for an exact full-title match."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for chapter-list similarity."
+msgstr "Set the score weight for chapter-list similarity."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for known title aliases."
+msgstr "Set the score weight for known title aliases."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for matching source URLs."
+msgstr "Set the score weight for matching source URLs."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for matching tracker records."
+msgstr "Set the score weight for matching tracker records."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for shared title tokens."
+msgstr "Set the score weight for shared title tokens."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for the normalized core title."
+msgstr "Set the score weight for the normalized core title."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for thumbnail similarity."
+msgstr "Set the score weight for thumbnail similarity."
+
 #: src/features/settings/screens/Appearance.tsx
 msgid "Sets the manga thumbnail as the background image on the manga page"
 msgstr "Sets the manga thumbnail as the background image on the manga page"
@@ -3486,6 +3890,10 @@ msgstr "Settings"
 #: src/features/reader/overlay/navigation/desktop/components/ReaderNavBarDesktopActions.tsx
 msgid "Share"
 msgstr "Share"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Shared title token score weight"
+msgstr "Shared title token score weight"
 
 #: src/features/settings/components/DebugInformation.tsx
 msgid "Show"
@@ -3650,6 +4058,10 @@ msgstr "Sort"
 msgid "Source"
 msgstr "Source"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Source chapter progress wins"
+msgstr "Source chapter progress wins"
+
 #: src/features/source/configuration/screens/SourceConfigure.tsx
 msgid "Source Configuration"
 msgstr "Source Configuration"
@@ -3733,6 +4145,10 @@ msgstr "Stop global update"
 msgid "Stretch small pages"
 msgstr "Stretch small pages"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Strong duplicate match threshold"
+msgstr "Strong duplicate match threshold"
+
 #: src/features/category/components/CreateOrEditCategoryDialog.tsx
 #: src/features/source/browse/components/SourceOptions.tsx
 msgid "Submit"
@@ -3795,6 +4211,18 @@ msgstr "Sync to an older state"
 #: src/features/settings/components/koreaderSync/KoreaderSyncSettings.tsx
 msgid "Sync will not be triggered if the progress difference is within this tolerance."
 msgstr "Sync will not be triggered if the progress difference is within this tolerance."
+
+#: src/features/settings/Settings.constants.ts
+msgid "Synchronize both ways"
+msgstr "Synchronize both ways"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Synchronize only to source chapters"
+msgstr "Synchronize only to source chapters"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Synchronize reading progress"
+msgstr "Synchronize reading progress"
 
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "SyncYomi"
@@ -3950,6 +4378,10 @@ msgstr "This will delete the saved search \"{savedSearch}\""
 msgid "This will remove the tracking locally."
 msgstr "This will remove the tracking locally."
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Thumbnail similarity score weight"
+msgstr "Thumbnail similarity score weight"
+
 #: src/features/reader/settings/behaviour/components/ReaderSettingScrollAmount.tsx
 msgid "Tiny"
 msgstr "Tiny"
@@ -4013,6 +4445,10 @@ msgstr "Tracked"
 msgid "Tracked manga"
 msgstr "Tracked manga"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Tracker match score weight"
+msgstr "Tracker match score weight"
+
 #: src/features/tracker/screens/TrackingSettings.tsx
 msgid "Trackers"
 msgstr "Trackers"
@@ -4025,9 +4461,17 @@ msgstr "Trackers"
 msgid "Tracking"
 msgstr "Tracking"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Trash retention days"
+msgstr "Trash retention days"
+
 #: src/features/theme/Themes.ts
 msgid "Tree Frog Green"
 msgstr "Tree Frog Green"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Try another source when a page list or image fails."
+msgstr "Try another source when a page list or image fails."
 
 #: src/features/settings/screens/ServerSettings.tsx
 #: src/features/tracker/components/cards/TrackerMangaCard.tsx
@@ -4107,6 +4551,10 @@ msgstr "Unknown"
 #: src/features/migration/MigrationManager.ts
 msgid "Unknown source"
 msgstr "Unknown source"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Unnumbered chapter matching"
+msgstr "Unnumbered chapter matching"
 
 #: src/features/browse/sources/components/SourceCard.tsx
 msgid "Unpin source"
@@ -4194,11 +4642,19 @@ msgstr "Uploading"
 msgid "URL"
 msgstr "URL"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "URL score weight"
+msgstr "URL score weight"
+
 #: src/features/settings/Settings.constants.ts
 msgid "Use a custom WebUI.\n"
 "To use a custom WebUI replace the content of the \"webUI\" directory in the root directory on the server with the files of the custom WebUI"
 msgstr "Use a custom WebUI.\n"
 "To use a custom WebUI replace the content of the \"webUI\" directory in the root directory on the server with the files of the custom WebUI"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Use existing downloads"
+msgstr "Use existing downloads"
 
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Use SOCKS proxy"
@@ -4208,9 +4664,17 @@ msgstr "Use SOCKS proxy"
 msgid "Use the default WebUI"
 msgstr "Use the default WebUI"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Use the first matching chapter in the configured source order."
+msgstr "Use the first matching chapter in the configured source order."
+
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Use the FlareSolverr response in case the server runs into a Cloudflare challenge while FlareSolverr does not and is therefore unable to solve the challenge (does not work for images)"
 msgstr "Use the FlareSolverr response in case the server runs into a Cloudflare challenge while FlareSolverr does not and is therefore unable to solve the challenge (does not work for images)"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Use the latest bookmark change"
+msgstr "Use the latest bookmark change"
 
 #: src/features/settings/Settings.constants.ts
 msgid "Use the latest features and help us get them ready for a stable release."
@@ -4387,427 +4851,3 @@ msgstr "Your library is empty"
 #: src/features/settings/Settings.constants.ts
 msgid "Your library will be accessible. Use this only on private networks or when otherwise securing access."
 msgstr "Your library will be accessible. Use this only on private networks or when otherwise securing access."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Avoid downloading the same chapter from multiple mirror sources."
-msgstr "Avoid downloading the same chapter from multiple mirror sources."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Chapter-level merge and split"
-msgstr "Chapter-level merge and split"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose how the merge planner matches chapters without numbers."
-msgstr "Choose how the merge planner matches chapters without numbers."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose how merged chapters behave while offline."
-msgstr "Choose how merged chapters behave while offline."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose whether merged chapters show original or normalized names."
-msgstr "Choose whether merged chapters show original or normalized names."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose which merge mode is pre-selected in the merge wizard."
-msgstr "Choose which merge mode is pre-selected in the merge wizard."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Default merge mode"
-msgstr "Default merge mode"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Download mirror chapters once"
-msgstr "Download mirror chapters once"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable manga merging to change this setting."
-msgstr "Enable manga merging to change this setting."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Fallback sources"
-msgstr "Fallback sources"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Minimum merge sources"
-msgstr "Minimum merge sources"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Keep all unnumbered chapters"
-msgstr "Keep all unnumbered chapters"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Match title and scanlator"
-msgstr "Match title and scanlator"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Materialize merged chapters"
-msgstr "Materialize merged chapters"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Merged chapter display"
-msgstr "Merged chapter display"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Offline merge behavior"
-msgstr "Offline merge behavior"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Normalized chapter names"
-msgstr "Normalized chapter names"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Original chapter names"
-msgstr "Original chapter names"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Re-check split chapter page counts during updates and flag changed splits for review."
-msgstr "Re-check split chapter page counts during updates and flag changed splits for review."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Revalidate splits on update"
-msgstr "Revalidate splits on update"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Require online access"
-msgstr "Require online access"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Set the minimum number of source manga that a merge must retain."
-msgstr "Set the minimum number of source manga that a merge must retain."
-
-#: src/features/settings/Settings.constants.ts
-msgid "Sequence sources"
-msgstr "Sequence sources"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Try another source when a page list or image fails."
-msgstr "Try another source when a page list or image fails."
-
-#: src/features/settings/Settings.constants.ts
-msgid "Use existing downloads"
-msgstr "Use existing downloads"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Unnumbered chapter matching"
-msgstr "Unnumbered chapter matching"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Mirror sources"
-msgstr "Mirror sources"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable merging and splitting individual chapters."
-msgstr "Enable merging and splitting individual chapters."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable the manga merge and chapter split tools."
-msgstr "Enable the manga merge and chapter split tools."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Manga merging"
-msgstr "Manga merging"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Merge & library tools"
-msgstr "Merge & library tools"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Fork stock mode"
-msgstr "Fork stock mode"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Disable all fork tools and use stock server behavior."
-msgstr "Disable all fork tools and use stock server behavior."
-
-#: src/features/settings/Settings.constants.ts
-msgid "Merged manga only"
-msgstr "Merged manga only"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Merged and source manga"
-msgstr "Merged and source manga"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Exclude merge data from SyncYomi"
-msgstr "Exclude merge data from SyncYomi"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Keep fork-owned merge, lifecycle and journal data out of SyncYomi."
-msgstr "Keep fork-owned merge, lifecycle and journal data out of SyncYomi."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Include merge data"
-msgstr "Include merge data"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Include merge configuration and source links in server backups."
-msgstr "Include merge configuration and source links in server backups."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Flatten merged export"
-msgstr "Flatten merged export"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable merge backups to change this setting."
-msgstr "Enable merge backups to change this setting."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Export merged manga as ordinary manga using the preferred source chapters."
-msgstr "Export merged manga as ordinary manga using the preferred source chapters."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "OPDS merged manga visibility"
-msgstr "OPDS merged manga visibility"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose whether OPDS feeds show merged manga only or both merged and source manga."
-msgstr "Choose whether OPDS feeds show merged manga only or both merged and source manga."
-
-#: src/features/settings/Settings.constants.ts
-msgid "Preferred source"
-msgstr "Preferred source"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Use the first matching chapter in the configured source order."
-msgstr "Use the first matching chapter in the configured source order."
-
-#: src/features/settings/Settings.constants.ts
-msgid "Most pages"
-msgstr "Most pages"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Prefer the source chapter with the most pages."
-msgstr "Prefer the source chapter with the most pages."
-
-#: src/features/settings/Settings.constants.ts
-msgid "Newest upload"
-msgstr "Newest upload"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Prefer the chapter with the newest source upload date."
-msgstr "Prefer the chapter with the newest source upload date."
-
-#: src/features/settings/Settings.constants.ts
-msgid "Choose per chapter"
-msgstr "Choose per chapter"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Let you choose the preferred source separately for each chapter."
-msgstr "Let you choose the preferred source separately for each chapter."
-
-#: src/features/settings/Settings.constants.ts
-msgid "Newest progress wins"
-msgstr "Newest progress wins"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Merged chapter progress wins"
-msgstr "Merged chapter progress wins"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Source chapter progress wins"
-msgstr "Source chapter progress wins"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Keep bookmarks from both chapters"
-msgstr "Keep bookmarks from both chapters"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Use the latest bookmark change"
-msgstr "Use the latest bookmark change"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Synchronize both ways"
-msgstr "Synchronize both ways"
-
-#: src/features/settings/Settings.constants.ts
-msgid "Synchronize only to source chapters"
-msgstr "Synchronize only to source chapters"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Duplicate chapter strategy"
-msgstr "Duplicate chapter strategy"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose which source chapter to use when mirror sources contain the same chapter."
-msgstr "Choose which source chapter to use when mirror sources contain the same chapter."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Synchronize reading progress"
-msgstr "Synchronize reading progress"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Keep read state and progress aligned between merged and source chapters."
-msgstr "Keep read state and progress aligned between merged and source chapters."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Progress conflict policy"
-msgstr "Progress conflict policy"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose which chapter's progress wins when source and merged progress differ."
-msgstr "Choose which chapter's progress wins when source and merged progress differ."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable progress synchronization to change this setting."
-msgstr "Enable progress synchronization to change this setting."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Keep read progress monotonic"
-msgstr "Keep read progress monotonic"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Prevent synchronized progress from changing a read chapter back to unread."
-msgstr "Prevent synchronized progress from changing a read chapter back to unread."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Progress bookmark policy"
-msgstr "Progress bookmark policy"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose how bookmarks are combined between source and merged chapters."
-msgstr "Choose how bookmarks are combined between source and merged chapters."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Progress synchronization direction"
-msgstr "Progress synchronization direction"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Choose whether progress synchronizes both ways or only to source chapters."
-msgstr "Choose whether progress synchronizes both ways or only to source chapters."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable trash for removed fork items"
-msgstr "Enable trash for removed fork items"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Keep soft-removed fork items in trash so they can be restored."
-msgstr "Keep soft-removed fork items in trash so they can be restored."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Trash retention days"
-msgstr "Trash retention days"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Set how long trashed items are retained; zero keeps them indefinitely."
-msgstr "Set how long trashed items are retained; zero keeps them indefinitely."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "days"
-msgstr "days"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable trash to change this setting."
-msgstr "Enable trash to change this setting."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Restore sources when a merged manga is removed"
-msgstr "Restore sources when a merged manga is removed"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Return source manga to the library when their merged manga is removed."
-msgstr "Return source manga to the library when their merged manga is removed."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Require typed confirmation before purge"
-msgstr "Require typed confirmation before purge"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Require typing the confirmation phrase before permanently purging trash."
-msgstr "Require typing the confirmation phrase before permanently purging trash."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Reapply merge plan on source updates"
-msgstr "Reapply merge plan on source updates"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Reapply merge filters, exclusions and duplicate choices after source updates."
-msgstr "Reapply merge filters, exclusions and duplicate choices after source updates."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Continue after a source update failure"
-msgstr "Continue after a source update failure"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Allow remaining merge sources to update when one source fails."
-msgstr "Allow remaining merge sources to update when one source fails."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Detect removed source chapters"
-msgstr "Detect removed source chapters"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Mark removed source chapters missing and attempt safe relinking after updates."
-msgstr "Mark removed source chapters missing and attempt safe relinking after updates."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Duplicate detection"
-msgstr "Duplicate detection"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable duplicate manga detection."
-msgstr "Enable duplicate manga detection."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Strong duplicate match threshold"
-msgstr "Strong duplicate match threshold"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Set the minimum 0–100 score for a strong duplicate match."
-msgstr "Set the minimum 0–100 score for a strong duplicate match."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "points"
-msgstr "points"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Minimum duplicate candidate threshold"
-msgstr "Minimum duplicate candidate threshold"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Set the minimum 0–100 score for a duplicate candidate to be shown."
-msgstr "Set the minimum 0–100 score for a duplicate candidate to be shown."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Full title score weight"
-msgstr "Full title score weight"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Set the score weight for an exact full-title match."
-msgstr "Set the score weight for an exact full-title match."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Core title score weight"
-msgstr "Core title score weight"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Set the score weight for the normalized core title."
-msgstr "Set the score weight for the normalized core title."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Shared title token score weight"
-msgstr "Shared title token score weight"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Set the score weight for shared title tokens."
-msgstr "Set the score weight for shared title tokens."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable duplicate detection to change this setting."
-msgstr "Enable duplicate detection to change this setting."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Download reindex"
-msgstr "Download reindex"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable download reindex tools."
-msgstr "Enable download reindex tools."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Consistency checks"
-msgstr "Consistency checks"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable library and download consistency checks."
-msgstr "Enable library and download consistency checks."
