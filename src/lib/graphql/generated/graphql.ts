@@ -3209,6 +3209,7 @@ export type ServerSettingsFragment = {
     reindexAllowFuzzy: boolean;
     reindexAdoptMode: Types.ReindexAdoptMode;
     doctorEnabled: boolean;
+    doctorSchedule: Types.DoctorSchedule;
     downloadConversions: Array<{
         __typename: 'SettingsDownloadConversionType';
         mimeType: string;
@@ -3366,6 +3367,7 @@ export type ResetServerSettingsMutation = {
             reindexAllowFuzzy: boolean;
             reindexAdoptMode: Types.ReindexAdoptMode;
             doctorEnabled: boolean;
+            doctorSchedule: Types.DoctorSchedule;
             downloadConversions: Array<{
                 __typename: 'SettingsDownloadConversionType';
                 mimeType: string;
@@ -3533,6 +3535,7 @@ export type UpdateServerSettingsMutation = {
             reindexAllowFuzzy: boolean;
             reindexAdoptMode: Types.ReindexAdoptMode;
             doctorEnabled: boolean;
+            doctorSchedule: Types.DoctorSchedule;
             downloadConversions: Array<{
                 __typename: 'SettingsDownloadConversionType';
                 mimeType: string;
@@ -3696,6 +3699,7 @@ export type GetServerSettingsQuery = {
         reindexAllowFuzzy: boolean;
         reindexAdoptMode: Types.ReindexAdoptMode;
         doctorEnabled: boolean;
+        doctorSchedule: Types.DoctorSchedule;
         downloadConversions: Array<{
             __typename: 'SettingsDownloadConversionType';
             mimeType: string;

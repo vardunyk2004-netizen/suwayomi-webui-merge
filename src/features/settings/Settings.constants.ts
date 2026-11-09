@@ -22,6 +22,7 @@ import { getDefaultLanguages } from '@/base/utils/Languages.ts';
 import type { SelectSettingValue, SelectSettingValueDisplayInfo } from '@/base/components/settings/SelectSetting.tsx';
 import {
     AuthMode,
+    DoctorSchedule,
     KoreaderSyncChecksumMethod,
     KoreaderSyncConflictStrategy,
     MergeChapterDisplay,
@@ -347,6 +348,12 @@ export const PROGRESS_DIRECTION_SELECT_VALUES: SelectSettingValue<ProgressDirect
 export const REINDEX_ADOPT_MODE_SELECT_VALUES: SelectSettingValue<ReindexAdoptMode>[] = [
     [ReindexAdoptMode.Copy, { text: msg`Copy` }],
     [ReindexAdoptMode.Move, { text: msg`Move original` }],
+];
+
+export const DOCTOR_SCHEDULE_SELECT_VALUES: SelectSettingValue<DoctorSchedule>[] = [
+    [DoctorSchedule.Off, { text: msg`Off`, description: msg`Run consistency checks only when requested.` }],
+    [DoctorSchedule.Daily, { text: msg`Daily`, description: msg`Schedule automatic consistency checks each day.` }],
+    [DoctorSchedule.Weekly, { text: msg`Weekly`, description: msg`Schedule automatic consistency checks each week.` }],
 ];
 
 export const IMAGE_PROCESSING_COMPRESSION = {

@@ -17,6 +17,7 @@ import { ListSubheader } from '@/base/components/lists/ListSubheader.tsx';
 import type { ServerSettings } from '@/features/settings/Settings.types.ts';
 import type { PartialSettingsTypeInput } from '@/lib/graphql/generated/graphql-base.types.ts';
 import {
+    DOCTOR_SCHEDULE_SELECT_VALUES,
     MERGE_CHAPTER_DISPLAY_SELECT_VALUES,
     MERGE_DEDUPE_STRATEGY_SELECT_VALUES,
     MERGE_DEFAULT_MODE_SELECT_VALUES,
@@ -75,6 +76,7 @@ type ForkToolSettings = Pick<
     | 'reindexAllowFuzzy'
     | 'reindexAdoptMode'
     | 'doctorEnabled'
+    | 'doctorSchedule'
 >;
 
 type ForkToolsSettingsProps = {
@@ -706,6 +708,15 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                     onChange={(event) => updateSettings({ doctorEnabled: event.target.checked })}
                 />
             </ListItem>
+            <SelectSetting
+                settingName={t`Consistency check schedule`}
+                dialogDescription={t`Choose how often consistency checks should run automatically. Off keeps checks on request; scheduled runs require consistency checks to be enabled and available.`}
+                value={settings.doctorSchedule}
+                values={DOCTOR_SCHEDULE_SELECT_VALUES}
+                disabled={dependentSwitchDisabled || !settings.doctorEnabled}
+                disabledDescription={t`Enable consistency checks to change this setting.`}
+                handleChange={(value) => updateSettings({ doctorSchedule: value })}
+            />
         </List>
     );
 };

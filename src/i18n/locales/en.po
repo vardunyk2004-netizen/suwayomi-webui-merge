@@ -946,6 +946,10 @@ msgid "Choose how merged chapters behave while offline."
 msgstr "Choose how merged chapters behave while offline."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose how often consistency checks should run automatically. Off keeps checks on request; scheduled runs require consistency checks to be enabled and available."
+msgstr "Choose how often consistency checks should run automatically. Off keeps checks on request; scheduled runs require consistency checks to be enabled and available."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Choose how the merge planner matches chapters without numbers."
 msgstr "Choose how the merge planner matches chapters without numbers."
 
@@ -1079,6 +1083,10 @@ msgstr "Connected as {currentUsername} to {currentServerAddress}"
 #: src/features/settings/components/koreaderSync/KoreaderSyncSettings.tsx
 msgid "Connected as {initialUsername} to {initialServerAddress}"
 msgstr "Connected as {initialUsername} to {initialServerAddress}"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Consistency check schedule"
+msgstr "Consistency check schedule"
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Consistency checks"
@@ -1785,6 +1793,10 @@ msgstr "Electron path"
 #: src/features/reader/settings/general/components/ReaderSettingBackgroundColor.tsx
 msgid "Enable auto background color in continuous reading mode"
 msgstr "Enable auto background color in continuous reading mode"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable consistency checks to change this setting."
+msgstr "Enable consistency checks to change this setting."
 
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Enable debug logs"
@@ -3122,6 +3134,10 @@ msgstr "Obsolete"
 msgid "OEL"
 msgstr "OEL"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Off"
+msgstr "Off"
+
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Offline merge behavior"
 msgstr "Offline merge behavior"
@@ -3632,6 +3648,10 @@ msgstr "Right to left"
 msgid "Rosegold"
 msgstr "Rosegold"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Run consistency checks only when requested."
+msgstr "Run consistency checks only when requested."
+
 #: src/features/manga/components/details/MangaNotes.tsx
 #: src/features/settings/screens/ImageProcessingSetting.tsx
 #: src/features/theme/components/CreateThemeDialog.tsx
@@ -3671,6 +3691,14 @@ msgstr "Scale type"
 #: src/features/chapter/components/ChapterExcludeSanlatorsFilter.tsx
 msgid "Scanlator"
 msgstr "Scanlator"
+
+#: src/features/settings/Settings.constants.ts
+msgid "Schedule automatic consistency checks each day."
+msgstr "Schedule automatic consistency checks each day."
+
+#: src/features/settings/Settings.constants.ts
+msgid "Schedule automatic consistency checks each week."
+msgstr "Schedule automatic consistency checks each week."
 
 #: src/features/tracker/components/cards/TrackerActiveCard.tsx
 #: src/features/tracker/components/cards/TrackerMangaCard.tsx
