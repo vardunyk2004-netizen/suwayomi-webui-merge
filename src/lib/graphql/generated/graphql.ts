@@ -3205,6 +3205,9 @@ export type ServerSettingsFragment = {
     duplicatesWeightThumbnail: number;
     duplicatesWeightTracker: number;
     reindexEnabled: boolean;
+    reindexDefaultDryRun: boolean;
+    reindexAllowFuzzy: boolean;
+    reindexAdoptMode: Types.ReindexAdoptMode;
     doctorEnabled: boolean;
     downloadConversions: Array<{
         __typename: 'SettingsDownloadConversionType';
@@ -3359,6 +3362,9 @@ export type ResetServerSettingsMutation = {
             duplicatesWeightThumbnail: number;
             duplicatesWeightTracker: number;
             reindexEnabled: boolean;
+            reindexDefaultDryRun: boolean;
+            reindexAllowFuzzy: boolean;
+            reindexAdoptMode: Types.ReindexAdoptMode;
             doctorEnabled: boolean;
             downloadConversions: Array<{
                 __typename: 'SettingsDownloadConversionType';
@@ -3523,6 +3529,9 @@ export type UpdateServerSettingsMutation = {
             duplicatesWeightThumbnail: number;
             duplicatesWeightTracker: number;
             reindexEnabled: boolean;
+            reindexDefaultDryRun: boolean;
+            reindexAllowFuzzy: boolean;
+            reindexAdoptMode: Types.ReindexAdoptMode;
             doctorEnabled: boolean;
             downloadConversions: Array<{
                 __typename: 'SettingsDownloadConversionType';
@@ -3683,6 +3692,9 @@ export type GetServerSettingsQuery = {
         duplicatesWeightThumbnail: number;
         duplicatesWeightTracker: number;
         reindexEnabled: boolean;
+        reindexDefaultDryRun: boolean;
+        reindexAllowFuzzy: boolean;
+        reindexAdoptMode: Types.ReindexAdoptMode;
         doctorEnabled: boolean;
         downloadConversions: Array<{
             __typename: 'SettingsDownloadConversionType';
