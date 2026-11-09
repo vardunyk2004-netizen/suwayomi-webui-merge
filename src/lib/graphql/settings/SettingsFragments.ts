@@ -193,5 +193,6 @@ export const SERVER_SETTINGS = gql`
         reindexAllowFuzzy
         reindexAdoptMode
         doctorEnabled
+        doctorSchedule
     }
 `;
