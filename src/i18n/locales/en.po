@@ -4749,6 +4749,54 @@ msgid "Enable duplicate manga detection."
 msgstr "Enable duplicate manga detection."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Strong duplicate match threshold"
+msgstr "Strong duplicate match threshold"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the minimum 0–100 score for a strong duplicate match."
+msgstr "Set the minimum 0–100 score for a strong duplicate match."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "points"
+msgstr "points"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Minimum duplicate candidate threshold"
+msgstr "Minimum duplicate candidate threshold"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the minimum 0–100 score for a duplicate candidate to be shown."
+msgstr "Set the minimum 0–100 score for a duplicate candidate to be shown."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Full title score weight"
+msgstr "Full title score weight"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for an exact full-title match."
+msgstr "Set the score weight for an exact full-title match."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Core title score weight"
+msgstr "Core title score weight"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for the normalized core title."
+msgstr "Set the score weight for the normalized core title."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Shared title token score weight"
+msgstr "Shared title token score weight"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Set the score weight for shared title tokens."
+msgstr "Set the score weight for shared title tokens."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable duplicate detection to change this setting."
+msgstr "Enable duplicate detection to change this setting."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Download reindex"
 msgstr "Download reindex"
 

@@ -59,6 +59,11 @@ type ForkToolSettings = Pick<
     | 'mergeBackupFlattenExport'
     | 'mergeOpdsVisibility'
     | 'duplicatesEnabled'
+    | 'duplicatesStrongThreshold'
+    | 'duplicatesMinThreshold'
+    | 'duplicatesWeightTitle'
+    | 'duplicatesWeightCoreTitle'
+    | 'duplicatesWeightToken'
     | 'reindexEnabled'
     | 'doctorEnabled'
 >;
@@ -72,6 +77,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
     const { t } = useLingui();
     const dependentSwitchDisabled = settings.forkStockMode;
     const mergeSettingsDisabled = dependentSwitchDisabled || !settings.mergeEnabled;
+    const duplicateSettingsDisabled = dependentSwitchDisabled || !settings.duplicatesEnabled;
     const progressSettingsDisabled = mergeSettingsDisabled || !settings.progressSyncEnabled;
     const lifecycleSettingsDisabled = mergeSettingsDisabled || !settings.lifecycleTrashEnabled;
     const backupSettingsDisabled = mergeSettingsDisabled || !settings.mergeBackupEnabled;
@@ -485,6 +491,76 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                     onChange={(event) => updateSettings({ duplicatesEnabled: event.target.checked })}
                 />
             </ListItem>
+            <NumberSetting
+                settingTitle={t`Strong duplicate match threshold`}
+                dialogDescription={t`Set the minimum 0–100 score for a strong duplicate match.`}
+                settingValue={settings.duplicatesStrongThreshold.toString()}
+                value={settings.duplicatesStrongThreshold}
+                defaultValue={88}
+                minValue={50}
+                maxValue={100}
+                stepSize={1}
+                valueUnit={t`points`}
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesStrongThreshold: value })}
+            />
+            <NumberSetting
+                settingTitle={t`Minimum duplicate candidate threshold`}
+                dialogDescription={t`Set the minimum 0–100 score for a duplicate candidate to be shown.`}
+                settingValue={settings.duplicatesMinThreshold.toString()}
+                value={settings.duplicatesMinThreshold}
+                defaultValue={74}
+                minValue={30}
+                maxValue={95}
+                stepSize={1}
+                valueUnit={t`points`}
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesMinThreshold: value })}
+            />
+            <NumberSetting
+                settingTitle={t`Full title score weight`}
+                dialogDescription={t`Set the score weight for an exact full-title match.`}
+                settingValue={settings.duplicatesWeightTitle.toFixed(2)}
+                value={settings.duplicatesWeightTitle}
+                defaultValue={0.25}
+                minValue={0}
+                maxValue={1}
+                stepSize={0.01}
+                valueUnit=""
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesWeightTitle: value })}
+            />
+            <NumberSetting
+                settingTitle={t`Core title score weight`}
+                dialogDescription={t`Set the score weight for the normalized core title.`}
+                settingValue={settings.duplicatesWeightCoreTitle.toFixed(2)}
+                value={settings.duplicatesWeightCoreTitle}
+                defaultValue={0.2}
+                minValue={0}
+                maxValue={1}
+                stepSize={0.01}
+                valueUnit=""
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesWeightCoreTitle: value })}
+            />
+            <NumberSetting
+                settingTitle={t`Shared title token score weight`}
+                dialogDescription={t`Set the score weight for shared title tokens.`}
+                settingValue={settings.duplicatesWeightToken.toFixed(2)}
+                value={settings.duplicatesWeightToken}
+                defaultValue={0.15}
+                minValue={0}
+                maxValue={1}
+                stepSize={0.01}
+                valueUnit=""
+                disabled={duplicateSettingsDisabled}
+                disabledDescription={t`Enable duplicate detection to change this setting.`}
+                handleUpdate={(value) => updateSettings({ duplicatesWeightToken: value })}
+            />
             <ListItem>
                 <ListItemText primary={t`Download reindex`} secondary={t`Enable download reindex tools.`} />
                 <Switch
