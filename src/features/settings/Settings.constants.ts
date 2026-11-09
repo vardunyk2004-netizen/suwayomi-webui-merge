@@ -33,6 +33,7 @@ import {
     ProgressBookmarkPolicy,
     ProgressConflictPolicy,
     ProgressDirection,
+    ReindexAdoptMode,
     StartSyncResult,
     SyncState,
     WebUiChannel,
@@ -341,6 +342,11 @@ export const PROGRESS_BOOKMARK_POLICY_SELECT_VALUES: SelectSettingValue<Progress
 export const PROGRESS_DIRECTION_SELECT_VALUES: SelectSettingValue<ProgressDirection>[] = [
     [ProgressDirection.Both, { text: msg`Synchronize both ways` }],
     [ProgressDirection.ToSourceOnly, { text: msg`Synchronize only to source chapters` }],
+];
+
+export const REINDEX_ADOPT_MODE_SELECT_VALUES: SelectSettingValue<ReindexAdoptMode>[] = [
+    [ReindexAdoptMode.Copy, { text: msg`Copy` }],
+    [ReindexAdoptMode.Move, { text: msg`Move original` }],
 ];
 
 export const IMAGE_PROCESSING_COMPRESSION = {

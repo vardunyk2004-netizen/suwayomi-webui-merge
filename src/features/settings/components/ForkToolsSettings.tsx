@@ -26,6 +26,7 @@ import {
     PROGRESS_BOOKMARK_POLICY_SELECT_VALUES,
     PROGRESS_CONFLICT_POLICY_SELECT_VALUES,
     PROGRESS_DIRECTION_SELECT_VALUES,
+    REINDEX_ADOPT_MODE_SELECT_VALUES,
 } from '@/features/settings/Settings.constants.ts';
 
 type ForkToolSettings = Pick<
@@ -70,6 +71,9 @@ type ForkToolSettings = Pick<
     | 'duplicatesWeightThumbnail'
     | 'duplicatesWeightTracker'
     | 'reindexEnabled'
+    | 'reindexDefaultDryRun'
+    | 'reindexAllowFuzzy'
+    | 'reindexAdoptMode'
     | 'doctorEnabled'
 >;
 
@@ -646,6 +650,49 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                     onChange={(event) => updateSettings({ reindexEnabled: event.target.checked })}
                 />
             </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Default dry run`}
+                    secondary={
+                        dependentSwitchDisabled || !settings.reindexEnabled
+                            ? t`Enable download reindex to change this setting.`
+                            : t`Preview proposed changes before applying any reindex repairs.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.reindexDefaultDryRun}
+                    slotProps={{ input: { 'aria-label': t`Default dry run` } }}
+                    disabled={dependentSwitchDisabled || !settings.reindexEnabled}
+                    onChange={(event) => updateSettings({ reindexDefaultDryRun: event.target.checked })}
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Allow fuzzy reindex matches`}
+                    secondary={
+                        dependentSwitchDisabled || !settings.reindexEnabled
+                            ? t`Enable download reindex to change this setting.`
+                            : t`Allow fuzzy candidates; each fuzzy match still requires per-item confirmation.`
+                    }
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.reindexAllowFuzzy}
+                    slotProps={{ input: { 'aria-label': t`Allow fuzzy reindex matches` } }}
+                    disabled={dependentSwitchDisabled || !settings.reindexEnabled}
+                    onChange={(event) => updateSettings({ reindexAllowFuzzy: event.target.checked })}
+                />
+            </ListItem>
+            <SelectSetting
+                settingName={t`Adopt download mode`}
+                dialogDescription={t`Choose how confirmed downloads are adopted. Copy keeps the original; Move is destructive to the original location and is only used after explicit adoption.`}
+                value={settings.reindexAdoptMode}
+                values={REINDEX_ADOPT_MODE_SELECT_VALUES}
+                disabled={dependentSwitchDisabled || !settings.reindexEnabled}
+                disabledDescription={t`Enable download reindex to change this setting.`}
+                handleChange={(value) => updateSettings({ reindexAdoptMode: value })}
+            />
             <ListItem>
                 <ListItemText
                     primary={t`Consistency checks`}

@@ -436,6 +436,10 @@ msgstr "Add tracking"
 msgid "Added manga to library!"
 msgstr "Added manga to library!"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Adopt download mode"
+msgstr "Adopt download mode"
+
 #: src/features/library/screens/LibrarySettings.tsx
 msgid "Advanced"
 msgstr "Advanced"
@@ -466,6 +470,14 @@ msgstr "All"
 #: src/features/downloads/screens/DownloadSettings.tsx
 msgid "Allow deleting bookmarked chapters"
 msgstr "Allow deleting bookmarked chapters"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Allow fuzzy candidates; each fuzzy match still requires per-item confirmation."
+msgstr "Allow fuzzy candidates; each fuzzy match still requires per-item confirmation."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Allow fuzzy reindex matches"
+msgstr "Allow fuzzy reindex matches"
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Allow remaining merge sources to update when one source fails."
@@ -926,6 +938,10 @@ msgid "Choose how bookmarks are combined between source and merged chapters."
 msgstr "Choose how bookmarks are combined between source and merged chapters."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Choose how confirmed downloads are adopted. Copy keeps the original; Move is destructive to the original location and is only used after explicit adoption."
+msgstr "Choose how confirmed downloads are adopted. Copy keeps the original; Move is destructive to the original location and is only used after explicit adoption."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Choose how merged chapters behave while offline."
 msgstr "Choose how merged chapters behave while offline."
 
@@ -1113,6 +1129,7 @@ msgstr "Copied to clipboard"
 #: src/features/manga/components/details/MangaDetails.tsx
 #: src/features/migration/components/MigrationOptionsDialog.tsx
 #: src/features/settings/components/DebugInformation.tsx
+#: src/features/settings/Settings.constants.ts
 msgid "Copy"
 msgstr "Copy"
 
@@ -1478,6 +1495,10 @@ msgid "Default category when adding new manga to the library"
 msgstr "Default category when adding new manga to the library"
 
 #: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Default dry run"
+msgstr "Default dry run"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Default merge mode"
 msgstr "Default merge mode"
 
@@ -1768,6 +1789,10 @@ msgstr "Enable auto background color in continuous reading mode"
 #: src/features/settings/screens/ServerSettings.tsx
 msgid "Enable debug logs"
 msgstr "Enable debug logs"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable download reindex to change this setting."
+msgstr "Enable download reindex to change this setting."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Enable download reindex tools."
@@ -2928,6 +2953,10 @@ msgstr "Most pages"
 msgid "Mountain Sunset"
 msgstr "Mountain Sunset"
 
+#: src/features/settings/Settings.constants.ts
+msgid "Move original"
+msgstr "Move original"
+
 #: src/features/downloads/components/DownloadQueueChapterCard.tsx
 msgid "Move series to bottom"
 msgstr "Move series to bottom"
@@ -3314,6 +3343,10 @@ msgstr "Prevents content from overlapping device cutouts and screen edges"
 #: src/features/settings/Settings.constants.ts
 msgid "Preview"
 msgstr "Preview"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Preview proposed changes before applying any reindex repairs."
+msgstr "Preview proposed changes before applying any reindex repairs."
 
 #: src/features/reader/settings/behaviour/components/ReaderSettingExitMode.tsx
 #: src/features/reader/tap-zones/ReaderTapZone.constants.ts
