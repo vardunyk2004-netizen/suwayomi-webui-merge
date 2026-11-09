@@ -3199,6 +3199,11 @@ export type ServerSettingsFragment = {
     duplicatesWeightTitle: number;
     duplicatesWeightCoreTitle: number;
     duplicatesWeightToken: number;
+    duplicatesWeightAlias: number;
+    duplicatesWeightUrl: number;
+    duplicatesWeightChapter: number;
+    duplicatesWeightThumbnail: number;
+    duplicatesWeightTracker: number;
     reindexEnabled: boolean;
     doctorEnabled: boolean;
     downloadConversions: Array<{
@@ -3348,6 +3353,11 @@ export type ResetServerSettingsMutation = {
             duplicatesWeightTitle: number;
             duplicatesWeightCoreTitle: number;
             duplicatesWeightToken: number;
+            duplicatesWeightAlias: number;
+            duplicatesWeightUrl: number;
+            duplicatesWeightChapter: number;
+            duplicatesWeightThumbnail: number;
+            duplicatesWeightTracker: number;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
             downloadConversions: Array<{
@@ -3507,6 +3517,11 @@ export type UpdateServerSettingsMutation = {
             duplicatesWeightTitle: number;
             duplicatesWeightCoreTitle: number;
             duplicatesWeightToken: number;
+            duplicatesWeightAlias: number;
+            duplicatesWeightUrl: number;
+            duplicatesWeightChapter: number;
+            duplicatesWeightThumbnail: number;
+            duplicatesWeightTracker: number;
             reindexEnabled: boolean;
             doctorEnabled: boolean;
             downloadConversions: Array<{
@@ -3662,6 +3677,11 @@ export type GetServerSettingsQuery = {
         duplicatesWeightTitle: number;
         duplicatesWeightCoreTitle: number;
         duplicatesWeightToken: number;
+        duplicatesWeightAlias: number;
+        duplicatesWeightUrl: number;
+        duplicatesWeightChapter: number;
+        duplicatesWeightThumbnail: number;
+        duplicatesWeightTracker: number;
         reindexEnabled: boolean;
         doctorEnabled: boolean;
         downloadConversions: Array<{
