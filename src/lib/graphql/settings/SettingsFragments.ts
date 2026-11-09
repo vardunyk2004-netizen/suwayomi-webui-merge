@@ -189,6 +189,9 @@ export const SERVER_SETTINGS = gql`
         duplicatesWeightThumbnail
         duplicatesWeightTracker
         reindexEnabled
+        reindexDefaultDryRun
+        reindexAllowFuzzy
+        reindexAdoptMode
         doctorEnabled
     }
 `;
