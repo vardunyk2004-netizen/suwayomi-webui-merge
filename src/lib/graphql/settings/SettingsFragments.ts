@@ -194,5 +194,7 @@ export const SERVER_SETTINGS = gql`
         reindexAdoptMode
         doctorEnabled
         doctorSchedule
+        migrationBlockMergedSources
+        sourcePinEnabled
     }
 `;
