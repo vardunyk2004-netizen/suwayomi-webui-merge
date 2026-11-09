@@ -183,6 +183,11 @@ export const SERVER_SETTINGS = gql`
         duplicatesWeightTitle
         duplicatesWeightCoreTitle
         duplicatesWeightToken
+        duplicatesWeightAlias
+        duplicatesWeightUrl
+        duplicatesWeightChapter
+        duplicatesWeightThumbnail
+        duplicatesWeightTracker
         reindexEnabled
         doctorEnabled
     }
