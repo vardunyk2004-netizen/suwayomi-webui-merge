@@ -12,6 +12,7 @@ import { SERVER_SETTINGS } from '@/lib/graphql/settings/SettingsFragments.ts';
 export const GET_SERVER_SETTINGS = gql`
     ${SERVER_SETTINGS}
     query GET_SERVER_SETTINGS {
+        forkFeaturesAvailable
         settings {
             ...SERVER_SETTINGS
         }
