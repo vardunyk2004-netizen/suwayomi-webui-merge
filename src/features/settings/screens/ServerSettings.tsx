@@ -137,6 +137,19 @@ export const ServerSettings = () => {
         try {
             await mutateSettings({ variables: { input: { settings } } });
             onCompletion?.(true);
+
+            const availabilitySettings = [
+                'forkStockMode',
+                'mergeEnabled',
+                'duplicatesEnabled',
+                'reindexEnabled',
+                'doctorEnabled',
+            ] satisfies (keyof PartialSettingsTypeInput)[];
+            if (availabilitySettings.some((setting) => setting in settings)) {
+                await refetchServerSettings().catch(
+                    defaultPromiseErrorHandler('ServerSettings::refetchForkFeatureAvailability'),
+                );
+            }
         } catch (e) {
             makeToast(t`Failed to save changes`, 'error', getErrorMessage(e));
             onCompletion?.(false);
@@ -246,7 +259,11 @@ export const ServerSettings = () => {
     return (
         <List sx={{ pt: 0 }}>
             {localSettings}
-            <ForkToolsSettings settings={serverSettings} updateSettings={updateSettings} />
+            <ForkToolsSettings
+                settings={serverSettings}
+                availability={data!.forkFeaturesAvailable}
+                updateSettings={updateSettings}
+            />
             <List
                 subheader={
                     <ListSubheader component="div" id="server-settings-server-address">

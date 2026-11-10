@@ -3576,6 +3576,7 @@ export type GetServerSettingsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type GetServerSettingsQuery = {
     __typename: 'Query';
+    forkFeaturesAvailable: Types.ForkFeaturesAvailableStatus;
     settings: {
         __typename: 'SettingsType';
         ip: string;

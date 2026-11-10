@@ -16,6 +16,7 @@ import { SelectSetting } from '@/base/components/settings/SelectSetting.tsx';
 import { ListSubheader } from '@/base/components/lists/ListSubheader.tsx';
 import type { ServerSettings } from '@/features/settings/Settings.types.ts';
 import type { PartialSettingsTypeInput } from '@/lib/graphql/generated/graphql-base.types.ts';
+import { ForkFeaturesAvailableStatus } from '@/lib/graphql/generated/graphql-base.types.ts';
 import {
     DOCTOR_SCHEDULE_SELECT_VALUES,
     MERGE_CHAPTER_DISPLAY_SELECT_VALUES,
@@ -83,10 +84,11 @@ type ForkToolSettings = Pick<
 
 type ForkToolsSettingsProps = {
     settings: ForkToolSettings;
+    availability: ForkFeaturesAvailableStatus;
     updateSettings: (settings: PartialSettingsTypeInput) => Promise<void>;
 };
 
-export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSettingsProps) => {
+export const ForkToolsSettings = ({ settings, availability, updateSettings }: ForkToolsSettingsProps) => {
     const { t } = useLingui();
     const dependentSwitchDisabled = settings.forkStockMode;
     const mergeSettingsDisabled = dependentSwitchDisabled || !settings.mergeEnabled;
@@ -94,6 +96,13 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
     const progressSettingsDisabled = mergeSettingsDisabled || !settings.progressSyncEnabled;
     const lifecycleSettingsDisabled = mergeSettingsDisabled || !settings.lifecycleTrashEnabled;
     const backupSettingsDisabled = mergeSettingsDisabled || !settings.mergeBackupEnabled;
+
+    const availabilityText = {
+        [ForkFeaturesAvailableStatus.Available]: t`Fork features are available.`,
+        [ForkFeaturesAvailableStatus.DisabledBySetting]: t`Fork features are disabled in settings.`,
+        [ForkFeaturesAvailableStatus.DisabledByStockMode]: t`Fork features are disabled because stock mode is enabled.`,
+        [ForkFeaturesAvailableStatus.Unavailable]: t`Merge & library tools are unavailable because fork database migration failed. Check server logs.`,
+    }[availability];
 
     return (
         <List
@@ -114,6 +123,9 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                     slotProps={{ input: { 'aria-label': t`Fork stock mode` } }}
                     onChange={(event) => updateSettings({ forkStockMode: event.target.checked })}
                 />
+            </ListItem>
+            <ListItem>
+                <ListItemText primary={t`Feature availability`} secondary={availabilityText} />
             </ListItem>
             <ListItem>
                 <ListItemText

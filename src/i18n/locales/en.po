@@ -2029,6 +2029,10 @@ msgstr "Failed to save changes"
 msgid "Fallback sources"
 msgstr "Fallback sources"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Feature availability"
+msgstr "Feature availability"
+
 #: src/features/settings/Settings.constants.ts
 msgid "Features and changes in this version might not be completely ready yet and can cause bugs.\n"
 "Make sure that you have automatic backups enabled to prevent loss of your library!\n"
@@ -2146,6 +2150,18 @@ msgstr "Forest Dew"
 #: src/features/library/screens/LibrarySettings.tsx
 msgid "Forget manga categories"
 msgstr "Forget manga categories"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Fork features are available."
+msgstr "Fork features are available."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Fork features are disabled because stock mode is enabled."
+msgstr "Fork features are disabled because stock mode is enabled."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Fork features are disabled in settings."
+msgstr "Fork features are disabled in settings."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Fork stock mode"
@@ -2843,6 +2859,10 @@ msgstr "Menu"
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Merge & library tools"
 msgstr "Merge & library tools"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Merge & library tools are unavailable because fork database migration failed. Check server logs."
+msgstr "Merge & library tools are unavailable because fork database migration failed. Check server logs."
 
 #: src/features/settings/Settings.constants.ts
 msgid "Merged and source manga"
