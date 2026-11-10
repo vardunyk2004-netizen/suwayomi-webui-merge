@@ -77,6 +77,8 @@ type ForkToolSettings = Pick<
     | 'reindexAdoptMode'
     | 'doctorEnabled'
     | 'doctorSchedule'
+    | 'migrationBlockMergedSources'
+    | 'sourcePinEnabled'
 >;
 
 type ForkToolsSettingsProps = {
@@ -124,6 +126,32 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
                     slotProps={{ input: { 'aria-label': t`Manga merging` } }}
                     disabled={dependentSwitchDisabled}
                     onChange={(event) => updateSettings({ mergeEnabled: event.target.checked })}
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Block migrating merged sources`}
+                    secondary={t`Prevent migrating a manga that is a source in a merge until its links can be safely repointed.`}
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.migrationBlockMergedSources}
+                    slotProps={{ input: { 'aria-label': t`Block migrating merged sources` } }}
+                    disabled={mergeSettingsDisabled}
+                    onChange={(event) => updateSettings({ migrationBlockMergedSources: event.target.checked })}
+                />
+            </ListItem>
+            <ListItem>
+                <ListItemText
+                    primary={t`Enable source pinning`}
+                    secondary={t`Enable source pinning controls in browse and migration screens.`}
+                />
+                <Switch
+                    edge="end"
+                    checked={settings.sourcePinEnabled}
+                    slotProps={{ input: { 'aria-label': t`Enable source pinning` } }}
+                    disabled={dependentSwitchDisabled}
+                    onChange={(event) => updateSettings({ sourcePinEnabled: event.target.checked })}
                 />
             </ListItem>
             <SelectSetting

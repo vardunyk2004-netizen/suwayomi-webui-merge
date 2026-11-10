@@ -3210,6 +3210,8 @@ export type ServerSettingsFragment = {
     reindexAdoptMode: Types.ReindexAdoptMode;
     doctorEnabled: boolean;
     doctorSchedule: Types.DoctorSchedule;
+    migrationBlockMergedSources: boolean;
+    sourcePinEnabled: boolean;
     downloadConversions: Array<{
         __typename: 'SettingsDownloadConversionType';
         mimeType: string;
@@ -3368,6 +3370,8 @@ export type ResetServerSettingsMutation = {
             reindexAdoptMode: Types.ReindexAdoptMode;
             doctorEnabled: boolean;
             doctorSchedule: Types.DoctorSchedule;
+            migrationBlockMergedSources: boolean;
+            sourcePinEnabled: boolean;
             downloadConversions: Array<{
                 __typename: 'SettingsDownloadConversionType';
                 mimeType: string;
@@ -3536,6 +3540,8 @@ export type UpdateServerSettingsMutation = {
             reindexAdoptMode: Types.ReindexAdoptMode;
             doctorEnabled: boolean;
             doctorSchedule: Types.DoctorSchedule;
+            migrationBlockMergedSources: boolean;
+            sourcePinEnabled: boolean;
             downloadConversions: Array<{
                 __typename: 'SettingsDownloadConversionType';
                 mimeType: string;
@@ -3700,6 +3706,8 @@ export type GetServerSettingsQuery = {
         reindexAdoptMode: Types.ReindexAdoptMode;
         doctorEnabled: boolean;
         doctorSchedule: Types.DoctorSchedule;
+        migrationBlockMergedSources: boolean;
+        sourcePinEnabled: boolean;
         downloadConversions: Array<{
             __typename: 'SettingsDownloadConversionType';
             mimeType: string;

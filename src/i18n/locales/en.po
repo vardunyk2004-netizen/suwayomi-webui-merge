@@ -683,6 +683,10 @@ msgstr "Binary file size"
 msgid "Black"
 msgstr "Black"
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Block migrating merged sources"
+msgstr "Block migrating merged sources"
+
 #: src/features/reader/filters/settings/components/ReaderSettingRGBA.tsx
 msgid "Blue"
 msgstr "Blue"
@@ -1841,6 +1845,14 @@ msgstr "Enable page read progress"
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Enable progress synchronization to change this setting."
 msgstr "Enable progress synchronization to change this setting."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable source pinning"
+msgstr "Enable source pinning"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Enable source pinning controls in browse and migration screens."
+msgstr "Enable source pinning controls in browse and migration screens."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Enable the manga merge and chapter split tools."
@@ -3347,6 +3359,10 @@ msgstr "Preload images"
 #: src/features/reader/hotkeys/settings/components/RecordHotkey.tsx
 msgid "Press keys"
 msgstr "Press keys"
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Prevent migrating a manga that is a source in a merge until its links can be safely repointed."
+msgstr "Prevent migrating a manga that is a source in a merge until its links can be safely repointed."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Prevent synchronized progress from changing a read chapter back to unread."
