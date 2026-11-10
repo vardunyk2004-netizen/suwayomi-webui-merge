@@ -131,7 +131,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
             <ListItem>
                 <ListItemText
                     primary={t`Block migrating merged sources`}
-                    secondary={t`Prevent migrating a manga that is a source in a merge until its links can be safely repointed.`}
+                    secondary={t`Preference for blocking migration of a manga used as a merge source. F13 migration enforcement is not yet implemented.`}
                 />
                 <Switch
                     edge="end"
@@ -144,7 +144,7 @@ export const ForkToolsSettings = ({ settings, updateSettings }: ForkToolsSetting
             <ListItem>
                 <ListItemText
                     primary={t`Enable source pinning`}
-                    secondary={t`Enable source pinning controls in browse and migration screens.`}
+                    secondary={t`Preference for source pin controls in browse and migration screens. F13 control wiring is not yet implemented.`}
                 />
                 <Switch
                     edge="end"

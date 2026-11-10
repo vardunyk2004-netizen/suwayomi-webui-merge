@@ -1851,10 +1851,6 @@ msgid "Enable source pinning"
 msgstr "Enable source pinning"
 
 #: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Enable source pinning controls in browse and migration screens."
-msgstr "Enable source pinning controls in browse and migration screens."
-
-#: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Enable the manga merge and chapter split tools."
 msgstr "Enable the manga merge and chapter split tools."
 
@@ -3348,6 +3344,14 @@ msgstr "Prefer the chapter with the newest source upload date."
 msgid "Prefer the source chapter with the most pages."
 msgstr "Prefer the source chapter with the most pages."
 
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Preference for blocking migration of a manga used as a merge source. F13 migration enforcement is not yet implemented."
+msgstr "Preference for blocking migration of a manga used as a merge source. F13 migration enforcement is not yet implemented."
+
+#: src/features/settings/components/ForkToolsSettings.tsx
+msgid "Preference for source pin controls in browse and migration screens. F13 control wiring is not yet implemented."
+msgstr "Preference for source pin controls in browse and migration screens. F13 control wiring is not yet implemented."
+
 #: src/features/settings/Settings.constants.ts
 msgid "Preferred source"
 msgstr "Preferred source"
@@ -3359,10 +3363,6 @@ msgstr "Preload images"
 #: src/features/reader/hotkeys/settings/components/RecordHotkey.tsx
 msgid "Press keys"
 msgstr "Press keys"
-
-#: src/features/settings/components/ForkToolsSettings.tsx
-msgid "Prevent migrating a manga that is a source in a merge until its links can be safely repointed."
-msgstr "Prevent migrating a manga that is a source in a merge until its links can be safely repointed."
 
 #: src/features/settings/components/ForkToolsSettings.tsx
 msgid "Prevent synchronized progress from changing a read chapter back to unread."
